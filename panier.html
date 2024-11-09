@@ -4,10 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Plateforme-e-commerce/assets/css/style.css">
-    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+              'primary': '#FFF',   // Tomate
+              'secondary': '#4CAF50', // Vert
+              'accent': '#FFD700', 
+            },
+            // Ajout d'une police personnalisée
+            fontFamily: {
+              'custom': ['"Arial"', 'sans-serif'],
+            },
+            // Marges et paddings personnalisés
+            spacing: {
+              '18': '4.5rem',  // Espace de 4.5rem pour marges/paddings
+              '22': '5.5rem',  // Espace de 5.5rem pour marges/paddings
+            },
+          }
+        }
+      }
+    </script>
     <title>Votre Panier</title>
 </head>
 <body>
+
+  <h1 class="text-3xl font-bold underline text-primary m-18 p-22 font-custom">
+    Bienvenue sur ma page !
+  </h1>
+
+  <p class="text-secondary m-18 p-22 font-custom">
+    Ceci est un paragraphe avec une police personnalisée, une couleur secondaire et un espacement.
+  </p>
     
 </body>
 </html>

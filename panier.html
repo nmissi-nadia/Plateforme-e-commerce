@@ -27,6 +27,15 @@
               '18': '4.5rem',  // Espace de 4.5rem pour marges/paddings
               '22': '5.5rem',  // Espace de 5.5rem pour marges/paddings
             },
+            borderRadius: {
+              'rounded-20': '20px'
+            },
+            transitionDuration: {
+              '500': '500ms',   //durée de 500ms
+            },
+            width: {
+              '7/10': '70%'
+            }
           }
         }
       }
@@ -35,27 +44,27 @@
 </head>
 <body>
   <header>
-    <nav class="flex p-4 text-primary justify-between">
+    <nav class="flex p-4 text-primary justify-between shadow-lg">
       
         <div class="logo-container w-1/4 flex items-center">
-          <img src="assets/imgs/red-blue-logo.png" alt="logo Sporteez">
+          <a href="#"><img src="assets/imgs/red-blue-logo.png" alt="logo Sporteez"></a>
         </div>
 
-      <div class="menu flex-col w-3/5 bg-red-700 p-1">
+      <div class="menu flex-col w-7/12 p-1">
         <div class="first-line flex w-full">
           <ul class="flex justify-between w-full">
-            <li class="border border-primary ">Accueil</li>
-            <li>Catalogue</li>
-            <li>À propos</li>
-            <li>Login</li>
+            <li class="border border-primary rounded-lg px-2 py-1 font-semibold font-custom text-sm hover:bg-primary hover:text-accent-2 transition-colors duration-500 ease-in-out cursor-pointer">Accueil</li>
+            <li class="border border-primary rounded-lg px-2 py-1 font-semibold font-custom text-sm hover:bg-primary hover:text-accent-2 transition-colors duration-500 ease-in-out cursor-pointer">Catalogue</li>
+            <li class="border border-primary rounded-lg px-2 py-1 font-semibold font-custom text-sm hover:bg-primary hover:text-accent-2 transition-colors duration-500 ease-in-out cursor-pointer">À propos</li>
+            <li class="border border-primary rounded-lg px-2 py-1 font-semibold font-custom text-sm hover:bg-primary hover:text-accent-2 transition-colors duration-500 ease-in-out cursor-pointer">Login</li>
           </ul>
           <div class="shoping-icon flex justify-center items-center w-1/5">
-            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-cart-shopping text-2xl cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer"></i>
           </div>
         </div>
-        <div class="second-line flex w-full mt-5">
-          <input class="w-3/5" type="search" placeholder="Recherche ..">
-          <button class="w-2/5">Rechercher</button>
+        <div class="second-line flex w-full mt-5 justify-between">
+          <input class="w-7/10 border border-primary rounded-xl px-2" type="search" placeholder="Recherche ..">
+          <button class="w-1/4 border bg-secondary rounded-xl px-2 py-1 font-semibold font-custom text-sm text-accent-2 h-8 hover:bg-primary transition-colors duration-500 ease-in-out cursor-pointer">Rechercher</button>
         </div>
       </div>
       
@@ -63,7 +72,7 @@
     </nav>
   </header>
 
-  <img class="w-screen" src="assets/imgs/maquette de page.jpg" alt="">
+  <img class="w-screen mt-10 border border-primary" src="assets/imgs/maquette de page.jpg" alt="">
     
 </body>
 </html>

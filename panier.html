@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Plateforme-e-commerce/assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8dd174d5fa.js" crossorigin="anonymous"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
               clifford: '#da373d',
-              'primary': '#FFF',   // Tomate
-              'secondary': '#4CAF50', // Vert
-              'accent': '#FFD700', 
+              'primary': '#254596', // Blue
+              'secondary': '#FB2649', // Rose
+              'accent': '#343635', // Noir
+              'accent-2': '#F8FCFF' // Blanc
             },
-            // Ajout d'une police personnalisée
             fontFamily: {
-              'custom': ['"Arial"', 'sans-serif'],
+              'custom': ['"Roboto"', 'sans-serif'],
             },
-            // Marges et paddings personnalisés
             spacing: {
               '18': '4.5rem',  // Espace de 4.5rem pour marges/paddings
               '22': '5.5rem',  // Espace de 5.5rem pour marges/paddings
@@ -31,14 +34,36 @@
     <title>Votre Panier</title>
 </head>
 <body>
+  <header>
+    <nav class="flex p-4 text-primary justify-between">
+      
+        <div class="logo-container w-1/4 flex items-center">
+          <img src="assets/imgs/red-blue-logo.png" alt="logo Sporteez">
+        </div>
 
-  <h1 class="text-3xl font-bold underline text-primary m-18 p-22 font-custom">
-    Bienvenue sur ma page !
-  </h1>
+      <div class="menu flex-col w-3/5 bg-red-700 p-1">
+        <div class="first-line flex w-full">
+          <ul class="flex justify-between w-full">
+            <li class="border border-primary ">Accueil</li>
+            <li>Catalogue</li>
+            <li>À propos</li>
+            <li>Login</li>
+          </ul>
+          <div class="shoping-icon flex justify-center items-center w-1/5">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+        <div class="second-line flex w-full mt-5">
+          <input class="w-3/5" type="search" placeholder="Recherche ..">
+          <button class="w-2/5">Rechercher</button>
+        </div>
+      </div>
+      
 
-  <p class="text-secondary m-18 p-22 font-custom">
-    Ceci est un paragraphe avec une police personnalisée, une couleur secondaire et un espacement.
-  </p>
+    </nav>
+  </header>
+
+  <img class="w-screen" src="assets/imgs/maquette de page.jpg" alt="">
     
 </body>
 </html>

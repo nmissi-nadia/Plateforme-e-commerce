@@ -121,7 +121,39 @@
     </header>
     <main>
       <section id="filter">
-
+        <div class="bg-gray-200 p-4 flex items-center justify-between rounded-md">
+  
+          <!-- Filter Icon and Label -->
+          <div class="flex items-center space-x-2">
+            <span class="text-gray-600 text-xl"><i class="fa-solid fa-sliders"></i></span> <!-- Filter icon -->
+            <span class="text-gray-700 font-medium">Filtre</span>
+          </div>
+          
+          <!-- Results Info -->
+          <div class="text-gray-600 text-sm hidden md:flex">
+            Affichage de 1 à 16 sur 32 résultats
+          </div>
+          
+          <!-- Show Amount -->
+          <div class="flex items-center space-x-2">
+            <span class="text-gray-700 hidden md:flex">Afficher</span>
+            <input type="number" min="1" max="100" value="16" class="w-16 p-1 border border-gray-300 rounded-md text-center focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          
+          <!-- Sort Options -->
+          <div class="flex items-center space-x-2">
+            <span class="text-gray-700">Trier par</span>
+            <select class="bg-white border border-gray-300 rounded-md p-1 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option>Default</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Newest Arrivals</option>
+              <option>Popularity</option>
+            </select>
+          </div>
+          
+        </div>
+        
       </section>
       <!-- <section class="" id="cards"> -->
         <section class="container my-12 mx-auto px-4 md:px-12">

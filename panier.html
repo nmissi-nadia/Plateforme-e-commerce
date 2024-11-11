@@ -23,7 +23,8 @@
             'secondary': '#FB2649', // Rose
             'accent': '#343635', // Noir
             'accent-2': '#F8FCFF', // Blanc
-            'blue-hover': '#3757A7' // couleur du hover sur les boutons bleu
+            'blue-hover': '#3757A7', // couleur du hover sur les boutons bleu
+            'pink-hover': '#E42141' // couleur du hover sur les boutons Pink
           },
           fontFamily: {
             'custom': ['"Roboto"', 'sans-serif'],
@@ -47,10 +48,7 @@
   </script>
   <title>Votre Panier</title>
 </head>
-
 <body>
-
-
   <nav class="bg-white border-gray-200 dark:bg-accent-2 shadow-lg">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -112,33 +110,73 @@
             class="block w-full px-4 py-3 ps-10 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-accent-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-accent-2 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Recherche..." required />
           <button type="submit"
-            class="text-primary text-xl absolute end-2.5 bottom-1 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-4 py-1 transition-colors duration-500 ease-in-out cursor-pointer"><i
-              class="fa-solid fa-magnifying-glass"></i></button>
+            class="text-primary text-xl absolute end-2.5 bottom-1 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-4 py-1 transition-colors duration-500 ease-in-out cursor-pointer"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
       </form>
     </div>
   </nav>
 
 
-
-  
-<a href="#" class="flex flex-col items-center border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl bg-gray-100 p-4">
-  <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="assets/imgs/fcb.png" alt="">
-  <div class="flex flex-col justify-between p-4 leading-normal">
-    <div class="flex ">
-      <h5 class="mb-2 text-large font-bold tracking-tight text-primary">UCL Maillot homme domicile 24/25 FC Barcelone - Édition Joueur</h5>
-      <i class="fa-solid fa-trash text-secondary text-right cursor-pointer"></i>
+  <div class="pannel bg-red-100 p-2 m-2 rounded-lg">
+    <div class="item">
+      <a href="#"
+        class="flex flex-col items-center border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl bg-gray-100 p-4 m-3">
+        <img
+          class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg border border-b-0 border-primary"
+          src="assets/imgs/fcb.png" alt="">
+        <div class="flex flex-col justify-between p-4 leading-normal bg-accent-2 border border-t-0 border-primary">
+          <div class="flex ">
+            <h5 class="mb-2 text-large font-bold tracking-tight text-primary">UCL Maillot homme domicile 24/25 FC
+              Barcelone
+              - Édition Joueur</h5>
+            <i class="fa-solid fa-trash text-secondary text-right cursor-pointer mt-1"></i>
+          </div>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">- Technologie Nike Dri-Fit ADV. <br>- 100 %
+            Polyester
+            recyclé <br>- Couleurs : Bleu et grenat.</p>
+          <h3 class="mb-2 text-sm font-bold tracking-tight text-primary">Livraison entre le 12 et 17 Novembre 2024</h3>
+          <div class="flex justify-between">
+            <div class="inline-flex rounded-md shadow-sm" role="group">
+              <button type="button"
+                class="px-2 py-2 text-sm font-medium text-accent-2 bg-secondary border border-gray-200 rounded-s-lg hover:bg-pink-hover hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700"><i
+                  class="fa-solid fa-minus"></i></button>
+              <button type="button"
+                class="px-4 py-2 text-sm font-medium text-accent-2 bg-secondary border-t border-b border-gray-200 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700">1</button>
+              <button type="button"
+                class="px-2 py-2 text-sm font-medium text-accent-2 bg-secondary border border-gray-200 rounded-e-lg hover:bg-pink-hover hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700"><i
+                  class="fa-solid fa-plus"></i></button>
+            </div>
+            <div>
+              <h2 class="text-xl text-primary font-bold">999,00 MAD</h2>
+            </div>
+          </div>
+        </div>
+      </a>
     </div>
-      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">- Technologie Nike Dri-Fit ADV. <br>- Tissu hautement extensible à séchage rapide <br>- 100 % Polyester recyclé <br>- Couleurs : Bleu et grenat.</p>
-      <h3 class="mb-2 text-sm font-bold tracking-tight text-primary">Livraison entre le 12 et 17 Novembre 2024</h3>
   </div>
-</a>
-
-
-
-
-
-  <img class="w-screen mt-10 border border-primary" src="assets/imgs/panier-mobile.png" alt="">
+  <div class="validate-section bg-red-100 p-2 m-2 rounded-lg">
+    <div class="coupon">
+      <div><p class="text-center text-sm text-accent-2 bg-secondary rounded mb-2 w-full">Saisir le code HELLO50 : <span class="font-bold">-50 MAD</span> sur votre 1ère commande à partir de 600,00 MAD d'achats</p></div>
+    </div>
+<form class="max-w-md mx-auto shadow-lg">   
+  <!-- <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label> -->
+  <div class="relative">
+      <label for="default-search"></label>
+      <input type="search" id="default-search" class="block w-full p-4 text-sm text-gray-900 border border-primary rounded-lg focus:border-secondary " placeholder="Entrez un Coupon .."/>
+      <button type="submit" class="text-accent-2 absolute end-2.5 bottom-2.5 bg-primary hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-sm px-4 py-2">Valider</button>
+  </div>
+</form>
+<div class="products-total border border-1 rounded">
+  <div class="total-produits flex justify-between border-b-2 border-gray-400">
+    <h3>Total des produits :</h3>
+    <h3><span>2</span> produits</h3>
+  </div>
+  <div class="total-produits flex justify-between border-b-2 border-gray-400">
+    <h3>Sous-Total :</h3>
+    <h3 class="font-bold text-primary">376,00</h3>
+  </div>
+</div>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </body>
 

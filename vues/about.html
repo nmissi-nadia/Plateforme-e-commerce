@@ -11,6 +11,38 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'primary': '#254596', // Blue
+            'secondary': '#FB2649', // Rose
+            'accent': '#343635', // Noir
+            'accent-2': '#F8FCFF', // Blanc
+            'blue-hover': '#3757A7' // couleur du hover sur les boutons bleu
+          },
+          fontFamily: {
+            'custom': ['"Roboto"', 'sans-serif'],
+          },
+          spacing: {
+            '18': '4.5rem',  // Espace de 4.5rem pour marges/paddings
+            '22': '5.5rem',  // Espace de 5.5rem pour marges/paddings
+          },
+          borderRadius: {
+            'rounded-20': '20px'
+          },
+          transitionDuration: {
+            '500': '500ms',   //durée de 500ms
+          },
+          width: {
+            '7/10': '70%'
+          },
+        }
+      }
+    }
+  </script>
   <body>
     <div class="bg-white">
         <header class="absolute inset-x-0 top-0 z-50">
@@ -74,17 +106,32 @@
         </header>
       
         <div class="relative isolate px-6 pt-14 lg:px-8">
-          <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-            <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+          <!-- Background Image Section -->
+          <div class="absolute inset-0">
+            <img src="/assets/imgs/about_img/header_background.jpg" alt="Football T-Shirt" class="w-full h-full object-cover">
           </div>
-          <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        
+          <!-- Color Overlay with Opacity -->
+          <div class="absolute inset-0 bg-[#007AFF] opacity-30"></div>
+        
+          <!-- Content Section -->
+          <div class="relative mx-auto max-w-4xl py-32 sm:py-48 lg:py-56 flex flex-col gap-[30px] justify-center items-center">
             <div class="text-center">
-              <h1 class="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">Notre passion pour le football se reflète dans chaque t-shirt que nous offrons.</h1>
+              <h1 class="text-balance text-5xl font-semibold tracking-tight text-[#E0E9FF] sm:text-6xl font-light">
+                Notre passion pour le football se reflète dans chaque t-shirt que nous offrons.
+              </h1>
+            </div>
+            <div>
+              <button type="button" class="bg-primary text-black h-[50px] w-[300px] rounded-3xl text-2xl">Voir Notre Shirts</button>
             </div>
           </div>
-         
         </div>
-      </div>
+        
+        
+        
+        
+        
+    </div>
 
 
       <section class="bg-white dark:bg-gray-900">
@@ -157,6 +204,5 @@
     </div>
 </div>
 
-    regk,rgl,glgklgrgl,gkrggkggkgtj
   </body>
 </html>

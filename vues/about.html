@@ -16,174 +16,313 @@
       theme: {
         extend: {
           colors: {
-            clifford: '#da373d',
-            'primary': '#254596', // Blue
-            'secondary': '#FB2649', // Rose
-            'accent': '#343635', // Noir
-            'accent-2': '#F8FCFF', // Blanc
-            'blue-hover': '#3757A7' // couleur du hover sur les boutons bleu
+            clifford: "#da373d",
+            primary: "#254596", // Blue
+            secondary: "#FB2649", // Rose
+            accent: "#343635", // Noir
+            "accent-2": "#F8FCFF", // Blanc
+            "blue-hover": "#3757A7", // couleur du hover sur les boutons bleu
           },
           fontFamily: {
-            'custom': ['"Roboto"', 'sans-serif'],
+            custom: ['"Roboto"', "sans-serif"],
           },
           spacing: {
-            '18': '4.5rem',  // Espace de 4.5rem pour marges/paddings
-            '22': '5.5rem',  // Espace de 5.5rem pour marges/paddings
+            18: "4.5rem", // Espace de 4.5rem pour marges/paddings
+            22: "5.5rem", // Espace de 5.5rem pour marges/paddings
           },
           borderRadius: {
-            'rounded-20': '20px'
+            "rounded-20": "20px",
           },
           transitionDuration: {
-            '500': '500ms',   //durée de 500ms
+            500: "500ms", //durée de 500ms
           },
           width: {
-            '7/10': '70%'
+            "7/10": "70%",
           },
-        }
-      }
-    }
+        },
+      },
+    };
   </script>
   <body>
     <div class="bg-white">
-        <header class="absolute inset-x-0 top-0 z-50">
-          <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-            <div class="flex lg:flex-1">
+      <header class="absolute inset-x-0 top-0 z-50">
+        <nav
+          class="flex items-center justify-between p-6 lg:px-8"
+          aria-label="Global"
+        >
+          <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img
+                class="w-auto h-8"
+                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button
+              type="button"
+              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a href="#" class="font-semibold text-gray-900 text-sm/6"
+              >Product</a
+            >
+            <a href="#" class="font-semibold text-gray-900 text-sm/6"
+              >Features</a
+            >
+            <a href="#" class="font-semibold text-gray-900 text-sm/6"
+              >Marketplace</a
+            >
+            <a href="#" class="font-semibold text-gray-900 text-sm/6"
+              >Company</a
+            >
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a href="#" class="font-semibold text-gray-900 text-sm/6"
+              >Log in <span aria-hidden="true">&rarr;</span></a
+            >
+          </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="lg:hidden" role="dialog" aria-modal="true">
+          <!-- Background backdrop, show/hide based on slide-over state. -->
+          <div class="fixed inset-0 z-50"></div>
+          <div
+            class="fixed inset-y-0 right-0 z-50 w-full px-6 py-6 overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          >
+            <div class="flex items-center justify-between">
               <a href="#" class="-m-1.5 p-1.5">
                 <span class="sr-only">Your Company</span>
-                <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="">
+                <img
+                  class="w-auto h-8"
+                  src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
+                  alt=""
+                />
               </a>
-            </div>
-            <div class="flex lg:hidden">
-              <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                <span class="sr-only">Open main menu</span>
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              <button
+                type="button"
+                class="-m-2.5 rounded-md p-2.5 text-gray-700"
+              >
+                <span class="sr-only">Close menu</span>
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                  data-slot="icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
             </div>
-            <div class="hidden lg:flex lg:gap-x-12">
-              <a href="#" class="text-sm/6 font-semibold text-gray-900">Product</a>
-              <a href="#" class="text-sm/6 font-semibold text-gray-900">Features</a>
-              <a href="#" class="text-sm/6 font-semibold text-gray-900">Marketplace</a>
-              <a href="#" class="text-sm/6 font-semibold text-gray-900">Company</a>
-            </div>
-            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-              <a href="#" class="text-sm/6 font-semibold text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
-            </div>
-          </nav>
-          <!-- Mobile menu, show/hide based on menu open state. -->
-          <div class="lg:hidden" role="dialog" aria-modal="true">
-            <!-- Background backdrop, show/hide based on slide-over state. -->
-            <div class="fixed inset-0 z-50"></div>
-            <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-              <div class="flex items-center justify-between">
-                <a href="#" class="-m-1.5 p-1.5">
-                  <span class="sr-only">Your Company</span>
-                  <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="">
-                </a>
-                <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-                  <span class="sr-only">Close menu</span>
-                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-              <div class="mt-6 flow-root">
-                <div class="-my-6 divide-y divide-gray-500/10">
-                  <div class="space-y-2 py-6">
-                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Product</a>
-                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Features</a>
-                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Marketplace</a>
-                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a>
-                  </div>
-                  <div class="py-6">
-                    <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a>
-                  </div>
+            <div class="flow-root mt-6">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="py-6 space-y-2">
+                  <a
+                    href="#"
+                    class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50"
+                    >Product</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50"
+                    >Features</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50"
+                    >Marketplace</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50"
+                    >Company</a
+                  >
+                </div>
+                <div class="py-6">
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    >Log in</a
+                  >
                 </div>
               </div>
             </div>
           </div>
-        </header>
-      
-        <div class="relative isolate px-6 pt-14 lg:px-8">
-          <!-- Background Image Section -->
-          <div class="absolute inset-0">
-            <img src="/assets/imgs/about_img/header_background.jpg" alt="Football T-Shirt" class="w-full h-full object-cover">
+        </div>
+      </header>
+
+      <div class="relative px-6 isolate pt-14 lg:px-8">
+        <!-- Background Image Section -->
+        <div class="absolute inset-0">
+          <img
+            src="/assets/imgs/about_img/header_background.jpg"
+            alt="Football T-Shirt"
+            class="object-cover w-full h-full"
+          />
+        </div>
+
+        <!-- Color Overlay with Opacity -->
+        <div
+          class="absolute inset-0 bg-[#007AFF] backdrop-blur-lg opacity-30"
+        ></div>
+
+        <!-- Content Section -->
+        <div
+          class="relative mx-auto max-w-4xl py-32 sm:py-48 lg:py-56 flex flex-col gap-[30px] justify-center items-center"
+        >
+          <div class="text-center">
+            <h1
+              class="text-5xl font-light font-semibold tracking-tight text-balance text-accent-2 sm:text-6xl"
+            >
+              Notre passion pour le football se reflète dans chaque t-shirt que
+              nous offrons.
+            </h1>
           </div>
-        
-          <!-- Color Overlay with Opacity -->
-          <div class="absolute inset-0 bg-[#007AFF] backdrop-blur-lg opacity-30"></div>
-        
-          <!-- Content Section -->
-          <div class="relative mx-auto max-w-4xl py-32 sm:py-48 lg:py-56 flex flex-col gap-[30px] justify-center items-center">
-            <div class="text-center">
-              <h1 class="text-balance text-5xl font-semibold tracking-tight text-accent-2 sm:text-6xl font-light">
-                Notre passion pour le football se reflète dans chaque t-shirt que nous offrons.
-              </h1>
-            </div>
-            <div>
-              <button type="button" class="bg-primary text-black h-[50px] w-[300px] rounded-3xl text-2xl">Voir Notre Shirts</button>
-            </div>
+          <div>
+            <button
+              type="button"
+              class="bg-primary text-black h-[50px] w-[300px] rounded-3xl text-2xl"
+            >
+              Voir Notre Shirts
+            </button>
           </div>
         </div>
-        
-        
-        
-        
-        
-    </div>
-
- <!-- notre histoir -->
-      <section class="bg-white dark:bg-gray-900">
-        <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-            <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">We didn't reinvent the wheel</h2>
-                <p class="mb-4">Sporteez est née de la passion commune de cinq fans de football, unis par l'envie de créer un lieu unique pour les supporters. Nous avons pour mission d'offrir des t-shirts de qualité, authentiques et abordables, qui permettent aux fans de montrer leur soutien à leur équipe préférée en toute fierté. Chez Sporteez, nous nous engageons à proposer une expérience d'achat conviviale et sécurisée, où chaque passionné de football peut trouver le produit parfait pour exprimer son attachement. Rejoignez-nous dans cette aventure et découvrez une large gamme de t-shirts conçus pour les vrais supporters !
-
-                </p>
-                <p>Nous sommes des passionnés de football, des créateurs et des artisans du design. Innovants et à l’écoute des besoins des supporters. Assez proches de nos clients pour offrir une expérience personnalisée et rapide.</p>
-            </div>
-            <div class="grid grid-cols-2 gap-4 mt-8">
-                <img class="w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" alt="office content 1">
-                <img class="mt-4 w-full lg:mt-10 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png" alt="office content 2">
-            </div>
-        </div>
-    </section>
-  
-     <!-- notre histoir -->
-
-
-
-     
-
-<div class="card-section flex px-12 justify-around ">
-    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 justify-items-center	">
-            <img class=" mt-6 justify-center rounded-t-lg" src="/assets/imgs/about_img/image 31.png" alt="" />
-        <div class="p-5 ">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center"> Chaque t-shirt est conçu pour capturer l'esprit du football et l'énergie des supporters, afin que chacun puisse exprimer sa passion.
-                </h5>
-        </div>
-    </div>
-
-    <div class="card-section flex px-12 justify-around ">
-      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 justify-items-center	">
-              <img class=" mt-6 justify-center rounded-t-lg" src="/assets/imgs/about_img/image 31.png" alt="" />
-          <div class="p-5 ">
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center"> Chaque t-shirt est conçu pour capturer l'esprit du football et l'énergie des supporters, afin que chacun puisse exprimer sa passion.
-                  </h5>
-          </div>
       </div>
-      <div class="card-section flex px-12 justify-around ">
-    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 justify-items-center	">
-            <img class=" mt-6 justify-center rounded-t-lg" src="/assets/imgs/about_img/image 31.png" alt="" />
-        <div class="p-5 ">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center"> Chaque t-shirt est conçu pour capturer l'esprit du football et l'énergie des supporters, afin que chacun puisse exprimer sa passion.
-                </h5>
+    </div>
+
+    <!-- notre histoir -->
+    <section class="bg-white dark:bg-gray-900">
+      <div
+        class="items-center max-w-screen-xl gap-16 px-4 py-8 mx-auto lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
+      >
+        <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+          <h2
+            class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+          >
+            We didn't reinvent the wheel
+          </h2>
+          <p class="mb-4">
+            Sporteez est née de la passion commune de cinq fans de football,
+            unis par l'envie de créer un lieu unique pour les supporters. Nous
+            avons pour mission d'offrir des t-shirts de qualité, authentiques et
+            abordables, qui permettent aux fans de montrer leur soutien à leur
+            équipe préférée en toute fierté. Chez Sporteez, nous nous engageons
+            à proposer une expérience d'achat conviviale et sécurisée, où chaque
+            passionné de football peut trouver le produit parfait pour exprimer
+            son attachement. Rejoignez-nous dans cette aventure et découvrez une
+            large gamme de t-shirts conçus pour les vrais supporters !
+          </p>
+          <p>
+            Nous sommes des passionnés de football, des créateurs et des
+            artisans du design. Innovants et à l’écoute des besoins des
+            supporters. Assez proches de nos clients pour offrir une expérience
+            personnalisée et rapide.
+          </p>
         </div>
-    </div>    
+        <div class="grid grid-cols-2 gap-4 mt-8">
+          <img
+            class="w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
+            alt="office content 1"
+          />
+          <img
+            class="w-full mt-4 rounded-lg lg:mt-10"
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
+            alt="office content 2"
+          />
+        </div>
+      </div>
+    </section>
 
-   
-</div>
+    <!-- notre histoir -->
 
+    
+
+    <div class="flex justify-around gap-16 px-12 mt-14 card-section">
+      <div
+        class="w-1/3 bg-white border shadow ounded-lg jborder-gray-200 dark:bg-gray-800 dark:border-gray-700 justify-items-center"
+      >
+        <img
+          class="justify-center mt-6 rounded-t-lg"
+          src="/assets/imgs/about_img/image 32.png"
+          alt=""
+        />
+        <div class="p-5">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-center text-gray-900 dark:text-white"
+          >
+            Chaque t-shirt est conçu pour capturer l'esprit du football et
+            l'énergie des supporters, afin que chacun puisse exprimer sa
+            passion.
+          </h5>
+        </div>
+      </div>
+      <div
+        class="w-1/3 bg-white border shadow ounded-lg jborder-gray-200 dark:bg-gray-800 dark:border-gray-700 justify-items-center"
+      >
+        <img
+          class="justify-center mt-6 rounded-t-lg"
+          src="/assets/imgs/about_img/image 31.png"
+          alt=""
+        />
+        <div class="p-5">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-center text-gray-900 dark:text-white"
+          >
+            Chez Sporteez, nous mettons notre passion pour le football dans
+            chaque t-shirt pour que chaque supporter puisse l’afficher
+            fièrement.
+          </h5>
+        </div>
+      </div>
+      <div
+        class="w-1/3 bg-white border shadow ounded-lg jborder-gray-200 dark:bg-gray-800 dark:border-gray-700 justify-items-center"
+      >
+        <img
+          class="justify-center mt-6 rounded-t-lg"
+          src="/assets/imgs/about_img/t-shirt_icone.png"
+          alt=""
+        />
+        <div class="p-5">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-center text-gray-900 dark:text-white"
+          >
+            Nous garantissons des t-shirts de haute qualité, confortables et
+            durables, pour que chaque supporter soit pleinement satisfait.
+          </h5>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div >gghughkgh</div>
   </body>
 </html>

@@ -125,9 +125,11 @@
         </div>
     </nav>
 
+
+    <!-- Contenue de la page Details-->
     <main>
         <!-- Ligne Bleu-->
-        <div class="h-[0.78rem] bg-blue-800">
+        <div class="h-[0.78rem] bg-blue-800 md:h-[2.688rem]">
 
         </div>
 
@@ -135,9 +137,9 @@
         <!-- Information sur le produit-->
         <div class="ml-[20%] max-w-52 p-6 bg-white rounded-lg ">
 
-            <h1 class="mb-2 text-xl font-medium text-gray-900 dark:text-white">Nike</h1>        
-            <p class="mb-3 text-sm font-normal text-gray-700 dark:text-gray-400">T-shirt Man United Originals</p>
-            <div class="inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white bg-red-500 ">
+            <h1 class="mb-2 text-xl font-medium text-gray-900 dark:text-white md:font-medium md:text-4xl">Nike</h1>        
+            <p class="mb-3 text-sm font-normal text-gray-700 dark:text-gray-400 md:text-2xl md:w-[15rem] md:font-semibold">T-shirt Man United Originals</p>
+            <div class="inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white bg-red-500 md:text-xl md:font-normal">
                 MAD 324.50
             </div>
         </div>
@@ -147,19 +149,27 @@
             <!-- Premier Grand div-->
             <div class="">
                 <!-- div 1-->
-                <div class=" hidden ">
-                    <div class="cursor-pointer"></div>
-                    <div class="cursor-pointer"></div>
-                    <div class="cursor-pointer"></div>
-                    <div class="cursor-pointer"></div>
-                </div>
+                <div class="hidden grid grid-cols-1 gap-[1.063rem] ml-[25%]">
+                  <div class="cursor-pointer">
+                      <img class="h-[6.75rem] w-[5.875rem]" src="../assets/imgs/details-imgs/figmamanuntd.png" alt="">
+                  </div>
+                  <div class="cursor-pointer">
+                      <img class="h-[6.75rem] w-[5.875rem]" src="../assets/imgs/details-imgs/manuntdblue.png" alt="">
+                  </div>
+                  <div class="cursor-pointer">
+                      <img class="h-[6.75rem] w-[5.875rem]" src="../assets/imgs/details-imgs/manuntdblack.jpg" alt="">
+                  </div>
+                  <div class="cursor-pointer">
+                      <img class="h-[6.75rem] w-[5.875rem]" src="../assets/imgs/details-imgs/figmamanuntd.png" alt="">
+                  </div>
+              </div>
 
                 <!-- div 2-->
-                <div class="max-w-[55%] mr-[20%] mx-auto">
+                <div class="max-w-[55%] mr-[20%] mx-auto md:h-[27.688rem] md:w-[22.813rem] md:ml-[23%] md:mb-[7%]">
 
                     <div id="default-carousel" class="relative">
                         <!-- Carousel-->
-                        <div class="relative cursor-pointer h-[19.063rem] pt-[20%] md:h-96">
+                        <div class="relative cursor-pointer h-[19.063rem] pt-[20%] md:h-[27.688rem] md:w-[22.813rem] md:pt-[15.5%]">
 
                             <div class="" >
                                 <img src="../assets/imgs/details-imgs/figmamanuntd.png"
@@ -178,11 +188,11 @@
 
                         </div>
                         
-                        <button type="button" class="absolute top-[50%] right-[96%]">
+                        <button type="button" class="absolute top-[50%] right-[96%] md:right-[100%]">
                             <i class="fa-solid fa-chevron-left text-[2rem] " style="color: #B5B5B5;"></i>
                         </button>
 
-                        <button type="button" class="absolute top-[50%] left-[96%]">
+                        <button type="button" class="absolute top-[50%] left-[96%] md:left-[100%]">
                             <i class="fa-solid fa-chevron-right text-[2rem]" style="color: #B5B5B5;"></i>
                         </button>
                     </div>
@@ -203,45 +213,45 @@
                 </div>
 
                 <!-- div 2-->
-                <h2 class="font-medium text-xs ml-[25%] text-gray-500 mt-[5%] mb-[3%]"> Couleur : <span class="italic text-black">Blanc</span></h2>
-                <div class="flex gap-[1.063rem] ml-[25%]">
+                <h2 class="font-medium text-xs ml-[25%] text-gray-500 mt-[5%] mb-[3%] md:text-lg"> Couleur : <span class="italic text-black">Blanc</span></h2>
+                <div class="flex gap-[1.063rem] ml-[25%] md:mb-[2%]">
                     <div class="cursor-pointer">
-                        <img class="h-[3.313rem] w-[3.188rem]" src="../assets/imgs/details-imgs/figmamanuntd.png" alt="">
+                        <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem]" src="../assets/imgs/details-imgs/figmamanuntd.png" alt="">
                     </div>
                     <div class="cursor-pointer">
-                        <img class="h-[3.313rem] w-[3.188rem]" src="../assets/imgs/details-imgs/manuntdblue.png" alt="">
+                        <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem]" src="../assets/imgs/details-imgs/manuntdblue.png" alt="">
                     </div>
                     <div class="cursor-pointer">
-                        <img class="h-[3.313rem] w-[3.188rem]" src="../assets/imgs/details-imgs/manuntdblack.jpg" alt="">
+                        <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem]" src="../assets/imgs/details-imgs/manuntdblack.jpg" alt="">
                     </div>
                 </div>
 
                 <!-- div 3-->
                 <div class="grid grid-rows-4 ml-[25%]">
-                    <h3 class="font-medium text-blue-900 text-xs pt-[2%] mt-[5%] ml-[1%] h-[1.25rem]">Guide des Tailles:  </h3>
+                    <h3 class="font-medium text-blue-900 text-xs pt-[2%] mt-[5%] ml-[1%] h-[1.25rem] md:font-semibold md:text-lg md:mt-[0%]">Guide des Tailles:  </h3>
 
-                    <select class="px-5 py-2 w-[13.313rem] mb-[2%] cursor-pointer font-medium text-xs text-center text-white bg-blue-800 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                    <select class="px-5 py-2 w-[13.313rem] mb-[2%] cursor-pointer font-medium text-xs text-center text-white bg-blue-800 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 md:w-[21.625rem] md:h-[3.125rem] md:font-medium md:text-xl">
                         <option value="initial" class="hidden px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-blue-900 bg-white hover:bg-blue-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300">Choisissez Votre Taille</option>
                         <option value="small" class="px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-blue-900 bg-white hover:bg-blue-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300">Small</option>
                         <option value="medium" class="px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-blue-900 bg-white hover:bg-blue-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300">Medium</option>
                         <option value="large" class="px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-blue-900 bg-white hover:bg-blue-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300">Large</option>
                     </select>
                     
-                    <div class="inline-flex ml-[16%]">
-                        <button class="bg-black hover:bg-gray-400 text-white font-bold text-2xl pb-2 pl-1 w-[15%]">
+                    <div class="inline-flex ml-[16%] md:ml-[11%] md:mt-[1.5%]">
+                        <button class="bg-black hover:bg-gray-400 text-white font-bold text-2xl pb-2 pl-1 w-[15%] md:w-[4.5rem] md:h-[3rem]">
                           +
                         </button>
                         
-                        <input type="text" class="bg-white border-2 border-black h-11 text-center text-black text-sm block w-[17%] py-2.5" placeholder="0"/>
+                        <input type="text" class="bg-white border-2 border-black h-11 text-center text-black text-sm block w-[17%] py-2.5 md:w-[4rem] md:h-[3rem] md:border-[1px]" placeholder="0"/>
                         
-                        <button class="bg-black hover:bg-gray-400 text-white font-bold text-2xl pb-2 pl-1 w-[15%]">
+                        <button class="bg-black hover:bg-gray-400 text-white font-bold text-2xl pb-2 pl-1 w-[15%] md:w-[4.5rem] md:h-[3rem]">
                           -
                         </button>
                     </div>
-                    <button type="button" class="px-5 py-2 w-[13.313rem] mt-[2%] font-medium text-xs text-center text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 "> Ajouter Au Panier </button>
+                    <button type="button" class="px-5 py-2 w-[13.313rem] mt-[2%] font-medium text-xs text-center text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 md:w-[21.625rem] md:h-[3.125rem] md:font-medium md:text-xl"> Ajouter Au Panier </button>
                 </div>
                 <!-- Ligne Bleu-->
-                <div class="h-[0.55rem] mt-[1.2rem] bg-blue-800">
+                <div class="h-[0.55rem] mt-[1.2rem] bg-blue-800 md:h-[1.3rem] md:mt-[2rem]">
 
                 </div>
 
@@ -259,14 +269,14 @@
 
 
         <!-- Section des Informations sur le produit-->
-         <section class="">
+        <section class="">
             <!-- Premier Grand div-->
-            <div class="mx-auto w-[13.25rem] px-4 sm:container mb-[1rem]">
+            <div class="mx-auto w-[13.25rem] px-4 mb-[1rem] md:w-[21.625rem] md:ml-[25%]">
                 <div class="border-stroke border-b border-gray-500">
-                   <h2 class="text-dark text-[0.938rem] font-normal pt-1 mt-4">
+                   <h2 class="text-dark text-[0.938rem] font-normal pt-1 mt-4 md:text-xl md:font-medium">
                     Disponibilité en magasin
                    </h2>
-                   <a href="#" class="font-normal text-xs text-blue-900"> Consultez nos magasins</a>
+                   <a href="#" class="font-normal text-xs text-blue-900 md:text-base"> Consultez nos magasins</a>
                 </div>
             </div>
 
@@ -274,9 +284,9 @@
             <div class="">
                 <!-- div 1-->
                 <div class="mb-[5%]">
-                    <div class="mx-auto w-[14.25rem] px-4 sm:container mb-[1rem]">
+                    <div class="mx-auto w-[14.25rem] px-4 mb-[1rem] md:w-[21.625rem] md:ml-[25%]">
                         <div class="border-stroke border-b border-gray-500">
-                           <h2 class="text-dark text-[0.91rem] font-bold mb-[0.5rem] pt-1 mt-4">
+                           <h2 class="text-dark text-[0.91rem] font-bold mb-[0.5rem] pt-1 mt-4 md:text-lg">
                             Description produit
                            </h2>
                         </div>
@@ -286,11 +296,11 @@
                         <tbody>
                             <tr class="border-b-[0.6rem] border-white">
 
-                                <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300">
+                                <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 md:w-[5.875rem]">
                                     Taille
                                 </th>
                                 
-                                <td class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-red-600 text-white">
+                                <td class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-red-600 text-white md:w-[13.75rem]">
                                     Medium
                                 </td>
 
@@ -298,11 +308,11 @@
 
                             <tr class="border-b-[0.6rem] border-white">
 
-                                <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300">
+                                <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 md:w-[5.875rem]">
                                     Brand
                                 </th>
                                 
-                                <td class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-red-600 text-white">
+                                <td class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-red-600 text-white md:w-[13.75rem]">
                                     Adidas
                                 </td>
 
@@ -310,11 +320,11 @@
 
                             <tr class="hidden border-b-[0.6rem] border-white">
 
-                                <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300">
+                                <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 md:w-[5.875rem]">
                                     Description
                                 </th>
                                 
-                                <td class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-red-600 text-white">
+                                <td class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-red-600 text-white md:w-[13.75rem]">
                                     Perferendis asperiores repudiandae sed beatae nulla repellendus vitae quaerat, quam, veniam veritatis unde debitis ratione autem reprehenderit est minima fugit itaque. Molestiae.
                                 </td>
 
@@ -322,11 +332,11 @@
 
                             <tr class="border-b-[0.6rem] border-white">
 
-                                <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300">
+                                <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 md:w-[5.875rem]">
                                     Couleur
                                 </th>
                                 
-                                <td class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-red-600 text-white">
+                                <td class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-red-600 text-white  md:w-[13.75rem]">
                                     Rouge
                                 </td>
 
@@ -334,11 +344,11 @@
 
                             <tr class="hidden border-b-[0.6rem] border-white">
 
-                                <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300">
+                                <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 md:w-[5.875rem]">
                                     Pays d'expédition
                                 </th>
                                 
-                                <td class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-red-600 text-white">
+                                <td class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-red-600 text-white  md:w-[13.75rem]">
                                     Angletere
                                 </td>
 
@@ -348,9 +358,9 @@
                 </div>
 
                 <!-- div 2-->
-                <div class="w-[54%] h-[5.3rem] ml-[27%] mb-[7%] bg-blue-800">
+                <div class="w-[14.5rem] h-[5.5rem] ml-[27%] mb-[7%] bg-blue-800 md:w-[19.8rem] md:h-[6rem]">
               
-                    <div class="grid grid-cols-2 gap-x-5 pl-3 pt-1 lg:grid-cols-3 md:grid-cols-2 max-md:max-w-lg mx-auto">
+                    <div class="grid grid-cols-2 gap-x-5 pl-3 pt-1 lg:grid-cols-3 md:grid-cols-2 max-md:max-w-lg mx-auto md:pt-2 md:pl-7">
 
                       <div class="w-[7.063rem] h-[1.7rem] py-2 flex mb-3">
                         <i class="fa-solid fa-map-location-dot text-white mt-[0.3rem] mr-[0.6rem]"></i>
@@ -381,11 +391,12 @@
 
             </div>
 
-         </section>
-         <!-- Ligne Rouge-->
-         <div class="h-[0.55rem] mt-[1.2rem] bg-red-600">
+        </section>
+         
+        <!-- Ligne Rouge-->
+        <div class="h-[0.55rem] mt-[1.2rem] bg-red-500 md:h-[2rem] md:mt-[2rem]">
 
-         </div>
+        </div>
         
         
 

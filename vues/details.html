@@ -121,13 +121,13 @@
 <!-- Contenue de la page Details-->
 <main>
     <!-- Ligne Bleu-->
-    <div class="h-[0.78rem] bg-blue-800 md:h-[2.688rem] lg:h-[3.3rem]">
+    <div class="h-[0.78rem] bg-blue-800 md:h-[2.688rem] lg:h-[3.3rem] xl:h-[2.563rem]">
 
     </div>
 
 
     <!-- Information sur le produit-->
-    <div class="ml-[20%] max-w-52 p-6 bg-white rounded-lg lg:ml-[26%] ">
+    <div class="ml-[20%] max-w-52 p-6 bg-white rounded-lg lg:ml-[26%] xl:hidden">
 
         <h1 class="mb-2 text-xl font-medium text-gray-900 dark:text-white md:font-medium md:text-4xl lg:font-medium lg:text-6xl">Nike</h1>        
         <p class="mb-3 text-sm font-normal text-gray-700 dark:text-gray-400 md:text-2xl md:w-[15rem] md:font-semibold lg:text-4xl lg:w-[20rem] lg:font-semibold">T-shirt Man United Originals</p>
@@ -137,31 +137,31 @@
     </div>
     
     <!-- Section de Presentation et Personnalisation-->
-    <section class="">
+  <section class="xl:flex">
         <!-- Premier Grand div-->
-        <div class="">
+        <div class="xl:grid xl:grid-cols-2 xl:w-[610px]">
             <!-- div 1-->
-            <div class="hidden grid grid-cols-1 gap-[1.063rem] ml-[25%]">
-              <div class="cursor-pointer">
-                  <img class="h-[6.75rem] w-[5.875rem]" src="../assets/imgs/details-imgs/figmamanuntd.png" alt="">
+            <div class="hidden h-[6.813rem] w-[5.875rem] grid grid-cols-1 gap-y-[1.625rem] ml-[25%] xl:grid">
+              <div class="cursor-pointer h-[6.813rem] w-[5.875rem]">
+                  <img class="" src="../assets/imgs/details-imgs/figmamanuntd.png" alt="">
               </div>
-              <div class="cursor-pointer">
-                  <img class="h-[6.75rem] w-[5.875rem]" src="../assets/imgs/details-imgs/manuntdblue.png" alt="">
+              <div class="cursor-pointer h-[6.813rem] w-[5.875rem]">
+                  <img class="" src="../assets/imgs/details-imgs/manuntdblue.png" alt="">
               </div>
-              <div class="cursor-pointer">
-                  <img class="h-[6.75rem] w-[5.875rem]" src="../assets/imgs/details-imgs/manuntdblack.jpg" alt="">
+              <div class="cursor-pointer h-[6.813rem] w-[5.875rem]">
+                  <img class="" src="../assets/imgs/details-imgs/manuntdblack.jpg" alt="">
               </div>
-              <div class="cursor-pointer">
-                  <img class="h-[6.75rem] w-[5.875rem]" src="../assets/imgs/details-imgs/figmamanuntd.png" alt="">
+              <div class="cursor-pointer h-[6.813rem] w-[5.875rem]">
+                  <img class="" src="../assets/imgs/details-imgs/figmamanuntd.png" alt="">
               </div>
           </div>
 
             <!-- div 2-->
-            <div class="max-w-[55%] mr-[20%] mx-auto md:h-[27.688rem] md:w-[22.813rem] md:ml-[23%] md:mb-[7%] lg:h-[29.688rem] lg:w-[24.813rem] lg:ml-[27%]">
+            <div class="max-w-[55%] mr-[20%] mx-auto md:h-[27.688rem] md:w-[22.813rem] md:ml-[23%] md:mb-[7%] lg:h-[29.688rem] lg:w-[24.813rem] lg:ml-[27%] xl:h-[31.813rem] xl:w-[30.063rem] xl:pt-[0%]">
 
-                <div id="default-carousel" class="relative">
+                <div id="default-carousel" class="relative xl:h-[31.813rem] xl:w-[30.063rem] xl:pt-[0%]">
                     <!-- Carousel-->
-                    <div class="relative cursor-pointer h-[19.063rem] pt-[20%] md:h-[27.688rem] md:w-[22.813rem] md:pt-[15.5%] lg:h-[29.688rem] lg:w-[24.813rem] lg:pt-[12.5%]">
+                    <div class="relative cursor-pointer h-[19.063rem] pt-[20%] md:h-[27.688rem] md:w-[22.813rem] md:pt-[15.5%] lg:h-[29.688rem] lg:w-[24.813rem] lg:pt-[12.5%] xl:h-[31.813rem] xl:w-[30.063rem] xl:pt-[0%]">
 
                         <div class="" >
                             <img src="../assets/imgs/details-imgs/figmamanuntd.png"
@@ -195,7 +195,7 @@
         <!-- Deuxieme Grand div-->
         <div class="">
             <!-- div 1-->
-            <div class="hidden ml-[20%] max-w-52 p-6 bg-white rounded-lg ">
+            <div class="hidden ml-[20%] max-w-52 p-6 bg-white rounded-lg xl:block">
 
                 <h1 class="mb-2 text-xl font-medium text-gray-900 dark:text-white">Nike</h1>        
                 <p class="mb-3 text-sm font-normal text-gray-700 dark:text-gray-400">T-shirt Man United Originals</p>
@@ -242,19 +242,13 @@
                 </div>
                 <button type="button" class="px-5 py-2 w-[13.313rem] mt-[2%] font-medium text-xs text-center text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 md:w-[21.625rem] md:h-[3.125rem] md:font-medium md:text-xl lg:text-2xl lg:w-[23.825rem] lg:h-[3.725rem]"> Ajouter Au Panier </button>
             </div>
-            <!-- Ligne Bleu-->
-            <div class="h-[0.55rem] mt-[1.2rem] bg-blue-800 md:h-[1.3rem] md:mt-[2rem] lg:h-[2rem]">
-
-            </div>
-
-
-
-
-
         </div>
-        
+  </section>
 
-    </section>
+    <!-- Ligne Bleu-->
+    <div class="h-[0.55rem] mt-[1.2rem] bg-blue-800 md:h-[1.3rem] md:mt-[2rem] lg:h-[2rem]">
+
+    </div>
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->       
   <!-- Section des Informations sur le produit-->

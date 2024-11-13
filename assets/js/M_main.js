@@ -98,7 +98,7 @@ fetch("https://mohamedmoustir.github.io/api/")
       let cloths = data.Tshorts
       carousel_cards.innerHTML += `
         
-     <div class=" mx-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow max-h-[600px]">
+     <div class =" mx-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow max-h-[600px]">
                  <a href="#">
                      <img class="p-8 w-[100%] max-h-[50%] rounded-t-lg" src="${cloths[i].images[2]}" alt="product image" />
                  </a>

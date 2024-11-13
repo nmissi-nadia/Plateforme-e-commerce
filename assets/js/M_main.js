@@ -157,7 +157,7 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
     const carousel_cards_words = document.getElementById('carousel-cards_Words');
     for (let i = 0; i < 3; i++) {
       let worldfot = data.worldfot
-      carousel_cards_words.innerHTML += `
+      carousel_cards_words.innerHTML +=`
      
      <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6 justify-evenly m-[100px]">
 
@@ -315,9 +315,6 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
      
      
      `
-
-
-
-
     }
+    
   })

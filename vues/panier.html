@@ -68,21 +68,17 @@
         <div class="hidden w-full md:flex md:w-auto" id="navbar-default">
           <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg bg-accent-2 md:flex-row md:space-x-4 md:mt-0 md:border-0 bg-accent-2 md:bg-accent-2">
             <li>
-              <a href="#" class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1 " aria-current="page">Accueil</a>
+              <a href="../vues/home.html" class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1 " aria-current="page">Accueil</a>
             </li>
             <li>
-              <a href="#" class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1">Catalogue</a>
+              <a href="../vues/catalogue.html" class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1">Catalogue</a>
             </li>
             <li>
-              <a href="#" class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1">À propos</a>
+              <a href="../vues/about.html" class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1">À propos</a>
             </li>
             <li>
               <a href="#" class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1">Login</a>
             </li>
-            <!-- <li>
-              <a href="#">
-                <i class="fa-solid fa-cart-shopping text-2xl cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer hidden"></i></a>
-            </li> -->
           </ul>
           <i id="shoping-icon-md" class="fa-solid fa-cart-shopping hidden sm:hidden md:flex text-3xl md:text-2xl sm:text-5xl text-primary cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer mr-6 sm:mr-10 md:mx-4 md:w-6 md:h-6 md:hover:text-secondary"></i>
         </div>
@@ -104,51 +100,13 @@
   </head>
   <!-- Header End -->
 
-
-
-
-
-  
-
-
   <!-- side bar panier start -->
-  <div id="panel-aside-bar" class="hidden relative z-10" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
-    <!--
-      Background backdrop, show/hide based on slide-over state.
-  
-      Entering: "ease-in-out duration-500"
-        From: "opacity-0"
-        To: "opacity-100"
-      Leaving: "ease-in-out duration-500"
-        From: "opacity-100"
-        To: "opacity-0"
-    -->
+  <div id="panel-aside-bar" class="hidden relative z-10 transition-opacity" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
     <div class="fixed inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
-  
     <div class="fixed inset-0 overflow-hidden">
       <div class="absolute inset-0 overflow-hidden">
         <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-          <!--
-            Slide-over panel, show/hide based on slide-over state.
-  
-            Entering: "transform transition ease-in-out duration-500 sm:duration-700"
-              From: "translate-x-full"
-              To: "translate-x-0"
-            Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
-              From: "translate-x-0"
-              To: "translate-x-full"
-          -->
           <div class="pointer-events-auto relative w-screen max-w-md">
-            <!--
-              Close button, show/hide based on slide-over state.
-  
-              Entering: "ease-in-out duration-500"
-                From: "opacity-0"
-                To: "opacity-100"
-              Leaving: "ease-in-out duration-500"
-                From: "opacity-100"
-                To: "opacity-0"
-            -->
             <div class="absolute left-0 top-0 -ml-8 flex pr-2 pt-4 sm:-ml-10 sm:pr-4">
               <button id="close-btn" type="button" class="relative rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white">
                 <span class="absolute -inset-2.5"></span>
@@ -158,13 +116,42 @@
                 </svg>
               </button>
             </div>
-  
             <div class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
               <div class="px-4 sm:px-6">
-                <h2 class="text-base font-semibold text-gray-900" id="slide-over-title">Panel title</h2>
+                <h2 class="text-secondary font-bold text-xl" id="slide-over-title">Votre Panier :</h2>
               </div>
               <div class="relative mt-6 flex-1 px-4 sm:px-6">
-                <!-- Your content -->
+                  <div class="item1 flex bg-red-100 mb-4 p-4 rounded-lg justify-between">
+                    <div class="item-pic w-1/4">
+                      <div class="flex flex-col justify-center m-auto">
+                        <img class="h-full w-full rounded-lg" src="../assets/imgs/atm.png" alt="">
+                        <div class="flex rounded-md shadow-sm justify-around mt-2" role="group">
+                          <button type="button"
+                            class="bg-primary text-sm h-6 px-1 rounded-l-lg text-accent-2 "><i
+                              class="fa-solid fa-minus"></i></button>
+                          <button type="button"
+                            class="bg-primary text-sm h-6 px-4 text-accent-2 "><span>1</span></button>
+                          <button type="button"
+                            class="bg-primary text-sm h-6 px-1 rounded-r-lg text-accent-2 "><i
+                              class="fa-solid fa-plus"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="infos bg-accent-2 w-[70%] flex flex-col justify-between rounded-lg">
+                      <div class="p-3">
+                        <div class="title-price flex justify-between ">
+                          <h3 class="text-lg">T-shirt</h3>
+                          <i class="fa-solid fa-trash text-secondary text-right cursor-pointer mt-1 sm:text-2xl sm:mt-0"></i>
+                        </div>
+                        <div class="title-price flex justify-between">
+                          <h5 class="text-sm">Livraison gratuite</h5>
+                        </div>
+                      </div>
+                      <div class="p-3">
+                        <h3 class="font-bold text-primary text-right"><span>299,99</span> MAD</h3>
+                      </div>
+                    </div>
+                  </div>
               </div>
             </div>
           </div>
@@ -173,25 +160,10 @@
     </div>
   </div>  
   <!-- side bar panier end -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
   <!-- Panier Start -->
   <h1 class="text-3xl text-primary mx-4 my-4 font-bold">Votre Panier :</h1>
-  <div class="md:flex lg:px-20">
+  <div class="md:flex md:px-30 lg:px-20">
     <div class="pannel bg-red-100 p-2 m-2 rounded-lg">
       <div class="item md:flex">
         <a href="#" class="flex flex-col items-center border border-gray-200 rounded-lg shadow md:flex-row md:max-w-3xl bg-gray-100 p-4 m-3">
@@ -228,8 +200,6 @@
         </a>
       </div>
     </div>
-
-
     <div class="validate-section bg-red-100 p-2 m-2 rounded-lg md:w-2/5">
       <div class="coupon">
         <div>
@@ -266,14 +236,12 @@
       </div>
     </div>
   </div>
-  
-  <!-- Validation Panier -->
-  
+  <!-- Validation Panier Start -->
   <div class="validate-btn flex justify-center">
     <button type="submit" class="bg-primary text-accent-2 font-bold px-10 py-2 rounded-3xl mb-4 mt-6 shadow-3xl">Générer
       mon Devis</button>
   </div>
-  <!-- Panier Start -->
+  <!-- Validation Panier end -->
    <!-- Footer Start -->
    <footer class="bg-primary px-10">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -365,18 +333,16 @@
       const shoppingIconMd = document.getElementById("shoping-icon-md");
       const panelCard = document.getElementById("panel-aside-bar");
 
-      // panelCard.classList.remove("hidden");
-      // panelCard.style.display = "block";
-      panelCard.classList.add("block")
+      panelCard.classList.remove("hidden");
     })
 
     document.getElementById("close-btn").addEventListener("click", function(){
       const panelCard = document.getElementById("panel-aside-bar");
-      panelCard.style.display = "none";
-    })
-  </script>
-   
 
+      panelCard.classList.add("hidden");
+    })
+
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </body>
 

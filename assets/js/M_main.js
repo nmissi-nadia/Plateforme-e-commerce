@@ -1,3 +1,39 @@
+
+
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                clifford: '#da373d',
+                'primary': '#254596', // Blue
+                'secondary': '#FB2649', // Rose
+                'accent': '#343635', // Noir
+                'accent-2': '#F8FCFF', // Blanc
+                'blue-hover': '#3757A7', // couleur du hover sur les boutons bleu
+                'pink-hover': '#E42141' // couleur du hover sur les boutons Pink
+            },
+            fontFamily: {
+                'custom': ['"Roboto"', 'sans-serif'],
+            },
+            spacing: {
+                '18': '4.5rem',  // Espace de 4.5rem pour marges/paddings
+                '22': '5.5rem',  // Espace de 5.5rem pour marges/paddings
+            },
+            borderRadius: {
+                'rounded-20': '20px'
+            },
+            transitionDuration: {
+                '500': '500ms',   //durée de 500ms
+            },
+            width: {
+                '7/10': '70%'
+            },
+        }
+    }
+}
+
+
+
 //carousel-images header
 const slides = document.getElementById('carousel-images');
 slides.addEventListener("wheel", (evnt) => {
@@ -34,9 +70,7 @@ document.getElementById("rightBtn").addEventListener("click", () => {
         document.getElementById("3").style.background = "#608BC1"
 
     }
-
-
-
+    
 })
 
 
@@ -65,9 +99,8 @@ function slideNum(id) {
         carousel_cards_words.style.scrollBehavior = "smooth"
         document.getElementById("2").style.background = "none"
         document.getElementById("3").style.background = "none"
-
         carousel_cards_words.scrollLeft = 0;
-
+    
     }
 
     if (id == "2") {
@@ -86,8 +119,10 @@ function slideNum(id) {
         carousel_cards_words.scrollLeft = 3000;
         document.getElementById("1").style.background = "none"
         document.getElementById("2").style.background = "none"
+        
 
     }
+    
 
 
 }
@@ -105,7 +140,7 @@ fetch("https://mohamedmoustir.github.io/api/")
         
      <div class =" mx-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow max-h-[500px]">
                  <a href="#">
-                     <img class="p-8 w-[100%] border max-h-[50%] rounded-t-lg" src="${cloths[i].images[2]}" alt="product image" />
+                     <img class="p-8 w-[100%] border max-h-[55%] rounded-t-lg" src="${cloths[i].images[2]}" alt="product image" />
                  </a>
                  <div class="px-8 pb-5 w-[350px]">
                      <a href="#">
@@ -145,15 +180,15 @@ fetch("https://mohamedmoustir.github.io/api/")
                      <div class="flex items-center justify-between">
                          <span class="text-3xl font-bold text-gray-900 dark:text-white">${cloths[i].price}$</span>
                          <a href="#"
-                             class="  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  ">Add
-                             to cart</a>
+                             class="  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  ">Go
+                             to shopping</a>
                      </div>
                  </div>
              </div>
      
      `
         }
-    })
+    }).catch(error=>console.log(erorr))
 
 
 fetch("https://mohamedmoustir.github.io/nweapi/")
@@ -318,4 +353,4 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
      `
         }
 
-    })
+    }).catch(error=>console.log(erorr))

@@ -70,7 +70,7 @@ document.getElementById("rightBtn").addEventListener("click", () => {
         document.getElementById("3").style.background = "#608BC1"
 
     }
-    
+
 })
 
 
@@ -100,7 +100,7 @@ function slideNum(id) {
         document.getElementById("2").style.background = "none"
         document.getElementById("3").style.background = "none"
         carousel_cards_words.scrollLeft = 0;
-    
+
     }
 
     if (id == "2") {
@@ -114,15 +114,15 @@ function slideNum(id) {
     }
 
     if (id == "3") {
-        document.getElementById("3").style.background = "#608BC1"
         carousel_cards_words.scrollBehavior = "smooth"
+        document.getElementById("3").style.background = "#608BC1"
         carousel_cards_words.scrollLeft = 3000;
         document.getElementById("1").style.background = "none"
         document.getElementById("2").style.background = "none"
-        
+
 
     }
-    
+
 
 
 }
@@ -134,7 +134,7 @@ function slideNum(id) {
 fetch("https://mohamedmoustir.github.io/api/")
     .then(result => result.json())
     .then(function (data) {
-        for (let i = 0; i < data.Tshorts.length; i++) {
+        for (let i = 0; i < 15; i++) {
             let cloths = data.Tshorts
             carousel_cards.innerHTML += `
         
@@ -144,7 +144,7 @@ fetch("https://mohamedmoustir.github.io/api/")
                  </a>
                  <div class="px-8 pb-5 w-[350px]">
                      <a href="#">
-                         <h5 class="text-xl  font-semibold tracking-tight text-gray-900 dark:text-white">${cloths[i].description.slice(0, 100)}</h5>
+                         <h5 class="text-xl  font-semibold tracking-tight text-gray-900 dark:text-white">${cloths[i].description.slice(0, 90)}...</h5>
                      </a>
                      <div class="flex items-center mt-2.5 mb-5">
                          <div class="flex items-center space-x-1 rtl:space-x-reverse">
@@ -188,7 +188,7 @@ fetch("https://mohamedmoustir.github.io/api/")
      
      `
         }
-    }).catch(error=>console.log(erorr))
+    }).catch(error => console.log(erorr))
 
 
 fetch("https://mohamedmoustir.github.io/nweapi/")
@@ -326,7 +326,6 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
                         </a>
                     </div>
                 </div>
-
                <div
                     class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
                     <a href="#">
@@ -353,4 +352,4 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
      `
         }
 
-    }).catch(error=>console.log(erorr))
+    }).catch(error => console.log(erorr))

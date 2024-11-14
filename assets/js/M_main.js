@@ -25,6 +25,23 @@ document.getElementById("rightBtn").addEventListener("click", () => {
     carousel_cards_words.scrollLeft += 1500;
 
 
+    carousel_cards_words.style.scrollBehavior = "smooth"
+    carousel_cards_words.scrollLeft += 1500;
+
+
+    if (carousel_cards_words.scrollLeft < 1500) {
+        document.getElementById("2").style.background = "#608BC1"
+        document.getElementById("1").style.background = "none"
+
+    } else if (carousel_cards_words.scrollLeft >= 1500) {
+        document.getElementById("2").style.background = "none"
+        document.getElementById("3").style.background = "#608BC1"
+
+  carousel_cards_words.style.scrollBehavior = "smooth"
+  carousel_cards_words.scrollLeft += 1500;
+
+
+
     if (carousel_cards_words.scrollLeft < 1500) {
         document.getElementById("2").style.background = "#608BC1"
         document.getElementById("1").style.background = "none"
@@ -37,10 +54,19 @@ document.getElementById("rightBtn").addEventListener("click", () => {
 
 
 
+    }
+   
+  
+
 })
 
 
 document.getElementById("leftBtn").addEventListener("click", () => {
+
+    carousel_cards_words.style.scrollBehavior = "smooth"
+    carousel_cards_words.scrollLeft -= 1500;
+
+
     carousel_cards_words.style.scrollBehavior = "smooth"
     carousel_cards_words.scrollLeft -= 1500;
 
@@ -52,6 +78,19 @@ document.getElementById("leftBtn").addEventListener("click", () => {
         document.getElementById("2").style.background = "none"
         document.getElementById("1").style.background = "#608BC1"
 
+  carousel_cards_words.style.scrollBehavior = "smooth"
+  carousel_cards_words.scrollLeft -= 1500;
+
+
+    if (carousel_cards_words.scrollLeft > 1500) {
+        document.getElementById("2").style.background = "#608BC1"
+        document.getElementById("3").style.background = "none"
+
+    } else if (carousel_cards_words.scrollLeft <= 1500) {
+        document.getElementById("2").style.background = "none"
+        document.getElementById("1").style.background = "#608BC1"
+
+
     }
 
 })
@@ -60,14 +99,14 @@ document.getElementById("leftBtn").addEventListener("click", () => {
 
 function slideNum(id) {
 
+
     if (id == "1") {
         document.getElementById("1").style.background = "#608BC1"
         carousel_cards_words.style.scrollBehavior = "smooth"
         document.getElementById("2").style.background = "none"
         document.getElementById("3").style.background = "none"
-
-        carousel_cards_words.scrollLeft = 0;
-
+            carousel_cards_words.scrollLeft = 0;
+        
     }
 
     if (id == "2") {
@@ -76,6 +115,37 @@ function slideNum(id) {
         carousel_cards_words.scrollLeft = 1500;
         document.getElementById("1").style.background = "none"
         document.getElementById("3").style.background = "none"
+
+  if (id == "1") {
+    document.getElementById("1").style.background = "#608BC1"
+    carousel_cards_words.style.scrollBehavior = "smooth"
+    document.getElementById("2").style.background = "none"
+    document.getElementById("3").style.background = "none"
+  }
+
+
+        carousel_cards_words.scrollLeft = 0;
+
+    }
+
+
+    if (id == "2") {
+        document.getElementById("2").style.background = "#608BC1"
+        carousel_cards_words.style.scrollBehavior = "smooth"
+        carousel_cards_words.scrollLeft = 1500;
+        document.getElementById("1").style.background = "none"
+        document.getElementById("3").style.background = "none"
+
+
+    }
+
+
+    if (id == "3") {
+        document.getElementById("3").style.background = "#608BC1"
+        carousel_cards_words.scrollBehavior = "smooth"
+        carousel_cards_words.scrollLeft = 3000;
+        document.getElementById("1").style.background = "none"
+        document.getElementById("2").style.background = "none"
 
 
     }
@@ -90,6 +160,10 @@ function slideNum(id) {
     }
 
 
+    }
+    
+
+
 }
 
 //request restApi get post delete patch put ..
@@ -97,13 +171,28 @@ function slideNum(id) {
 //option methode status:200 - 404 - 500 - 403
 
 fetch("https://mohamedmoustir.github.io/api/")
+
     .then(result => result.json())
     .then(function (data) {
         for (let i = 0; i < data.Tshorts.length; i++) {
             let cloths = data.Tshorts
             carousel_cards.innerHTML += `
+
         
      <div class =" mx-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow max-h-[500px]">
+
+        
+     <div class =" mx-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow max-h-[500px]">
+
+  .then(result => result.json())
+  .then(function (data) {
+    for (let i = 0; i < data.Tshorts.length; i++) {
+      let cloths = data.Tshorts
+      carousel_cards.innerHTML += `
+        
+     <div class =" mx-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow max-h-[600px]">
+
+
                  <a href="#">
                      <img class="p-8 w-[100%] border max-h-[50%] rounded-t-lg" src="${cloths[i].images[2]}" alt="product image" />
                  </a>
@@ -152,6 +241,7 @@ fetch("https://mohamedmoustir.github.io/api/")
              </div>
      
      `
+
         }
     })
 
@@ -166,11 +256,47 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
 
 
             carousel_cards_words.innerHTML += `
+
+
+        }
+    })
+
+
+fetch("https://mohamedmoustir.github.io/nweapi/")
+    .then(result => result.json())
+    .then(function (data) {
+        const carousel_cards_words = document.getElementById('carousel-cards_Words');
+        for (let i = 0; i < 3; i++) {
+            let worldfot = data.worldfot
+            carousel_cards_words.innerHTML += `
+
+    }
+  })
+
+
+
+fetch("https://mohamedmoustir.github.io/nweapi/")
+  .then(result => result.json())
+  .then(function (data) {
+    const carousel_cards_words = document.getElementById('carousel-cards_Words');
+    for (let i = 0; i < 3; i++) {
+      let worldfot = data.worldfot
+      carousel_cards_words.innerHTML += `
+
+
      
      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center mx-auto my-[100px]">
 
                 <div
+
                     class="max-w-sm w-[80%] h-52 min-w-[250px]  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px] max-m-[100px]">
+=======
+
+                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[110px]">
+
+                    class="max-w-sm w-[90%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
+
                     <a href="#">
                         <img class="rounded-t-lg w-full h-52" src="${worldfot[0].image}" alt="" />
                     </a>
@@ -194,7 +320,14 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
 
 
                 <div
+
                     class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
+                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[110px]">
+
+                    class="max-w-sm w-[90%] min-w-[250px] h-52 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
+
                     <a href="#">
                         <img class="rounded-t-lg w-full h-52" src="${worldfot[1].image}" alt="" />
                     </a>
@@ -219,7 +352,15 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
 
 
                 <div
+
                     class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
+
+                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[110px]"">
+
+                    class="max-w-sm w-[90%] min-w-[250px] h-52 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
+
                     <a href="#">
                         <img class="rounded-t-lg w-full h-52" src="${worldfot[7].image}" alt="" />
                     </a>
@@ -245,7 +386,15 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
 
 
                 <div
+
                     class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
+
+                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[110px]">
+
+                    class="max-w-sm w-[90%] min-w-[250px] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
+
                     <a href="#">
                         <img class="rounded-t-lg w-full h-52" src="${worldfot[3].image}" alt="" />
                     </a>
@@ -270,7 +419,15 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
 
 
                 <div
+
                     class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
+
+                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[110px]">
+
+                    class="max-w-sm w-[90%] min-w-[250px] h-52 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
+
                     <a href="#">
                         <img class="rounded-t-lg w-full h-52" src="${worldfot[8].image}" alt="" />
                     </a>
@@ -292,8 +449,19 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
                     </div>
                 </div>
 
+
                <div
                     class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
+
+
+                <div
+
+                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[110px]">
+
+                    class="max-w-sm w-[90%] min-w-[250px] h-52 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
+
                     <a href="#">
                         <img class="rounded-t-lg w-full h-52" src="${worldfot[4].image}" alt="" />
                     </a>
@@ -319,3 +487,384 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
         }
 
     })
+
+        }
+
+    })
+
+
+
+
+
+    }
+  })
+
+
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

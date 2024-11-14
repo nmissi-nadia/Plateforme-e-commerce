@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SPORTEEZ</title>
     <!-- <link
       rel="stylesheet"
@@ -32,6 +35,9 @@
       .bg {
         background: url("../assets/imgs/catalogue/stademob.png");
         background-size: cover;
+      .bg {
+        background: url("../assets/imgs/catalogue/stademob.png");
+        background-size: cover;
         height: 300px;
       }
     </style>
@@ -46,25 +52,39 @@
               accent: "#343635", // Noir
               "accent-2": "#F8FCFF", // Blanc
               "blue-hover": "#3757A7", // couleur du hover sur les boutons bleu
+              clifford: "#da373d",
+              primary: "#254596", // Blue
+              secondary: "#FB2649", // Rose
+              accent: "#343635", // Noir
+              "accent-2": "#F8FCFF", // Blanc
+              "blue-hover": "#3757A7", // couleur du hover sur les boutons bleu
             },
             fontFamily: {
               custom: ['"Roboto"', "sans-serif"],
             },
             borderRadius: {
               "rounded-20": "20px",
+              "rounded-20": "20px",
             },
             transitionDuration: {
               500: "500ms", //durée de 500ms
+              500: "500ms", //durée de 500ms
             },
             width: {
+              "7/10": "70%",
               "7/10": "70%",
             },
           },
         },
       };
+          },
+        },
+      };
     </script>
   </head>
+  </head>
 
+  <body>
   <body>
     <header>
       <!-- Header start -->
@@ -92,6 +112,7 @@
               aria-expanded="false"
             >
               <span class="sr-only">Open main menu</span>
+              <i class="fa-solid fa-bars sm:text-4xl"></i>
               <i class="fa-solid fa-bars sm:text-4xl"></i>
             </button>
           </div>
@@ -142,6 +163,9 @@
         <div class="flex w-full px-4 md:justify-center">
           <form class="w-full sm:w-full mb-2 md:w-4/5">
             <!-- <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Rechercher</label> -->
+        <div class="flex w-full px-4 md:justify-center">
+          <form class="w-full sm:w-full mb-2 md:w-4/5">
+            <!-- <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Rechercher</label> -->
             <div class="relative">
               <input
                 type="search"
@@ -160,6 +184,10 @@
           </form>
         </div>
       </nav>
+
+      <div class="bg flex items-center justify-center">
+        <h1 class="font-extrabold text-center">Accueil/Catalogue</h1>
+      </div>
 
       <div class="bg flex items-center justify-center">
         <h1 class="font-extrabold text-center">Accueil/Catalogue</h1>
@@ -300,6 +328,7 @@
         </nav>
       </section>
     </main>
+    
     <footer class="bg-blue-900 text-white py-10 px-6">
       <div
         class="container mx-auto flex flex-wrap justify-between items-start space-y-8 lg:space-y-0 lg:space-x-8"
@@ -445,4 +474,149 @@
     </footer>
     <script src="../assets/js/catalo.js"></script>
   </body>
+      <div
+        class="container mx-auto flex flex-wrap justify-between items-start space-y-8 lg:space-y-0 lg:space-x-8"
+      >
+        <!-- Logo and Social Media -->
+        <div class="space-y-2 md:flex-row">
+          <!-- <h2 class="text-2xl font-bold text-red-500">SPORTEEZ</h2> -->
+          <img
+            class="w-36"
+            src="../assets/imgs/red_logo.png"
+            alt="logo de site Sporteez"
+          />
+          <!-- <p class="text-sm text-gray-400">Football Vie</p> -->
+          <div class="flex space-x-6 text-red-500">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Links Section -->
+        <div class="flex flex-wrap w-full lg:w-auto hidden md:flex">
+          <div class="w-1/2 lg:w-auto lg:mr-10 block">
+            <h3 class="font-bold">Pages</h3>
+            <ul class="mt-2 space-y-2">
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">Accueil</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">Catalogue</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">A propos</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">Panier</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="w-1/2 lg:w-auto lg:mr-10">
+            <h3 class="font-bold">Service</h3>
+            <ul class="mt-2 space-y-2">
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">Shopify</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">WordPress</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >UI/UX Design</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="w-1/2 lg:w-auto lg:mr-10">
+            <h3 class="font-bold">Resource</h3>
+            <ul class="mt-2 space-y-2">
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">HTML</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">CSS</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >JavaScript</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">Java</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">JSON</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >UI/UX Design</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">Component</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="w-1/2 lg:w-auto">
+            <h3 class="font-bold">Company</h3>
+            <ul class="mt-2 space-y-2">
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">Tarifs</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">Sécurité</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Politique de confidentialité</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Conditions d'utilisation</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white">Rue</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="space-y-4">
+          <h3 class="font-bold">À propos de nous</h3>
+          <p class="text-gray-300 text-sm">
+            Vous pouvez nous contacter pour nous envoyer un email
+          </p>
+          <div class="relative">
+            <input
+              type="email"
+              placeholder="Votre email"
+              class="w-full py-2 px-4 text-gray-900 rounded-full focus:outline-none"
+            />
+            <button
+              class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-red-500 text-white rounded-full p-2"
+            >
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div
+        class="text-center border-t border-gray-600 mt-8 pt-4 text-sm text-gray-400"
+      >
+        © 2024 Sporteez | Powered by Youcode
+      </div>
+    </footer>
+    <script src="../assets/js/catalo.js"></script>
+  </body>
 </html>
+

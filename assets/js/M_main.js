@@ -1,3 +1,39 @@
+
+
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                clifford: '#da373d',
+                'primary': '#254596', // Blue
+                'secondary': '#FB2649', // Rose
+                'accent': '#343635', // Noir
+                'accent-2': '#F8FCFF', // Blanc
+                'blue-hover': '#3757A7', // couleur du hover sur les boutons bleu
+                'pink-hover': '#E42141' // couleur du hover sur les boutons Pink
+            },
+            fontFamily: {
+                'custom': ['"Roboto"', 'sans-serif'],
+            },
+            spacing: {
+                '18': '4.5rem',  // Espace de 4.5rem pour marges/paddings
+                '22': '5.5rem',  // Espace de 5.5rem pour marges/paddings
+            },
+            borderRadius: {
+                'rounded-20': '20px'
+            },
+            transitionDuration: {
+                '500': '500ms',   //durée de 500ms
+            },
+            width: {
+                '7/10': '70%'
+            },
+        }
+    }
+}
+
+
+
 //carousel-images header
 const slides = document.getElementById('carousel-images');
 slides.addEventListener("wheel", (evnt) => {
@@ -21,12 +57,11 @@ const carousel_cards_words = document.getElementById('carousel-cards_Words');
 document.getElementById("1").style.background = "#608BC1"
 document.getElementById("rightBtn").addEventListener("click", () => {
 
+
     carousel_cards_words.style.scrollBehavior = "smooth"
     carousel_cards_words.scrollLeft += 1500;
 
 
-    carousel_cards_words.style.scrollBehavior = "smooth"
-    carousel_cards_words.scrollLeft += 1500;
 
 
     if (carousel_cards_words.scrollLeft < 1500) {
@@ -36,6 +71,8 @@ document.getElementById("rightBtn").addEventListener("click", () => {
     } else if (carousel_cards_words.scrollLeft >= 1500) {
         document.getElementById("2").style.background = "none"
         document.getElementById("3").style.background = "#608BC1"
+
+
 
   carousel_cards_words.style.scrollBehavior = "smooth"
   carousel_cards_words.scrollLeft += 1500;
@@ -54,15 +91,13 @@ document.getElementById("rightBtn").addEventListener("click", () => {
 
 
 
-    }
-   
-  
 
+    }
+    
 })
 
 
 document.getElementById("leftBtn").addEventListener("click", () => {
-
     carousel_cards_words.style.scrollBehavior = "smooth"
     carousel_cards_words.scrollLeft -= 1500;
 
@@ -91,6 +126,7 @@ document.getElementById("leftBtn").addEventListener("click", () => {
         document.getElementById("1").style.background = "#608BC1"
 
 
+
     }
 
 })
@@ -99,14 +135,15 @@ document.getElementById("leftBtn").addEventListener("click", () => {
 
 function slideNum(id) {
 
-
     if (id == "1") {
         document.getElementById("1").style.background = "#608BC1"
         carousel_cards_words.style.scrollBehavior = "smooth"
         document.getElementById("2").style.background = "none"
         document.getElementById("3").style.background = "none"
-            carousel_cards_words.scrollLeft = 0;
-        
+
+        carousel_cards_words.scrollLeft = 0;
+    
+
     }
 
     if (id == "2") {
@@ -116,6 +153,8 @@ function slideNum(id) {
         document.getElementById("1").style.background = "none"
         document.getElementById("3").style.background = "none"
 
+
+=======
   if (id == "1") {
     document.getElementById("1").style.background = "#608BC1"
     carousel_cards_words.style.scrollBehavior = "smooth"
@@ -137,8 +176,8 @@ function slideNum(id) {
         document.getElementById("3").style.background = "none"
 
 
-    }
 
+    }
 
     if (id == "3") {
         document.getElementById("3").style.background = "#608BC1"
@@ -146,6 +185,9 @@ function slideNum(id) {
         carousel_cards_words.scrollLeft = 3000;
         document.getElementById("1").style.background = "none"
         document.getElementById("2").style.background = "none"
+
+        
+
 
 
     }
@@ -171,7 +213,6 @@ function slideNum(id) {
 //option methode status:200 - 404 - 500 - 403
 
 fetch("https://mohamedmoustir.github.io/api/")
-
     .then(result => result.json())
     .then(function (data) {
         for (let i = 0; i < data.Tshorts.length; i++) {
@@ -184,17 +225,8 @@ fetch("https://mohamedmoustir.github.io/api/")
         
      <div class =" mx-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow max-h-[500px]">
 
-  .then(result => result.json())
-  .then(function (data) {
-    for (let i = 0; i < data.Tshorts.length; i++) {
-      let cloths = data.Tshorts
-      carousel_cards.innerHTML += `
-        
-     <div class =" mx-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow max-h-[600px]">
-
-
                  <a href="#">
-                     <img class="p-8 w-[100%] border max-h-[50%] rounded-t-lg" src="${cloths[i].images[2]}" alt="product image" />
+                     <img class="p-8 w-[100%] border max-h-[55%] rounded-t-lg" src="${cloths[i].images[2]}" alt="product image" />
                  </a>
                  <div class="px-8 pb-5 w-[350px]">
                      <a href="#">
@@ -234,45 +266,20 @@ fetch("https://mohamedmoustir.github.io/api/")
                      <div class="flex items-center justify-between">
                          <span class="text-3xl font-bold text-gray-900 dark:text-white">${cloths[i].price}$</span>
                          <a href="#"
-                             class="  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  ">Add
-                             to cart</a>
+                             class="  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  ">Go
+                             to shopping</a>
                      </div>
                  </div>
              </div>
      
      `
-
         }
-    })
+    }).catch(error=>console.log(erorr))
 
 
-fetch("https://mohamedmoustir.github.io/nweapi/")
-    .then(result => result.json())
-    .then(function (data) {
-
-        const carousel_cards_words = document.getElementById('carousel-cards_Words');
-        for (let i = 0; i < 3; i++) {
-            let worldfot = data.worldfot
 
 
-            carousel_cards_words.innerHTML += `
-
-
-        }
-    })
-
-
-fetch("https://mohamedmoustir.github.io/nweapi/")
-    .then(result => result.json())
-    .then(function (data) {
-        const carousel_cards_words = document.getElementById('carousel-cards_Words');
-        for (let i = 0; i < 3; i++) {
-            let worldfot = data.worldfot
-            carousel_cards_words.innerHTML += `
-
-    }
-  })
-
+       
 
 
 fetch("https://mohamedmoustir.github.io/nweapi/")
@@ -284,17 +291,22 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
       carousel_cards_words.innerHTML += `
 
 
+
      
      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center mx-auto my-[100px]">
 
                 <div
 
                     class="max-w-sm w-[80%] h-52 min-w-[250px]  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px] max-m-[100px]">
-=======
+
+
+                    class="max-w-sm w-[80%] h-52 min-w-[250px]  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px] max-m-[100px]">
+
 
                     class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[110px]">
 
                     class="max-w-sm w-[90%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
 
 
                     <a href="#">
@@ -323,9 +335,13 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
 
                     class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
 
+
+                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
                     class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[110px]">
 
                     class="max-w-sm w-[90%] min-w-[250px] h-52 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
 
 
                     <a href="#">
@@ -356,9 +372,13 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
                     class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
 
 
+                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
+
                     class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[110px]"">
 
                     class="max-w-sm w-[90%] min-w-[250px] h-52 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
 
 
                     <a href="#">
@@ -390,9 +410,13 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
                     class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
 
 
+                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
+
                     class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[110px]">
 
                     class="max-w-sm w-[90%] min-w-[250px] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
 
 
                     <a href="#">
@@ -423,9 +447,13 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
                     class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
 
 
+                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
+
                     class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[110px]">
 
                     class="max-w-sm w-[90%] min-w-[250px] h-52 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
 
 
                     <a href="#">
@@ -454,12 +482,17 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
                     class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
 
 
+               <div
+                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
+
 
                 <div
 
                     class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[110px]">
 
                     class="max-w-sm w-[90%] min-w-[250px] h-52 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
+
 
 
                     <a href="#">
@@ -484,6 +517,11 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
                 </div>
 
      `
+
+        }
+
+    }).catch(error=>console.log(erorr))
+
         }
 
     })
@@ -502,6 +540,7 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
 
   }
 })
+
 
 
 

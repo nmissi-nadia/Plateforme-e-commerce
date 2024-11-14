@@ -34,8 +34,8 @@ document.getElementById("rightBtn").addEventListener("click", () => {
         document.getElementById("3").style.background = "#608BC1"
 
     }
-   
-  
+
+
 
 })
 
@@ -65,9 +65,9 @@ function slideNum(id) {
         carousel_cards_words.style.scrollBehavior = "smooth"
         document.getElementById("2").style.background = "none"
         document.getElementById("3").style.background = "none"
-       
-            carousel_cards_words.scrollLeft = 0;
-        
+
+        carousel_cards_words.scrollLeft = 0;
+
     }
 
     if (id == "2") {
@@ -88,7 +88,7 @@ function slideNum(id) {
         document.getElementById("2").style.background = "none"
 
     }
-    
+
 
 }
 
@@ -159,15 +159,18 @@ fetch("https://mohamedmoustir.github.io/api/")
 fetch("https://mohamedmoustir.github.io/nweapi/")
     .then(result => result.json())
     .then(function (data) {
+
         const carousel_cards_words = document.getElementById('carousel-cards_Words');
         for (let i = 0; i < 3; i++) {
             let worldfot = data.worldfot
+
+
             carousel_cards_words.innerHTML += `
      
-     <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6 justify-evenly m-[100px]">
+     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center mx-auto my-[100px]">
 
                 <div
-                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[110px]">
+                    class="max-w-sm w-[80%] h-52 min-w-[250px]  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px] max-m-[100px]">
                     <a href="#">
                         <img class="rounded-t-lg w-full h-52" src="${worldfot[0].image}" alt="" />
                     </a>
@@ -191,7 +194,7 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
 
 
                 <div
-                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[110px]">
+                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
                     <a href="#">
                         <img class="rounded-t-lg w-full h-52" src="${worldfot[1].image}" alt="" />
                     </a>
@@ -216,7 +219,7 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
 
 
                 <div
-                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[110px]"">
+                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
                     <a href="#">
                         <img class="rounded-t-lg w-full h-52" src="${worldfot[7].image}" alt="" />
                     </a>
@@ -242,7 +245,7 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
 
 
                 <div
-                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[110px]">
+                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
                     <a href="#">
                         <img class="rounded-t-lg w-full h-52" src="${worldfot[3].image}" alt="" />
                     </a>
@@ -267,7 +270,7 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
 
 
                 <div
-                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[110px]">
+                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
                     <a href="#">
                         <img class="rounded-t-lg w-full h-52" src="${worldfot[8].image}" alt="" />
                     </a>
@@ -289,19 +292,17 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
                     </div>
                 </div>
 
-
-
-                <div
-                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[110px]">
+               <div
+                    class="max-w-sm w-[80%] h-52 min-w-[250px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-[150px]">
                     <a href="#">
-                        <img class="rounded-t-lg w-full h-52" src="${worldfot[6].image}" alt="" />
+                        <img class="rounded-t-lg w-full h-52" src="${worldfot[4].image}" alt="" />
                     </a>
                     <div class="p-5  h-auto  shadow">
                         <a href="#">
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white w-full">
-                                ${worldfot[6].name}</h5>
+                                ${worldfot[4].name}</h5>
                         </a>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${worldfot[6].description.slice(0, 100)}.</p>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${worldfot[4].description.slice(0, 100)}.</p>
                         <a href="#"
                             class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                             Read more
@@ -314,11 +315,6 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
                     </div>
                 </div>
 
-
-
-            </div>
-     
-     
      `
         }
 

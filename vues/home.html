@@ -26,19 +26,23 @@
                     </a>
                     <div class="flex md:flex">
                         
-                        <button data-collapse-toggle="navbar-default" type="button"
-                            class="inline-flex items-center p-1 h-8 w-8 sm:w-12 sm:h-12 justify-center text-sm text-accent-2 rounded-lg md:hidden bg-primary focus:outline-none focus:ring-2 focus:ring-gray-200"
+
+                        <button data-collapse-toggle="navbar-default" type="button" onclick="openMenu()"
+                            class=" inline-flex items-center p-1 h-8 w-8 sm:w-12 sm:h-12 justify-center text-sm text-accent-2 rounded-lg md:hidden bg-primary focus:outline-none focus:ring-2 focus:ring-gray-200"
+
                             aria-controls="navbar-default" aria-expanded="false">
                             <span class="sr-only">Open main menu</span>
-                            <i class="fa-solid fa-bars sm:text-4xl"></i>
+                            <i class="fa-solid fa-bars sm:text-4xl "></i>
                         </button>
                     </div>
                     <div class="hidden w-full md:flex md:w-auto" id="navbar-default">
                         <ul
-                            class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg bg-accent-2 md:flex-row md:space-x-4 md:mt-0 md:border-0 bg-accent-2 md:bg-accent-2">
+                            class="font-medium flex flex-col p-4 md:p-0 mt-4  rounded-lg bg-accent-2 md:flex-row md:space-x-4 md:mt-0 md:border-0 bg-accent-2 md:bg-accent-2">
                             <li>
                                 <a href="./home.html"
-                                    class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1 "
+
+                                    class="block rounded text-primary m-8 border  md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1 "
+
                                     aria-current="page">Accueil</a>
                             </li>
                             <li>
@@ -230,55 +234,27 @@
                                 d="m19 9-7 7-7-7" />
                         </svg>
                     </button>
-                    <button id="sortDropdownButton1" data-dropdown-toggle="dropdownSort1" type="button"
-                        class="flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700 sm:w-auto">
-                        <svg class="-ms-0.5 me-2 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M7 4v16M7 4l3 3M7 4 4 7m9-3h6l-6 6h6m-6.5 10 3.5-7 3.5 7M14 18h4" />
-                        </svg>
-                        Sort
-                        <svg class="-me-0.5 ms-2 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m19 9-7 7-7-7" />
-                        </svg>
-                    </button>
                     <div id="dropdownSort1"
-                        class="z-50 hidden w-40 divide-y divide-gray-100 rounded-lg bg-white shadow dark:bg-gray-700"
+                        class="z-50 hidden absolute top-[130%] w-40 divide-y divide-gray-100 rounded-lg bg-white shadow dark:bg-gray-700"
                         data-popper-placement="bottom">
                         <ul class="p-2 text-left text-sm font-medium text-gray-500 dark:text-gray-400"
                             aria-labelledby="sortDropdownButton">
                             <li>
                                 <a href="#"
                                     class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
-                                    The most popular </a>
+                                   tri par price</a>
                             </li>
                             <li>
                                 <a href="#"
                                     class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
-                                    Newest </a>
+                                     </a>
                             </li>
                             <li>
                                 <a href="#"
                                     class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
                                     Increasing price </a>
                             </li>
-                            <li>
-                                <a href="#"
-                                    class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
-                                    Decreasing price </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
-                                    No. reviews </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
-                                    Discount % </a>
-                            </li>
+                
                         </ul>
                     </div>
                 </div>
@@ -330,15 +306,17 @@ id="carousel-cards_Words">
                 </svg>
             </a>
 
-            <a id="1" class="px-4 py-2 text-gray-700 border bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white"
+            <a id="one" value="1" class="px-4 py-2 text-gray-700 border bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white"
                 onclick="slideNum(this.id)">
                 1
             </a>
-            <a id="2" class="px-4 py-2 text-gray-700 bg-gray-200 border rounded-md hover:bg-blue-400 hover:text-white"
+            <a id="two" value="2"  class="px-4 py-2 text-gray-700 bg-gray-200 border rounded-md hover:bg-blue-400 hover:text-white"
                 onclick="slideNum(this.id)">
                 2
             </a>
-            <a id="3" class="px-4 py-2 hidden lg:flex text-gray-700 bg-gray-200 border rounded-md hover:bg-blue-400 hover:text-white"
+
+            <a id="three" value="3"  class="px-4 py-2 hidden lg:flex text-gray-700 bg-gray-200 border rounded-md hover:bg-blue-400 hover:text-white"
+
                 onclick="slideNum(this.id)">
                 3
             </a>

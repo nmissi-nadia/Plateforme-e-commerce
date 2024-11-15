@@ -33,6 +33,15 @@ tailwind.config = {
 }
 
 
+function openMenu(){
+
+    document.getElementById("navbar-default").style.scrollBehavior = "smooth"
+    document.getElementById("navbar-default").classList.toggle("hidden")
+    
+
+}
+
+
 
 //carousel-images header
 const slides = document.getElementById('carousel-images');
@@ -54,7 +63,8 @@ carousel_cards.addEventListener("wheel", (evnt) => {
 //slide-images catgory
 
 const carousel_cards_words = document.getElementById('carousel-cards_Words');
-document.getElementById("1").style.background = "#608BC1"
+document.getElementById("one").style.background = "#608BC1"
+// right
 document.getElementById("rightBtn").addEventListener("click", () => {
 
     carousel_cards_words.style.scrollBehavior = "smooth"
@@ -62,29 +72,32 @@ document.getElementById("rightBtn").addEventListener("click", () => {
 
 
     if (carousel_cards_words.scrollLeft < 1500) {
-        document.getElementById("2").style.background = "#608BC1"
-        document.getElementById("1").style.background = "none"
+        document.getElementById("two").style.background = "#608BC1"
+        document.getElementById("one").style.background = "none"
 
     } else if (carousel_cards_words.scrollLeft >= 1500) {
-        document.getElementById("2").style.background = "none"
-        document.getElementById("3").style.background = "#608BC1"
+
+        document.getElementById("two").style.background = "none"
+        document.getElementById("three").style.background = "#608BC1"
 
     }
-    
+
 })
 
-
+// left
 document.getElementById("leftBtn").addEventListener("click", () => {
     carousel_cards_words.style.scrollBehavior = "smooth"
     carousel_cards_words.scrollLeft -= 1500;
 
     if (carousel_cards_words.scrollLeft > 1500) {
-        document.getElementById("2").style.background = "#608BC1"
-        document.getElementById("3").style.background = "none"
+        document.getElementById("two").style.background = "#608BC1"
+        document.getElementById("three").style.background = "none"
 
     } else if (carousel_cards_words.scrollLeft <= 1500) {
-        document.getElementById("2").style.background = "none"
-        document.getElementById("1").style.background = "#608BC1"
+
+        document.getElementById("two").style.background = "none"
+        document.getElementById("one").style.background = "#608BC1"
+
 
     }
 
@@ -92,37 +105,40 @@ document.getElementById("leftBtn").addEventListener("click", () => {
 
 
 
-function slideNum(id) {
+function slideNum(value) {
+console.log(value);
 
-    if (id == "1") {
-        document.getElementById("1").style.background = "#608BC1"
+
+    if (value == "one") {
+        document.getElementById("one").style.background = "#608BC1"
         carousel_cards_words.style.scrollBehavior = "smooth"
-        document.getElementById("2").style.background = "none"
-        document.getElementById("3").style.background = "none"
+        document.getElementById("two").style.background = "none"
+        document.getElementById("three").style.background = "none"
         carousel_cards_words.scrollLeft = 0;
-    
+
     }
 
-    if (id == "2") {
-        document.getElementById("2").style.background = "#608BC1"
+    if (value == "two") {
+        document.getElementById("two").style.background = "#608BC1"
         carousel_cards_words.style.scrollBehavior = "smooth"
         carousel_cards_words.scrollLeft = 1500;
-        document.getElementById("1").style.background = "none"
-        document.getElementById("3").style.background = "none"
+        document.getElementById("one").style.background = "none"
+        document.getElementById("three").style.background = "none"
 
 
     }
 
-    if (id == "3") {
-        document.getElementById("3").style.background = "#608BC1"
+
+    if (value == "three") {
+        document.getElementById("three").style.background = "#608BC1"
         carousel_cards_words.scrollBehavior = "smooth"
+        document.getElementById("three").style.background = "#608BC1"
         carousel_cards_words.scrollLeft = 3000;
-        document.getElementById("1").style.background = "none"
-        document.getElementById("2").style.background = "none"
-        
-
+        document.getElementById("one").style.background = "none"
+        document.getElementById("two").style.background = "none"
     }
-    
+
+
 
 
 }
@@ -132,10 +148,15 @@ function slideNum(id) {
 //option methode status:200 - 404 - 500 - 403
 
 fetch("https://mohamedmoustir.github.io/api/")
+
     .then(result => result.json())
+
     .then(function (data) {
-        for (let i = 0; i < data.Tshorts.length; i++) {
-            let cloths = data.Tshorts
+        let cloths=data.Tshorts
+         
+        for (let i = 0; i < 15; i++) {
+         
+            
             carousel_cards.innerHTML += `
         
      <div class =" mx-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow max-h-[500px]">
@@ -144,7 +165,7 @@ fetch("https://mohamedmoustir.github.io/api/")
                  </a>
                  <div class="px-8 pb-5 w-[350px]">
                      <a href="#">
-                         <h5 class="text-xl  font-semibold tracking-tight text-gray-900 dark:text-white">${cloths[i].description.slice(0, 100)}</h5>
+                         <h5 class="text-xl  font-semibold tracking-tight text-gray-900 dark:text-white">${cloths[i].description.slice(0, 90)}...</h5>
                      </a>
                      <div class="flex items-center mt-2.5 mb-5">
                          <div class="flex items-center space-x-1 rtl:space-x-reverse">
@@ -187,8 +208,9 @@ fetch("https://mohamedmoustir.github.io/api/")
              </div>
      
      `
-        }
+        }   
     }).catch(error=>console.log(erorr))
+
 
 
 fetch("https://mohamedmoustir.github.io/nweapi/")
@@ -197,9 +219,7 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
 
         const carousel_cards_words = document.getElementById('carousel-cards_Words');
         for (let i = 0; i < 3; i++) {
-            let worldfot = data.worldfot
-
-
+            let worldfot = data.worldfot;
             carousel_cards_words.innerHTML += `
      
      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center mx-auto my-[100px]">
@@ -353,12 +373,14 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
         }
 
 
+    }).catch(error => console.log(erorr))
 
 
-    }
-  })
+
+
 
  
+
 
 
 

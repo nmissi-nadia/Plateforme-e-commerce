@@ -32,24 +32,19 @@ tailwind.config = {
     }
 }
 
-
-
-function openMenu(){
+function openMenu() {
 
     document.getElementById("navbar-default").style.scrollBehavior = "smooth"
     document.getElementById("navbar-default").classList.toggle("hidden")
-    
 
 
 }
-
 
 //carousel-images header
 const slides = document.getElementById('carousel-images');
 slides.addEventListener("wheel", (evnt) => {
     slides.scrollLeft += evnt.deltaX
 })
-
 //carousel-cards
 
 let carousel_cards = document.getElementById('carousel-cards');
@@ -79,9 +74,10 @@ document.getElementById("rightBtn").addEventListener("click", () => {
     } else if (carousel_cards_words.scrollLeft >= 1500) {
 
 
-
         document.getElementById("two").style.background = "none"
         document.getElementById("three").style.background = "#608BC1"
+
+
 
     }
 
@@ -89,7 +85,7 @@ document.getElementById("rightBtn").addEventListener("click", () => {
 
 // left
 document.getElementById("leftBtn").addEventListener("click", () => {
-    carousel_cards_words.style.scrollBehavior = "smooth"
+    // carousel_cards_words.style.scrollBehavior = "smooth"
     carousel_cards_words.scrollLeft -= 1500;
 
     if (carousel_cards_words.scrollLeft > 1500) {
@@ -130,8 +126,9 @@ function slideNum(value) {
 
     }
 
-
     if (value == "three") {
+        document.getElementById("three").style.background = "#608BC1"
+
         carousel_cards_words.scrollBehavior = "smooth"
         document.getElementById("three").style.background = "#608BC1"
         carousel_cards_words.scrollLeft = 3000;
@@ -149,8 +146,6 @@ function slideNum(value) {
 
 
 
-
-
 }
 
 //request restApi get post delete patch put ..
@@ -159,22 +154,22 @@ function slideNum(value) {
 
 fetch("https://mohamedmoustir.github.io/api/")
     .then(result => result.json()
+    )
+
     .then(function (data) {
         let cloths=data.Tshorts
          
-        for (let i = 0; i < 15; i++) {
+        for (let i = 1; i < 13; i++) {
          
+            
             carousel_cards.innerHTML += `
         
-     <div class =" mx-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow max-h-[500px]">
+     <div class =" mx-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow max-h-[600px]">
                  <a href="#">
-                     <img class="p-8 w-[100%] border max-h-[55%] rounded-t-lg" src="${cloths[i].images[2]}" alt="product image" />
+                     <img class="p-8 w-[100%] border max-h-[65%] rounded-t-lg" src="${cloths[i].images[1]}" alt="product image" />
                  </a>
                  <div class="px-8 pb-5 w-[350px]">
-
                     <a href="#">
-
-
                          <h5 class="text-xl  font-semibold tracking-tight text-gray-900 dark:text-white">${cloths[i].description.slice(0, 90)}...</h5>
                      </a>
                      <div class="flex items-center mt-2.5 mb-5">
@@ -219,9 +214,9 @@ fetch("https://mohamedmoustir.github.io/api/")
      
      `
 
-
         }   
     }).catch(error=>console.log(erorr))
+
 
 
 
@@ -232,8 +227,7 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
         const carousel_cards_words = document.getElementById('carousel-cards_Words');
         for (let i = 0; i < 3; i++) {
 
-            let worldfot = data.worldfot
-
+            let worldfot = data.worldfot;
 
             carousel_cards_words.innerHTML += `
      
@@ -387,390 +381,9 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
      `
         }
 
+
+
     }).catch(error => console.log(erorr))
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

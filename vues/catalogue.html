@@ -3,9 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SPORTEEZ</title>
     <!-- <link
       rel="stylesheet"
@@ -76,9 +73,7 @@
       };
     </script>
   </head>
-  </head>
-
-  <body>
+ 
   <body>
     <header>
       <!-- Header start -->
@@ -183,7 +178,7 @@
         <h1 class="font-extrabold text-center">Accueil/Catalogue</h1>
       </div>
 
-    
+      
     </header>
     <main>
       <section id="filter">
@@ -197,50 +192,39 @@
             <!-- Filter icon -->
             <span class="text-gray-700 font-medium">Filtre</span>
           </div>
-          <div id="filterSidebar" class="fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 overflow-y-auto">
+          <div id="filterSidebar" class="fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 overflow-y-auto z-20">
     <!-- Header de la Sidebar -->
-    <div class="flex justify-between items-center p-4 bg-gray-100 border-b border-gray-300 z-20">
+    <div class="flex justify-between items-center p-4 bg-gray-100 border-b border-gray-300 ">
       <h2 class="text-lg font-semibold">Filtres</h2>
       <button onclick="toggleSidebar(false)" class="text-gray-500 hover:text-black">&times;</button>
     </div>
 
     <!-- Contenu du Filtre -->
     <div class="p-4 space-y-6">
-      
-      <!-- Filtre Genre -->
-      <div>
-        <h3 class="text-gray-700 font-medium">Genre</h3>
-        <div class="mt-2 space-y-1">
-          <label class="flex items-center">
-            <input type="checkbox" name="gender" value="Male" class="form-checkbox text-blue-500">
-            <span class="ml-2">Male</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" name="gender" value="Female" class="form-checkbox text-blue-500">
-            <span class="ml-2">Female</span>
-          </label>
-        </div>
-      </div>
 
       <!-- Filtre Couleur -->
       <div>
-        <h3 class="text-gray-700 font-medium">Couleur</h3>
+        <h3 class="text-gray-700 font-medium">Category</h3>
         <div class="mt-2 space-y-1">
           <label class="flex items-center">
-            <input type="checkbox" name="color" value="Red" class="form-checkbox text-red-500">
-            <span class="ml-2">Rouge</span>
+            <input type="radio" name="category" value="La Liga" class="form-checkbox text-red-500">
+            <span class="ml-2">LA LIGA</span>
           </label>
           <label class="flex items-center">
-            <input type="checkbox" name="color" value="Black" class="form-checkbox text-gray-900">
-            <span class="ml-2">Noir</span>
+            <input type="radio" name="category" value="Premier League" class="form-checkbox text-gray-900">
+            <span class="ml-2">Premier League</span>
           </label>
           <label class="flex items-center">
-            <input type="checkbox" name="color" value="Black & White" class="form-checkbox text-gray-500">
-            <span class="ml-2">Noir & Blanc</span>
+            <input type="radio" name="category" value="Bundesliga" class="form-checkbox text-gray-500">
+            <span class="ml-2">Bundesliga</span>
           </label>
           <label class="flex items-center">
-            <input type="checkbox" name="color" value="Blue" class="form-checkbox text-blue-500">
-            <span class="ml-2">Bleu</span>
+            <input type="radio" name="category" value="Ligue 1" class="form-checkbox text-blue-500">
+            <span class="ml-2">Ligue 1</span>
+          </label>
+          <label class="flex items-center">
+            <input type="radio" name="category" value="Serie A" class="form-checkbox text-blue-500">
+            <span class="ml-2">Serie A</span>
           </label>
         </div>
       </div>
@@ -254,29 +238,11 @@
         </div>
       </div>
 
-      <!-- Filtre Taille -->
-      <div>
-        <h3 class="text-gray-700 font-medium">Taille</h3>
-        <div class="mt-2 space-y-1">
-          <label class="flex items-center">
-            <input type="checkbox" name="size" value="S" class="form-checkbox text-blue-500">
-            <span class="ml-2">S</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" name="size" value="M" class="form-checkbox text-blue-500">
-            <span class="ml-2">M</span>
-          </label>
-          <label class="flex items-center">
-            <input type="checkbox" name="size" value="L" class="form-checkbox text-blue-500">
-            <span class="ml-2">L</span>
-          </label>
-        </div>
-      </div>
     </div>
 
     <!-- Bouton Appliquer les Filtres -->
     <div class="p-4 border-t border-gray-300">
-      <button onclick="applyFilters()" class="w-full bg-blue-500 text-white py-2 rounded-md">
+      <button id="applyFiltersBtn-" class="w-full bg-blue-500 text-white py-2 rounded-md">
         Appliquer les Filtres
       </button>
     </div>
@@ -466,149 +432,4 @@
     </footer>
     <script src="../assets/js/catalo.js"></script>
   </body>
-      <div
-        class="container mx-auto flex flex-wrap justify-between items-start space-y-8 lg:space-y-0 lg:space-x-8"
-      >
-        <!-- Logo and Social Media -->
-        <div class="space-y-2 md:flex-row">
-          <!-- <h2 class="text-2xl font-bold text-red-500">SPORTEEZ</h2> -->
-          <img
-            class="w-36"
-            src="../assets/imgs/red_logo.png"
-            alt="logo de site Sporteez"
-          />
-          <!-- <p class="text-sm text-gray-400">Football Vie</p> -->
-          <div class="flex space-x-6 text-red-500">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-
-        <!-- Links Section -->
-        <div class="flex flex-wrap w-full lg:w-auto hidden md:flex">
-          <div class="w-1/2 lg:w-auto lg:mr-10 block">
-            <h3 class="font-bold">Pages</h3>
-            <ul class="mt-2 space-y-2">
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">Accueil</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">Catalogue</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">A propos</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">Panier</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="w-1/2 lg:w-auto lg:mr-10">
-            <h3 class="font-bold">Service</h3>
-            <ul class="mt-2 space-y-2">
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">Shopify</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">WordPress</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white"
-                  >UI/UX Design</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="w-1/2 lg:w-auto lg:mr-10">
-            <h3 class="font-bold">Resource</h3>
-            <ul class="mt-2 space-y-2">
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">HTML</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">CSS</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white"
-                  >JavaScript</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">Java</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">JSON</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white"
-                  >UI/UX Design</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">Component</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="w-1/2 lg:w-auto">
-            <h3 class="font-bold">Company</h3>
-            <ul class="mt-2 space-y-2">
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">Tarifs</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">Sécurité</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white"
-                  >Politique de confidentialité</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white"
-                  >Conditions d'utilisation</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">Rue</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Contact Form -->
-        <div class="space-y-4">
-          <h3 class="font-bold">À propos de nous</h3>
-          <p class="text-gray-300 text-sm">
-            Vous pouvez nous contacter pour nous envoyer un email
-          </p>
-          <div class="relative">
-            <input
-              type="email"
-              placeholder="Votre email"
-              class="w-full py-2 px-4 text-gray-900 rounded-full focus:outline-none"
-            />
-            <button
-              class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-red-500 text-white rounded-full p-2"
-            >
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Footer Bottom -->
-      <div
-        class="text-center border-t border-gray-600 mt-8 pt-4 text-sm text-gray-400"
-      >
-        © 2024 Sporteez | Powered by Youcode
-      </div>
-    </footer>
-    <script src="../assets/js/catalo.js"></script>
-  </body>
-</html>
-
+     

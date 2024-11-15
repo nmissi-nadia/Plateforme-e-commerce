@@ -40,7 +40,6 @@ function openMenu() {
 
 }
 
-
 //carousel-images header
 const slides = document.getElementById('carousel-images');
 slides.addEventListener("wheel", (evnt) => {

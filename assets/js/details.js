@@ -1,19 +1,126 @@
 /** Consommation de l'API */
 const apiUrl = 'https://mohamedmoustir.github.io/api/';
-let datatch = [];
+// let datatprds = [];
 let id = location.href.split("?")[1].split("=")[1];
+
+let tshrtcart = document.getElementById("affchg1");
+let infosctnr2 = document.getElementById("infosctnr2");
+let infosctnr = document.getElementById("infosctnr");
+let tshrttype = document.getElementById("tshrttype");
+
 
 fetch(apiUrl)
     .then(response => response.json())
     .then(function (data){
-    datatch.push(data);
+    // datatprds.push(data);
+    for (let i = 0; i < data.Tshorts.length; i++) {
+        if (i == id) {
+            tshrtcart.innerHTML = `
+            <div id="qtrimgs" class="hidden h-[6.813rem] w-[5.875rem] grid grid-cols-1 gap-y-[1.625rem] ml-[25%] xl:grid xl:pl-[6rem]">
+            <div class="chldimg cursor-pointer h-[6.813rem] w-[5.875rem]">
+                <img class="" src="${data.Tshorts[id].images[0]}" alt="Home Jersey">
+            </div>
+            <div class="chldimg cursor-pointer h-[6.813rem] w-[5.875rem]">
+                <img class="" src="${data.Tshorts[id].images[1]}" alt="Away Jersey">
+            </div>
+            <div class="chldimg cursor-pointer h-[6.813rem] w-[5.875rem]">
+                <img class="" src="${data.Tshorts[id].images[2]}" alt="Jersey Training">
+            </div>
+            <div class="chldimg cursor-pointer h-[6.813rem] w-[5.875rem]">
+                <img class="" src="${data.Tshorts[id].images[0]}" alt="Home Jersey">
+            </div>
+          </div>
 
+          
+          <div class="max-w-[55%] mr-[20%] mx-auto md:h-[27.688rem] md:w-[22.813rem] md:ml-[23%] md:mb-[7%] lg:h-[29.688rem] lg:w-[24.813rem] lg:ml-[27%] xl:h-[31.813rem] xl:w-[30.063rem] xl:pt-[0%] xl:max-w-[481px] xl:ml-[0]">
+
+              <div class="relative xl:h-[31.813rem] xl:w-[30.063rem] xl:pt-[0%]">
+                  
+                  <div id="bgcrssl" class="relative cursor-pointer h-[19.063rem] pt-[20%] md:h-[27.688rem] md:w-[22.813rem] md:pt-[15.5%] lg:h-[29.688rem] lg:w-[24.813rem] lg:pt-[12.5%] xl:h-[31.813rem] xl:w-[30.063rem] xl:pt-[0%]">
+
+                      <div class="fdrimg" >
+                          <img src="${data.Tshorts[id].images[0]}"
+                              class="object-cover" alt="Home Jersey">
+                      </div>
+
+                      <div class="fdrimg hidden duration-700 ease-in-out">
+                          <img src="${data.Tshorts[id].images[1]}"
+                              class="object-cover" alt="Home Jersey">
+                      </div>
+
+                      <div class="fdrimg hidden duration-700 ease-in-out">
+                          <img src="${data.Tshorts[id].images[2]}"
+                              class="object-cover" alt="Home Jersey">
+                      </div>
+
+                  </div>
+                  
+                  <button id="btnlft" type="button" class="absolute top-[50%] right-[96%] md:right-[100%]">
+                      <i class="fa-solid fa-chevron-left text-[2rem] " style="color: #B5B5B5;"></i>
+                  </button>
+
+                  <button id="btnrgt" type="button" class="absolute top-[50%] left-[96%] md:left-[100%]">
+                      <i class="fa-solid fa-chevron-right text-[2rem]" style="color: #B5B5B5;"></i>
+                  </button>
+              </div>
+          
+          </div>
+            
+            
+            `;
+            affichageducrssl();
+            affchgcrsslimgs();
+
+
+
+            infosctnr2.innerHTML =`
+            <h1 class="marqname mb-2 text-lg font-medium text-gray-900 dark:text-white md:font-medium md:text-3xl lg:font-medium lg:text-5xl">${data.Tshorts[id].category}</h1>        
+            <p class="teamname mb-3 text-sm font-normal text-gray-700 dark:text-gray-400 md:text-2xl md:w-[15rem] md:font-semibold lg:text-4xl lg:w-[20rem] lg:font-semibold">T-shirt <span class="spneqpnm">${data.Tshorts[id].title}</span> Originals</p>
+            <div class="prix inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white bg-secondary md:text-xl md:font-normal lg:text-2xl">
+            ${data.Tshorts[id].price} MAD
+            </div>
+            `;
+
+            infosctnr.innerHTML =`
+            <h1 class="marqname mb-2 text-xl font-medium text-gray-900 dark:text-white md:font-medium md:text-4xl lg:font-medium lg:text-6xl">${data.Tshorts[id].category}</h1>        
+            <p class="teamname mb-3 text-sm font-normal text-gray-700 dark:text-gray-400 md:text-2xl md:w-[15rem] md:font-semibold lg:text-4xl lg:w-[20rem] lg:font-semibold">T-shirt <span class="spneqpnm">${data.Tshorts[id].title}</span> Originals</p>
+            <div class="prix inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white bg-secondary md:text-xl md:font-normal lg:text-2xl">
+            ${data.Tshorts[id].price} MAD
+            </div>
+            `;
+
+
+
+            tshrttype.innerHTML = `
+
+            <div id="lclimg" class="cursor-pointer">
+                  <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem] lg:h-[5.85rem] lg:w-[5.55rem] xl:h-[5.5rem] xl:w-[5.25rem]" src="${data.Tshorts[id].images[0]}" alt="Home Jersey">
+              </div>
+              <div id="homimg" class="cursor-pointer">
+                  <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem] lg:h-[5.85rem] lg:w-[5.55rem] xl:h-[5.5rem] xl:w-[5.25rem]" src="${data.Tshorts[id].images[1]}" alt="Away Jersey">
+              </div>
+              <div id="awyimg" class="cursor-pointer">
+                  <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem] lg:h-[5.85rem] lg:w-[5.55rem] xl:h-[5.5rem] xl:w-[5.25rem]" src="${data.Tshorts[id].images[2]}" alt="Jersey Training">
+              </div>
+            
+            
+            
+            `;
+
+            
+
+
+
+
+    }};
+    
 });
 
 
 
 
 function afficherProduit() {
+    
 
 
 };
@@ -117,16 +224,18 @@ updatecounter();
 
 
 /** Caroussel de quatre images */
-const chldimg = document.querySelectorAll('#qtrimgs .chldimg img');
-const prntimg = document.querySelector('#bgcrssl .fdrimg img');
+function affchgcrsslimgs(){
+    const chldimg = document.querySelectorAll('#qtrimgs .chldimg img');
+    const prntimg = document.querySelector('#bgcrssl .fdrimg img');
 
 
-chldimg.forEach((img) => {
-  img.addEventListener('click', (e) => {
-    const chngimg = e.target.src;
-    prntimg.src = chngimg;
-  });
-});
+    chldimg.forEach((img) => {
+    img.addEventListener('click', (e) => {
+        const chngimg = e.target.src;
+        prntimg.src = chngimg;
+    });
+    });
+};
 
 
 /**////////////////////////////////////////////////////// */
@@ -135,33 +244,38 @@ chldimg.forEach((img) => {
 
 /** Caroussel des images */
 
-const crslimgs = document.querySelectorAll('.fdrimg');
-const bttnagch = document.getElementById("btnlft");
-const bttndrt = document.getElementById("btnrgt");
+function affichageducrssl(){
+    const crslimgs = document.querySelectorAll('.fdrimg');
+    const bttnagch = document.getElementById("btnlft");
+    const bttndrt = document.getElementById("btnrgt");
 
-let currentIndex = 0;
+    let currentIndex = 0;
 
-function updateCarousel() {
-    crslimgs.forEach((img, index) => {
-        if (index === currentIndex) {
-            img.classList.remove('hidden'); 
-        } else {
-            img.classList.add('hidden');
-        }
+    function updateCarousel() {
+        crslimgs.forEach((img, index) => {
+            if (index === currentIndex) {
+                img.classList.remove('hidden'); 
+            } else {
+                img.classList.add('hidden');
+            }
+        });
+    }
+
+    bttnagch.addEventListener('click', () => {
+        currentIndex = currentIndex === 0 ? crslimgs.length - 1 : currentIndex - 1;
+        updateCarousel();
     });
-}
 
-bttnagch.addEventListener('click', () => {
-    currentIndex = currentIndex === 0 ? crslimgs.length - 1 : currentIndex - 1;
+    bttndrt.addEventListener('click', () => {
+        currentIndex = currentIndex === crslimgs.length - 1 ? 0 : currentIndex + 1;
+        updateCarousel();
+    });
+
+
     updateCarousel();
-});
 
-bttndrt.addEventListener('click', () => {
-    currentIndex = currentIndex === crslimgs.length - 1 ? 0 : currentIndex + 1;
-    updateCarousel();
-});
+};
 
-updateCarousel();
 
 /**////////////////////////////////////////////////////// */
 

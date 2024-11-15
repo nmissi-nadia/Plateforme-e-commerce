@@ -32,10 +32,13 @@ tailwind.config = {
     }
 }
 
-function openMenu() {
+
+
+function openMenu(){
 
     document.getElementById("navbar-default").style.scrollBehavior = "smooth"
     document.getElementById("navbar-default").classList.toggle("hidden")
+    
 
 
 }
@@ -74,10 +77,11 @@ document.getElementById("rightBtn").addEventListener("click", () => {
         document.getElementById("one").style.background = "none"
 
     } else if (carousel_cards_words.scrollLeft >= 1500) {
+
+
+
         document.getElementById("two").style.background = "none"
         document.getElementById("three").style.background = "#608BC1"
-
-
 
     }
 
@@ -93,8 +97,10 @@ document.getElementById("leftBtn").addEventListener("click", () => {
         document.getElementById("three").style.background = "none"
 
     } else if (carousel_cards_words.scrollLeft <= 1500) {
+
         document.getElementById("two").style.background = "none"
         document.getElementById("one").style.background = "#608BC1"
+
 
     }
 
@@ -103,7 +109,7 @@ document.getElementById("leftBtn").addEventListener("click", () => {
 
 
 function slideNum(value) {
-    console.log(value);
+
 
     if (value == "one") {
         document.getElementById("one").style.background = "#608BC1"
@@ -124,6 +130,7 @@ function slideNum(value) {
 
     }
 
+
     if (value == "three") {
         carousel_cards_words.scrollBehavior = "smooth"
         document.getElementById("three").style.background = "#608BC1"
@@ -132,7 +139,15 @@ function slideNum(value) {
         document.getElementById("two").style.background = "none"
 
 
+
     }
+
+
+
+
+
+
+
 
 
 
@@ -144,14 +159,11 @@ function slideNum(value) {
 
 fetch("https://mohamedmoustir.github.io/api/")
     .then(result => result.json()
-    )
-
     .then(function (data) {
-        let cloths = data.Tshorts
-
+        let cloths=data.Tshorts
+         
         for (let i = 0; i < 15; i++) {
-
-
+         
             carousel_cards.innerHTML += `
         
      <div class =" mx-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow max-h-[500px]">
@@ -159,7 +171,10 @@ fetch("https://mohamedmoustir.github.io/api/")
                      <img class="p-8 w-[100%] border max-h-[55%] rounded-t-lg" src="${cloths[i].images[2]}" alt="product image" />
                  </a>
                  <div class="px-8 pb-5 w-[350px]">
+
                     <a href="#">
+
+
                          <h5 class="text-xl  font-semibold tracking-tight text-gray-900 dark:text-white">${cloths[i].description.slice(0, 90)}...</h5>
                      </a>
                      <div class="flex items-center mt-2.5 mb-5">
@@ -203,10 +218,11 @@ fetch("https://mohamedmoustir.github.io/api/")
              </div>
      
      `
-        }
-    })
 
-// .catch(error => console.log(erorr))
+
+        }   
+    }).catch(error=>console.log(erorr))
+
 
 
 fetch("https://mohamedmoustir.github.io/nweapi/")
@@ -215,6 +231,7 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
 
         const carousel_cards_words = document.getElementById('carousel-cards_Words');
         for (let i = 0; i < 3; i++) {
+
             let worldfot = data.worldfot
 
 
@@ -371,3 +388,390 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
         }
 
     }).catch(error => console.log(erorr))
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

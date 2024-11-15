@@ -76,6 +76,8 @@ document.getElementById("rightBtn").addEventListener("click", () => {
     } else if (carousel_cards_words.scrollLeft >= 1500) {
         document.getElementById("two").style.background = "none"
         document.getElementById("three").style.background = "#608BC1"
+      
+
 
     }
 

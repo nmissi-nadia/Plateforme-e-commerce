@@ -32,6 +32,7 @@ tailwind.config = {
     }
 }
 
+
 function openMenu(){
 
     document.getElementById("navbar-default").style.scrollBehavior = "smooth"
@@ -74,10 +75,10 @@ document.getElementById("rightBtn").addEventListener("click", () => {
         document.getElementById("one").style.background = "none"
 
     } else if (carousel_cards_words.scrollLeft >= 1500) {
+
+
         document.getElementById("two").style.background = "none"
         document.getElementById("three").style.background = "#608BC1"
-      
-
 
     }
 
@@ -93,8 +94,10 @@ document.getElementById("leftBtn").addEventListener("click", () => {
         document.getElementById("three").style.background = "none"
 
     } else if (carousel_cards_words.scrollLeft <= 1500) {
+
         document.getElementById("two").style.background = "none"
         document.getElementById("one").style.background = "#608BC1"
+
 
     }
 
@@ -103,7 +106,7 @@ document.getElementById("leftBtn").addEventListener("click", () => {
 
 
 function slideNum(value) {
-console.log(value);
+
 
     if (value == "one") {
         document.getElementById("one").style.background = "#608BC1"
@@ -124,7 +127,10 @@ console.log(value);
 
     }
 
+
     if (value == "three") {
+        document.getElementById("three").style.background = "#608BC1"
+
         carousel_cards_words.scrollBehavior = "smooth"
         document.getElementById("three").style.background = "#608BC1"
         carousel_cards_words.scrollLeft = 3000;
@@ -132,7 +138,13 @@ console.log(value);
         document.getElementById("two").style.background = "none"
 
 
+
     }
+
+
+
+
+
 
 
 
@@ -203,10 +215,11 @@ fetch("https://mohamedmoustir.github.io/api/")
              </div>
      
      `
-        }
-    })
-   
-    // .catch(error => console.log(erorr))
+
+        }   
+    }).catch(error=>console.log(erorr))
+
+
 
 
 fetch("https://mohamedmoustir.github.io/nweapi/")
@@ -215,8 +228,8 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
 
         const carousel_cards_words = document.getElementById('carousel-cards_Words');
         for (let i = 0; i < 3; i++) {
-            let worldfot = data.worldfot
 
+            let worldfot = data.worldfot;
 
             carousel_cards_words.innerHTML += `
      
@@ -370,4 +383,394 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
      `
         }
 
+
+
     }).catch(error => console.log(erorr))
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

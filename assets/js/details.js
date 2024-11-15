@@ -13,8 +13,6 @@ fetch(apiUrl)
 
 
 
-
-
 function afficherProduit() {
 
 

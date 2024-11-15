@@ -42,7 +42,6 @@ function openMenu(){
 }
 
 
-
 //carousel-images header
 const slides = document.getElementById('carousel-images');
 slides.addEventListener("wheel", (evnt) => {
@@ -77,6 +76,7 @@ document.getElementById("rightBtn").addEventListener("click", () => {
 
     } else if (carousel_cards_words.scrollLeft >= 1500) {
 
+
         document.getElementById("two").style.background = "none"
         document.getElementById("three").style.background = "#608BC1"
 
@@ -106,7 +106,6 @@ document.getElementById("leftBtn").addEventListener("click", () => {
 
 
 function slideNum(value) {
-console.log(value);
 
 
     if (value == "one") {
@@ -131,12 +130,20 @@ console.log(value);
 
     if (value == "three") {
         document.getElementById("three").style.background = "#608BC1"
+
         carousel_cards_words.scrollBehavior = "smooth"
         document.getElementById("three").style.background = "#608BC1"
         carousel_cards_words.scrollLeft = 3000;
         document.getElementById("one").style.background = "none"
         document.getElementById("two").style.background = "none"
+
+
+
     }
+
+
+
+
 
 
 
@@ -148,8 +155,8 @@ console.log(value);
 //option methode status:200 - 404 - 500 - 403
 
 fetch("https://mohamedmoustir.github.io/api/")
-
-    .then(result => result.json())
+    .then(result => result.json()
+)
 
     .then(function (data) {
         let cloths=data.Tshorts
@@ -208,8 +215,10 @@ fetch("https://mohamedmoustir.github.io/api/")
              </div>
      
      `
+
         }   
     }).catch(error=>console.log(erorr))
+
 
 
 
@@ -219,7 +228,9 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
 
         const carousel_cards_words = document.getElementById('carousel-cards_Words');
         for (let i = 0; i < 3; i++) {
+
             let worldfot = data.worldfot;
+
             carousel_cards_words.innerHTML += `
      
      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center mx-auto my-[100px]">
@@ -373,6 +384,7 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
         }
 
 
+
     }).catch(error => console.log(erorr))
 
 
@@ -380,7 +392,6 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
 
 
  
-
 
 
 

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="../assets/js//tailwind.js"></script>
+    <link rel="stylesheet" href="../assets/style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body class="text-white">
+
+    <header>
+
+        <!-- Header start -->
+
+        <head>
+            <nav class="bg-white border-gray-200 shadow-lg">
+                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                    <a href="#" class="flex items-center">
+                        <img src="../assets/imgs/red-blue-logo.png" class="h-8 sm:h-12 md:h-8" alt="Sporteez Logo" />
+                    </a>
+                    <div class="flex md:flex">
+                        
+
+                        <button data-collapse-toggle="navbar-default" type="button" onclick="openMenu()"
+                            class=" inline-flex items-center p-1 h-8 w-8 sm:w-12 sm:h-12 justify-center text-sm text-accent-2 rounded-lg md:hidden bg-primary focus:outline-none focus:ring-2 focus:ring-gray-200"
+
+                            aria-controls="navbar-default" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <i class="fa-solid fa-bars sm:text-4xl "></i>
+                        </button>
+                    </div>
+                    <div class="hidden w-full md:flex md:w-auto" id="navbar-default">
+                        <ul
+                            class="font-medium flex flex-col p-4 md:p-0 mt-4  rounded-lg bg-accent-2 md:flex-row md:space-x-4 md:mt-0 md:border-0 bg-accent-2 md:bg-accent-2">
+                            <li>
+                                <a href="./home.html"
+
+                                    class="block rounded text-primary m-8 border  md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1 "
+
+                                    aria-current="page">Accueil</a>
+                            </li>
+                            <li>
+                                <a href="./catalogue.html"
+                                    class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1">Catalogue</a>
+                            </li>
+                            <li>
+                                <a href="./about.html"
+                                    class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1">À
+                                    propos</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1">Login</a>
+                            </li>
+              
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex w-full px-4 md:justify-center">
+                    <form class="w-full sm:w-full mb-2 md:w-4/5">
+                        <div class="relative">
+                            <input type="search" id="default-search"
+                                class="flex w-full sm:w-full px-4 py-3 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-accent-2 focus:ring-blue-500 focus:border-blue-500 "
+                                placeholder="Recherche..." required />
+                            <button type="submit"
+                                class="text-primary text-xl absolute end-2.5 bottom-1 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-4 py-1 transition-colors duration-500 ease-in-out cursor-pointer"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </head>
+        <!-- Header End -->
+
+    </header>
+
+    <div id="carousel-images" class="overflow-hidden grid grid-cols-[100%_minmax(100%,_auto)] ">
+        <!-- (Barcelona) -->
+        <div class="section bg-cover bg-no-repeat bg-center  h-[70vh] lg:h-[100vh]  relative"
+            style="background-image: url(../assets/imgs/home/Barcelona.png)">
+            <div class="mx-[80px]">
+                <div class="flex justify-end -mx-14">
+                    <div class="flex items-center space-x-2">
+                        <img src="../assets/imgs/home/Nike.png" alt="" class="w-16 h-16">
+                        <p class="text-xs">HOME KIT 21/22 <br><span class="font-bold text-[20px] my-8">BARCELONA</span>
+                        </p>
+                    </div>
+                </div>
+                <img src="../assets/imgs/home/barca-logo.png" alt="" width="110px">
+
+                <div class="flex items-center mt-[20px] space-x-2">
+                    <img src="../assets/imgs/home/Nike.png" alt="Nike Logo" class="w-16 h-16">
+                    <p>HOME KIT 21/22</p>
+                </div>
+                <div>
+                    <h1
+                        class="text-[200px] text-white absolute top-[26%] left-[4%] font-bold max-lg:text-[100px] max-lg:[30%] left-[4%]">
+                        BARCELONA</h1>
+                </div>
+
+                <div class="cloths">
+                    <img src="../assets/imgs/home/rakuten.png" alt=""
+                        class="rakuten absolute top-0 h-[95%] left-[50%] -translate-x-1/2 lg:max-w-[90%] lg:left-1/2 lg:-translate-x-1/2">
+                    <div class="rakuten absolute right-0 top-[20%]">
+                        <img src="../assets/imgs/home/Jersey2.png" alt="" class="w-[300px] h-[500px] max-lg:hidden">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-[35%] flex h-[177px] top-[65%] absolute left-[14%] max-lg:hidden">
+                <img src="../assets/imgs/home/video.jpg" alt="">
+                <div class="backdrop-blur-lg bg-transparent p-4 py-8">
+                    <h1 class="font-bold">How Was Made?</h1>
+                    <p class="text-[10px] leading-[1.5rem] text-[#ddd]">The recycled polyester used in Nike products
+                        begins
+                        as recycled plastic bottles, which are cleaned, shredded into flakes and converted into pellets.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex colm-2 justify-end space-x-2 relative top-[28%] right-[14%]">
+                <p class="text-[10px] leading-[1.5rem] text-[#ddd] w-[20%] max-lg:hidden">The Barcelona F.C. Stadium
+                    Home Shirt
+                    features
+                    highly breathable fabric to help keep sweat off your skin while you cheer for your team. This
+                    product is
+                    made from at least 75% recycled polyester fibres.
+                    <br>
+                    <button class="bg-white py-2 px-8 text-black my-8 hover:bg-black hover:text-white ">SHOP NOW<i
+                            class="fa-solid fa-arrow-right-long mx-2"></i></button>
+                </p>
+            </div>
+            <div class="flex  items-end my-[14%] justify-center gap-[10px]">
+                <div class="w-6 h-6 rounded-full border border-white-700"></div>
+                <div class="w-6 h-6 rounded-full bg-blue-700"></div>
+                <div class="w-6 h-6 rounded-full border border-white-700"></div>
+            </div>
+        </div>
+
+        <!--  (Liverpool) -->
+        <div class="sectio bg-cover bg-no-repeat bg-center  h-[70vh] lg:h-[100vh] relative "
+            style="background-image: url(../assets/imgs/home/Liverpool.png)">
+            <div class="mx-[80px]">
+                <div class="flex justify-end -mx-14">
+                    <div class="flex items-center space-x-2">
+                        <img src="../assets/imgs/home/Nike.png" alt="" class="w-16 h-16">
+                        <p class="text-xs">HOME KIT 21/22 <br><span class="font-bold text-[20px] my-8">LIVERPOOL</span>
+                        </p>
+                    </div>
+                </div>
+                <img src="../assets/imgs/home/Liverpool_FC.svg.png" alt="" width="60px">
+
+                <div class="flex items-center mt-[30px] space-x-2">
+                    <img src="../assets/imgs/home/Nike.png" alt="Nike Logo" class="w-16 h-16">
+                    <p>HOME KIT 21/22</p>
+                </div>
+                <div>
+                    <h1
+                        class="text-[230px] text-white absolute top-[26%] left-[4%] font-bold max-lg:text-[100px] max-lg:[30%] left-[4%]">
+                        LIVERPOOL</h1>
+                </div>
+
+                <div class="cloths">
+                    <img src="../assets/imgs/home/Jersey (2).png" alt=""
+                        class="absolute top-0 max-w-none  h-[100%] left-[50%] -translate-x-1/2 lg:left-1/2 lg:-translate-x-1/2 ">
+
+
+                    <div class="rakuten absolute right-0 top-[30%]">
+                        <img src="../assets/imgs/home/rakuten2.png" alt="" class="w-48 h-72 max-lg:hidden">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-[35%] flex h-[170px] top-[65%] absolute left-[14%] max-lg:hidden">
+                <img src="../assets/imgs/home/video.png" alt="">
+                <div class="backdrop-blur-lg bg-transparent p-4 py-8">
+                    <h1 class="font-bold">How Was Made?</h1>
+                    <p class="text-[10px] leading-[1.5rem] text-[#ddd]">The recycled polyester used in Nike products
+                        begins
+                        as recycled plastic bottles, which are cleaned, shredded into flakes and converted into pellets.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex colm-2 justify-end space-x-2 relative top-[31%] right-[14%]">
+                <p class="text-[10px] leading-[1.5rem] text-[#ddd] w-[20%]  max-lg:hidden">The Liverpool F.C. Stadium
+                    Home Shirt
+                    features
+                    highly breathable fabric to help keep sweat off your skin while you cheer for your team. This
+                    product is
+                    made from at least 75% recycled polyester fibres.
+                    <br>
+                    <button class="bg-white py-2 px-8 text-black my-8 hover:bg-black hover:text-white ">SHOP NOW<i
+                            class="fa-solid fa-arrow-right-long mx-2"></i></button>
+                </p>
+            </div>
+            <div class="flex  items-end my-[14%] justify-center gap-[10px]">
+                <div class="w-6 h-6 rounded-full border border-white-700"></div>
+                <div class="w-6 h-6 rounded-full border border-white-700"></div>
+                <div class="w-6 h-6 rounded-full bg-blue-700"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <section class="bg-gray-50 py-8 antialiased dark:bg-gray-900 md:py-12">
+        <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
+            <!-- Heading & Filters -->
+            <div class="mb-4 items-end justify-between space-y-4 sm:flex sm:space-y-0 md:mb-8">
+                <div>
+
+                    <h2 class="mt-3 text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Electronics</h2>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button data-modal-toggle="filterModal" data-modal-target="filterModal" type="button"
+                        class="flex w-full items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700 sm:w-auto">
+                        <svg class="-ms-0.5 me-2 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                d="M18.796 4H5.204a1 1 0 0 0-.753 1.659l5.302 6.058a1 1 0 0 1 .247.659v4.874a.5.5 0 0 0 .2.4l3 2.25a.5.5 0 0 0 .8-.4v-7.124a1 1 0 0 1 .247-.659l5.302-6.059c.566-.646.106-1.658-.753-1.658Z" />
+                        </svg>
+                        Filters
+                        <svg class="-me-0.5 ms-2 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 9-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="dropdownSort1"
+                        class="z-50 hidden absolute top-[130%] w-40 divide-y divide-gray-100 rounded-lg bg-white shadow dark:bg-gray-700"
+                        data-popper-placement="bottom">
+                        <ul class="p-2 text-left text-sm font-medium text-gray-500 dark:text-gray-400"
+                            aria-labelledby="sortDropdownButton">
+                            <li>
+                                <a href="#"
+                                    class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
+                                   tri par price</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
+                                     </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="group inline-flex w-full items-center rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Increasing price </a>
+                            </li>
+                
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- End Heading & Filters -->
+
+
+
+
+
+
+
+
+            <div class="mb-4 flex justify-around overflow-hidden " id="carousel-cards">
+                <!-- cards -->
+
+                <!-- End Cards -->
+            </div>
+
+    </section>
+
+
+
+
+
+
+    <!-- component -->
+
+    <div class="relative bg-gray- py-6 sm:py-12 ">
+                                                                                                                                                      
+       
+<h1 class="my-8 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl text-center"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 "> Les meilleures ligues</span>mondiales.</h1>
+<p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 text-center">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+
+<div class="px-42 w-full grid grid grid-cols-[100%_minmax(100%,_auto)_minmax(100%,_auto)] justify-evenly overflow-hidden"
+id="carousel-cards_Words">
+
+         </div>
+
+
+
+        <!-- pagination -->
+        <div class="flex items-center space-x-1 justify-center my-[100px]">
+            <a class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md" id="leftBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+                </svg>
+            </a>
+
+            <a id="one" value="1" class="px-4 py-2 text-gray-700 border bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white"
+                onclick="slideNum(this.id)">
+                1
+            </a>
+            <a id="two" value="2"  class="px-4 py-2 text-gray-700 bg-gray-200 border rounded-md hover:bg-blue-400 hover:text-white"
+                onclick="slideNum(this.id)">
+                2
+            </a>
+
+            <a id="three" value="3"  class="px-4 py-2 hidden lg:flex text-gray-700 bg-gray-200 border rounded-md hover:bg-blue-400 hover:text-white"
+
+                onclick="slideNum(this.id)">
+                3
+            </a>
+            <a class="px-4 py-2 text-gray-500 bg-gray-300 rounded-md hover:bg-blue-400 hover:text-white" id="rightBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+            </a>
+        </div>
+    </div>
+    <!-- hero section -->
+    <div class="relative bg-gradient-to-r from-purple-600 to-blue-600 h-[50vh] text-white overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="../assets/imgs/marseille.jpg"
+                alt="Background Image" class="object-cover object-center w-full h-full" />
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+        </div>
+
+        <div class="relative z-10 flex flex-col justify-center items-center h-full text-center">
+            <h1 class="text-5xl font-bold leading-tight mb-4">Découvrez nos meilleurs produits</h1>
+            <p class="text-lg text-gray-300 mb-8">Discover amazing features and services that await you.</p>
+            <a href="#"
+                class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Get
+                Discover</a>
+        </div>
+    </div>
+<section>
+
+    <div class="my-6 font-[sans-serif] my-[90px]">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-gray-800">Testimonials</h2>
+          <p class="text-sm text-gray-800 mt-4 leading-relaxed">Veniam proident aute magna anim excepteur et  ex consectetur velit ullamco veniam minim aute sit. Elit occaecat officia et laboris Lorem minim. Officia do aliqua adipisicing ullamco in</p>
+        </div>
+      
+                  <div class="grid md:grid-cols-3 gap-6 max-w-6xl max-md:gap-16 max-md:max-w-lg mx-auto mt-20">
+          <div class="w-full p-6 rounded-lg mx-auto shadow-[0_4px_14px_-6px_rgba(93,96,127,0.4)] bg-white relative">
+            <img src="https://readymadeui.com/team-2.webp" class="w-14 h-14 rounded-full absolute right-0 left-0 mx-auto -top-7" />
+            <div class="mt-6 text-center w-10px">
+              <p class="text-sm text-gray-800 leading-relaxed wrap">The service was amazing. I never had to wait that long for my food. The staff was friendly and attentive, and the delivery was impressively prompt at the all time.</p>
+            </div>
+  
+            <div class="flex justify-center space-x-1 mt-6">
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+            </div>
+  
+            <div class="mt-6 text-center">
+              <h4 class="text-sm whitespace-nowrap font-bold">John Doe</h4>
+            </div>
+          </div>
+  
+          <div class="w-full p-6 rounded-lg mx-auto shadow-[0_4px_14px_-6px_rgba(93,96,127,0.4)] bg-white relative">
+            <img src="https://readymadeui.com/team-3.webp" class="w-14 h-14 rounded-full absolute right-0 left-0 mx-auto -top-7" />
+            <div class="mt-6 text-center">
+              <p class="text-sm text-gray-800 leading-relaxed">The service was amazing. I never had to wait that long for my food. The staff was friendly and attentive, and the delivery was impressively prompt at the all time.</p>
+            </div>
+  
+            <div class="flex justify-center space-x-1 mt-6">
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+            </div>
+  
+            <div class="mt-6 text-center">
+              <h4 class="text-sm whitespace-nowrap font-bold">Karolina Adair</h4>
+            </div>
+          </div>
+       
+  
+          <div class="w-full p-6 rounded-lg mx-auto shadow-[0_4px_14px_-6px_rgba(93,96,127,0.4)] bg-white relative">
+            <img src="https://readymadeui.com/team-4.webp" class="w-14 h-14 rounded-full absolute right-0 left-0 mx-auto -top-7" />
+            <div class="mt-6 text-center">
+              <p class="text-sm text-gray-800 leading-relaxed ">The service was amazing. I never had to wait that long for my food. The staff was friendly and attentive, and the delivery was impressively prompt at the all time.</p>
+            </div>
+  
+            <div class="flex justify-center space-x-1 mt-6">
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+              <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+              </svg>
+            </div>
+  
+            <div class="mt-6 text-center">
+              <h4 class="text-sm whitespace-nowrap font-bold">Simon Konecki</h4>
+            </div>
+          </div>
+        </div>
+
+  
+      </div>
+   
+</section>
+<!-- footer -->
+<footer class="bg-blue-900 text-white py-10 px-6">
+    <div class="container mx-auto flex flex-wrap justify-between items-start space-y-8 lg:space-y-0 lg:space-x-8">
+      <!-- Logo and Social Media -->
+      <div class="space-y-2 md:flex-row">
+        <!-- <h2 class="text-2xl font-bold text-red-500">SPORTEEZ</h2> -->
+         <img class="w-36" src="../assets/imgs/red_logo.png" alt="logo de site Sporteez">
+        <!-- <p class="text-sm text-gray-400">Football Vie</p> -->
+        <div class="flex space-x-6 text-red-500 ">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+  
+      <!-- Links Section -->
+      <div class="flex flex-wrap w-full lg:w-auto hidden md:flex">
+        <div class="w-1/2 lg:w-auto lg:mr-10 block">
+          <h3 class="font-bold">Pages</h3>
+          <ul class="mt-2 space-y-2">
+            <li><a href="#" class="text-gray-300 hover:text-white">Accueil</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white">Catalogue</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white">A propos</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white">Panier</a></li>
+          </ul>
+        </div>
+  
+        <div class="w-1/2 lg:w-auto lg:mr-10">
+          <h3 class="font-bold">Service</h3>
+          <ul class="mt-2 space-y-2">
+            <li><a href="#" class="text-gray-300 hover:text-white">Shopify</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white">WordPress</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white">UI/UX Design</a></li>
+          </ul>
+        </div>
+  
+        <div class="w-1/2 lg:w-auto lg:mr-10">
+          <h3 class="font-bold">Resource</h3>
+          <ul class="mt-2 space-y-2">
+            <li><a href="#" class="text-gray-300 hover:text-white">HTML</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white">CSS</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white">JavaScript</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white">Java</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white">JSON</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white">UI/UX Design</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white">Component</a></li>
+          </ul>
+        </div>
+  
+        <div class="w-1/2 lg:w-auto">
+          <h3 class="font-bold">Company</h3>
+          <ul class="mt-2 space-y-2">
+            <li><a href="#" class="text-gray-300 hover:text-white">Tarifs</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white">Sécurité</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white">Politique de confidentialité</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white">Conditions d'utilisation</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white">Rue</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Contact Form -->
+      <div class="space-y-4">
+        <h3 class="font-bold">À propos de nous</h3>
+        <p class="text-gray-300 text-sm">Vous pouvez nous contacter pour nous envoyer un email</p>
+        <div class="relative">
+          <input type="email" placeholder="Votre email" class="w-full py-2 px-4 text-gray-900 rounded-full focus:outline-none">
+          <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-red-500 text-white rounded-full p-2">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom -->
+    <div class="text-center border-t border-gray-600 mt-8 pt-4 text-sm text-gray-400">
+      
+    </div>
+  </footer>
+  
+</body>
+<script src="../assets/js/M_main.js"></script>
+
+
+</html>

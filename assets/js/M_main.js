@@ -32,6 +32,29 @@ tailwind.config = {
     }
 }
 
+let carousel_cards = document.getElementById('carousel-cards');
+
+function slideLeft() {
+    carousel_cards.style.scrollBehavior = "smooth"
+    carousel_cards.scrollLeft -= 500
+
+}
+
+
+function slideRighe() {
+    carousel_cards.style.scrollBehavior = "smooth"
+    carousel_cards.scrollLeft += 500
+}
+
+
+
+
+
+
+
+
+
+
 function openMenu() {
 
     document.getElementById("navbar-default").style.scrollBehavior = "smooth"
@@ -48,7 +71,7 @@ slides.addEventListener("wheel", (evnt) => {
 
 //carousel-cards
 
-let carousel_cards = document.getElementById('carousel-cards');
+
 carousel_cards.addEventListener("wheel", (evnt) => {
     carousel_cards.scrollLeft += evnt.deltaX
 })
@@ -148,7 +171,7 @@ fetch("https://mohamedmoustir.github.io/api/")
     .then(function (data) {
         let cloths = data.Tshorts
 
-        for (let i = 0; i < 15; i++) {
+        for (let i = 1; i < 15; i++) {
 
 
             carousel_cards.innerHTML += `
@@ -370,3 +393,29 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
         }
 
     }).catch(error => console.log(erorr))
+
+// Fonction d'Afficher et cacher aside barre
+document.getElementById("shoping-icon-md").addEventListener("click", function () {
+    const shoppingIconMd = document.getElementById("shoping-icon-md");
+    const panelCard = document.getElementById("panel-aside-bar");
+
+    panelCard.classList.remove("hidden");
+})
+
+document.getElementById("close-btn").addEventListener("click", function () {
+    const panelCard = document.getElementById("panel-aside-bar");
+
+    panelCard.classList.add("hidden");
+});
+
+const testimnal= document.getElementById("testimnal")
+function NextSlide() {
+    
+    testimnal.style.scrollBehavior = "smooth"
+    testimnal.scrollLeft += 500;
+}
+
+function PreviousSlide() {
+    testimnal.style.scrollBehavior = "smooth"
+    testimnal.scrollLeft -= 500;
+}

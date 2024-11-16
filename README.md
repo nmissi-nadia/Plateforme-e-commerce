@@ -130,7 +130,8 @@ FAQ.
    Ouvrez `index.html` dans un navigateur web.
 
 3. **Structure de la Navigation** :
-   - Page d'accueil : Liste des produits avec filtres et recherche.
+   - Page d'accueil : .
+   - Page catalogue : Liste des produits avec filtres et recherche.
    - Détails du produit : Informations détaillées sur un produit spécifique.
    - Page panier : Visualisation des articles ajoutés.
 
@@ -141,16 +142,21 @@ FAQ.
 
 ## 📂 Structure du Projet
 ```
-FootballMerchandise/
+Plateforme-e-commerce/
 ├── assets/
 │   ├── css/
 │   │   └── tailwind.css
+|   |   └── about.css
 │   ├── js/
-│       └── main.js
+│       └── M_main.js
+│       └── abdo.js
+│       └── catalo.js
+│       └── details.js
 ├── vues/
 │   ├── index.html
 │   ├── details.html
 │   ├── cart.html
+├   |── about.html
 ├── README.md
 ```
 
@@ -181,14 +187,25 @@ FootballMerchandise/
 ---
 ## 📸 Captures d'Écran
 ### Page d'accueil
+> **Description :** PAgr d'accueil de notre site.  
+
+![Page d'accueil](/assets/imgs/home.png)
+
+### Page Catalogue
 > **Description :** Liste des produits avec recherche et filtres.  
 
-![Page d'accueil](https://via.placeholder.com/800x400?text=Capture+Accueil)
+![Page Catalogur](/assets/imgs/cat.png)
+
 
 ### Page détails du produit
 > **Description :** Affiche les détails complets d'un produit sélectionné.  
 
-![Page détails](https://via.placeholder.com/800x400?text=Capture+Détails)
+![Page détails](/assets/imgs/detail.png)
+
+### Page à propos de nous
+> **Description :** Affiche les information à propos de notre site.  
+
+![Page détails](/assets/imgs/propos.png)
 
 ### Page panier
 > **Description :** Visualisation des produits ajoutés au panier.  

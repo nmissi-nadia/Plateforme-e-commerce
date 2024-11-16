@@ -2,7 +2,7 @@
 YouMarket lance une plateforme e-commerce innovante pour une expérience d'achat fluide et personnalisée. Les utilisateurs pourront configurer leurs produits et utiliser des outils avancés pour la recherche, la navigation et la gestion des commandes. En utilisant HTML, CSS, Tailwind et JavaScript.
 
 
-# 🎯 Football T-shirts Merchandise Web App  
+# 🎯 Site e-commerce pour vente  les t-shirts de football 
 
 > Une application web moderne permettant aux utilisateurs de parcourir, rechercher et acheter des T-shirts de football. Cette application utilise une API pour fournir des données dynamiques et propose une expérience utilisateur fluide.
 

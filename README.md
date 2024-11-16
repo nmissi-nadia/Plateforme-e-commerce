@@ -230,10 +230,16 @@ Plateforme-e-commerce/
 ---
 
 ## 🧑‍💻 Auteur
-**Nadia Nmissi** 
-**Mohamed Moustir**
-**Mohamed Abdelhak Dadssi**
-**Oussama Amou** 
+**[Nadia Nmissi](https://github.com/nmissi-nadia)**
+
+**[Mohamed Moustir](https://github.com/MohamedMoustir)**
+
+**[Mohamed Abdelhak Dadssi](https://github.com/Dadssi)** 
+
+**[Oussama Amou](https://github.com/oussamaamou)** 
+
+**[Abderrahman Ahouari](https://github.com/Abderrahman-Ahouari)**
+
 Étudiants en développement web @ YouCode. Passionnée par la création d'interfaces utilisateur modernes et intuitives.
 
 

@@ -403,7 +403,6 @@ document.getElementById("shoping-icon-md").addEventListener("click", function ()
 
 document.getElementById("close-btn").addEventListener("click", function () {
     const panelCard = document.getElementById("panel-aside-bar");
-
     panelCard.classList.add("hidden");
 });
 

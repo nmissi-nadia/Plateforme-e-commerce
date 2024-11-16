@@ -1,7 +1,6 @@
 /** Consommation de l'API */
 const apiUrl = 'https://mohamedmoustir.github.io/api/';
 // let datatprds = [];
-// let datatprds = [];
 let id = location.href.split("?")[1].split("=")[1];
 
 let tshrtcart = document.getElementById("affchg1");
@@ -365,4 +364,3 @@ function affichageducrssl(){
 
 
 /**////////////////////////////////////////////////////// */
-

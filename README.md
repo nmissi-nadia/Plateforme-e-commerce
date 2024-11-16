@@ -112,7 +112,6 @@ FootballMerchandise/
 ```
 
 ---
-
 ## 📸 Captures d'Écran
 ### Page d'accueil
 > **Description :** Liste des produits avec recherche et filtres.  

@@ -3,16 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
+    <meta name="description" content="Découvrez notre boutique en ligne dédiée aux fans de football. Parcourez des t-shirts exclusifs des plus grandes ligues comme La Liga, Premier League, Bundesliga, Ligue 1 et Serie A. Profitez d'un design moderne et d'une expérience utilisateur fluide pour trouver vos produits préférés.">
+    <meta name="keywords" content="football, t-shirts, boutique en ligne, La Liga, Premier League, Bundesliga, Ligue 1, Serie A, produits dérivés, shopping, mode sportive, t-shirts football">
+    <title>SPORTEEZ</title>
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
-    />
+    /> -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-   <link rel="stylesheet" href="/assets/css/about.css">
+   <link rel="stylesheet" href="../assets/css/about.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="/assets/js/abdo.js"></script>
+    <script src="../assets/js/abdo.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8dd174d5fa.js" crossorigin="anonymous"></script>
     
+
   </head>
   <style>
     
@@ -45,8 +56,6 @@
       },
     };
 
-
-    
   </script>
   <body>
 
@@ -104,161 +113,76 @@
     </header>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="bg-white">
-      <!-- <header class="absolute inset-x-0 top-0 z-50">
-        <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-          <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Your Company</span>
-              <img
-                class="w-auto h-8"
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="flex lg:hidden">
-            <button
-              type="button"
-              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            >
-              <span class="sr-only">Open main menu</span>
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-                data-slot="icon"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
+    <!-- side bar panier start -->
+  <div id="panel-aside-bar" class="hidden relative z-10 transition-opacity" aria-labelledby="slide-over-title"
+  role="dialog" aria-modal="true">
+  <div class="fixed inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
+  <div class="fixed inset-0 overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+        <div class="pointer-events-auto relative w-screen max-w-md">
+          <div class="absolute left-0 top-0 -ml-8 flex pr-2 pt-4 sm:-ml-10 sm:pr-4">
+            <button id="close-btn" type="button"
+              class="relative rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white">
+              <span class="absolute -inset-2.5"></span>
+              <span class="sr-only">Close panel</span>
+              <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true" data-slot="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
-          <div class="hidden lg:flex lg:gap-x-12">
-            <a href="#" class="font-semibold text-gray-900 text-sm/6"
-              >Product</a
-            >
-            <a href="#" class="font-semibold text-gray-900 text-sm/6"
-              >Features</a
-            >
-            <a href="#" class="font-semibold text-gray-900 text-sm/6"
-              >Marketplace</a
-            >
-            <a href="#" class="font-semibold text-gray-900 text-sm/6"
-              >Company</a
-            >
-          </div>
-          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" class="font-semibold text-gray-900 text-sm/6"
-              >Log in <span aria-hidden="true">&rarr;</span></a
-            >
-          </div>
-        </nav>
-        <div class="lg:hidden" role="dialog" aria-modal="true">
-          <div class="fixed inset-0 z-50"></div>
-          <div
-            class="fixed inset-y-0 right-0 z-50 w-full px-6 py-6 overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
-          >
-            <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5">
-                <span class="sr-only">Your Company</span>
-                <img
-                  class="w-auto h-8"
-                  src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
-                />
-              </a>
-              <button
-                type="button"
-                class="-m-2.5 rounded-md p-2.5 text-gray-700"
-              >
-                <span class="sr-only">Close menu</span>
-                <svg
-                  class="w-6 h-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M6 18 18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
+          <div class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
+            <div class="px-4 sm:px-6">
+              <h2 class="text-secondary font-bold text-xl" id="slide-over-title">Votre Panier :</h2>
             </div>
-            <div class="flow-root mt-6">
-              <div class="-my-6 divide-y divide-gray-500/10">
-                <div class="py-6 space-y-2">
-                  <a
-                    href="#"
-                    class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50"
-                    >Product</a
-                  >
-                  <a
-                    href="#"
-                    class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50"
-                    >Features</a
-                  >
-                  <a
-                    href="#"
-                    class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50"
-                    >Marketplace</a
-                  >
-                  <a
-                    href="#"
-                    class="block px-3 py-2 -mx-3 font-semibold text-gray-900 rounded-lg text-base/7 hover:bg-gray-50"
-                    >Company</a
-                  >
+            <div id="aside-panel" class="product-card relative mt-6 flex-1 px-4 sm:px-6">
+              <div class="item1 flex bg-red-100 mb-4 p-4 rounded-lg justify-between">
+                <div class="item-pic w-1/4">
+                  <div class="flex flex-col justify-center m-auto">
+                    <img class="h-full w-full rounded-lg" src="../assets/imgs/atm.png" alt="">
+                    <div class="flex rounded-md shadow-sm justify-around mt-2" role="group">
+                      <button type="button" class="bg-primary text-sm h-6 px-1 rounded-l-lg text-accent-2 "><i
+                          class="fa-solid fa-minus"></i></button>
+                      <button type="button" class="bg-primary text-sm h-6 px-4 text-accent-2 "><span>1</span></button>
+                      <button type="button" class="bg-primary text-sm h-6 px-1 rounded-r-lg text-accent-2 "><i
+                          class="fa-solid fa-plus"></i></button>
+                    </div>
+                  </div>
                 </div>
-                <div class="py-6">
-                  <a
-                    href="#"
-                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                    >Log in</a
-                  >
+                <div class="infos bg-accent-2 w-[70%] flex flex-col justify-between rounded-lg">
+                  <div class="p-3">
+                    <div class="title-price flex justify-between ">
+                      <h3 class="text-lg">T-shirt</h3>
+                      <i
+                        class="fa-solid fa-trash text-secondary text-right cursor-pointer mt-1 sm:text-2xl sm:mt-0"></i>
+                    </div>
+                    <div class="title-price flex justify-between">
+                      <h5 class="text-sm">Livraison gratuite</h5>
+                    </div>
+                  </div>
+                  <div class="p-3">
+                    <h3 class="font-bold text-primary text-right"><span>299,99</span> MAD</h3>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </header> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- side bar panier end -->
+
+  <!-- header sectioon -->
+    <div class="bg-white">
+   
       <div class="relative px-6 isolate pt-14 lg:px-8">
         <div class="absolute inset-0">
           <img
-            src="/assets/imgs/about_img/header_background.jpg"
-            alt="Football T-Shirt"
+            src="../assets/imgs/about_img/header_background.jpg"
+            alt="header_background"
             class="object-cover w-full h-full"
           />
         </div>
@@ -280,13 +204,17 @@
             <button
               type="button"
               class="bg-primary text-accent-2 h-[50px] w-[300px] rounded-3xl text-2xl"
-            >
+            > <a href="catalogue.html">
               Voir Notre Shirts
+            </a>
             </button>
           </div>
         </div>
       </div>
     </div>
+
+  <!-- header sectioon -->
+
     
 <!-- section de notre histoir -->
 
@@ -295,11 +223,7 @@
         class="items-center max-w-screen-xl gap-16 px-4 py-8 mx-auto lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
       >
         <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-          <h2
-            class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white"
-          >
-            We didn't reinvent the wheel
-          </h2>
+         
           <p class="mb-4">
             Sporteez est née de la passion commune de cinq fans de football,
             unis par l'envie de créer un lieu unique pour les supporters. Nous
@@ -321,13 +245,13 @@
         <div class="grid grid-cols-2 gap-4 mt-8">
           <img
             class="w-full rounded-lg"
-            src="/assets/imgs/about_img/t_shirt_1.jpg"
-            alt="office content 1"
+            src="../assets/imgs/about_img/t_shirt_1.jpg"
+            alt="t-shirt img real madrid"
           />
           <img
             class="w-full mt-4 rounded-lg lg:mt-10"
-            src="/assets/imgs/about_img/t_shirt_2.jpg"
-            alt="office content 2"
+            src="../assets/imgs/about_img/t_shirt_2.jpg"
+            alt="t-shirt img messi"
           />
         </div>
       </div>
@@ -351,8 +275,8 @@
       >
         <img
           class="justify-center mt-6 rounded-t-lg"
-          src="/assets/imgs/about_img/image 32.png"
-          alt=""
+          src="../assets/imgs/about_img/image 32.png"
+          alt="icone card 1"
         />
         <div class="p-5">
           <h5
@@ -369,8 +293,8 @@
       >
         <img
           class="justify-center mt-6 rounded-t-lg"
-          src="/assets/imgs/about_img/image 31.png"
-          alt=""
+          src="../assets/imgs/about_img/image 31.png"
+          alt="icon card 2"
         />
         <div class="p-5">
           <h5
@@ -387,8 +311,8 @@
       >
         <img
           class="justify-center mt-6 rounded-t-lg"
-          src="/assets/imgs/about_img/t-shirt_icone.png"
-          alt=""
+          src="../assets/imgs/about_img/t-shirt_icone.png"
+          alt="icon card 3"
         />
         <div class="p-5">
           <h5
@@ -413,14 +337,9 @@
           <h2
             class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white"
           >
-            Our Team
+            Notre Equipe
           </h2>
-          <p
-            class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400"
-          >
-            Explore the whole collection of open-source web components and
-            elements built with the utility classes from Tailwind
-          </p>
+          
         </div>
         <div id="Nmissi" class="mx-64 my-8">
       
@@ -435,22 +354,21 @@
         >
           <img
             class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-            src="/assets/imgs/about_img/nadia_nmissi.jpg"
-            alt="Avatar de Mohamed Moustir"
+            src="../assets/imgs/about_img/nadia_nmissi.jpg"
+            alt="image profile nadia nmissi"
           />
         </a>
         <div class="p-5">
           <h3
             class="text-xl font-bold tracking-tight text-gray-900 dark:text-white"
           >
-            <a href="#">Oussama Amou</a>
+            <a href="#">Nadia Nmissi </a>
           </h3>
           <span class="text-gray-500 dark:text-gray-400"
-            >Responsable Marketing</span
+            >Cheffe de Projet</span
           >
           <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-            Oussama est responsable de la gestion des réseaux sociaux et des
-            marketing.
+            Superviser des ventes et des services client, tout en assurant que chaque client se sente pris en charge.
           </p>
         </div>
       </div>
@@ -470,8 +388,8 @@
             >
               <img
                 class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-                src="/assets/imgs/about_img/ossama.jpg"
-                alt="Avatar de Mohamed Moustir"
+                src="../assets/imgs/about_img/ossama.jpg"
+                alt="image profile Oussama Amou"
               />
             </a>
             <div class="p-5">
@@ -501,8 +419,8 @@
             >
               <img
                 class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-                src="/assets/imgs/about_img/mohamed_dadssi.jpg"
-                alt="Avatar de Mohamed Moustir"
+                src="../assets/imgs/about_img/mohamed_dadssi.jpg"
+                alt="image profile Mohamed Dadssi"
               />
             </a>
             <div class="p-5">
@@ -532,7 +450,7 @@
             >
               <img
                 class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-                src="/assets/imgs/about_img/mohamed_moustir.jpg"
+                src="../assets/imgs/about_img/mohamed_moustir.jpg"
                 alt="Avatar de Mohamed Moustir"
               />
             </a>
@@ -563,8 +481,8 @@
             >
               <img
                 class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
-                src="/assets/imgs/about_img/abdorrahmane_ahouari.jpg"
-                alt="Avatar d'Abderrahmane"
+                src="../assets/imgs/about_img/abdorrahmane_ahouari.jpg"
+                alt="image prohile de Abderrahmane ahouari"
               />
             </a>
             <div class="p-5">
@@ -594,9 +512,9 @@
     <!-- section notre services -->
     <div class="max-w-screen-sm mx-auto my-8 mb-8 text-center lg:mb-16">
       <h2
-        class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+        class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white "
       >
-        Our Services
+        Notre Services
       </h2>
     </div>
     <div class="card_container">
@@ -606,8 +524,8 @@
         <a href="#">
           <img
             class="rounded-t-lg w-full"
-            src="/assets/imgs/about_img/our_services_img2.png"
-            alt=""
+            src="../assets/imgs/about_img/our_services_img2.png"
+            alt="image de service 1"
           />
         </a>
         <div class="p-5">
@@ -631,8 +549,8 @@
         <a href="#">
           <img
             class="rounded-t-lg w-full"
-            src="/assets/imgs/about_img/our_services_img3.png"
-            alt=""
+            src="../assets/imgs/about_img/our_services_img3.png"
+            alt="image de service 2"
           />
         </a>
         <div class="p-5">
@@ -657,8 +575,8 @@
         <a href="#">
           <img
             class="rounded-t-lg w-full"
-            src="/assets/imgs/about_img/our_services_img1.png"
-            alt=""
+            src="../assets/imgs/about_img/our_services_img1.png"
+            alt="image de service 3"
           />
         </a>
         <div class="p-5">
@@ -685,8 +603,7 @@
       <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div class="mb-16">
           <h2 class="text-4xl font-manrope text-center font-bold text-gray-900 leading-[3.25rem]">
-            Frequently asked questions
-          </h2>
+             FAQ  </h2>
         </div>
         <div class="accordion-group" id="faq-section">
           <div class="accordion border border-solid border-gray-300 p-4 rounded-xl mb-8 lg:p-4">

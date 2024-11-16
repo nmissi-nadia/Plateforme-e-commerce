@@ -19,16 +19,16 @@ fetch(apiUrl)
             tshrtcart.innerHTML = `
             <div id="qtrimgs" class="hidden h-[6.813rem] w-[5.875rem] grid grid-cols-1 gap-y-[1.625rem] ml-[25%] xl:grid xl:pl-[6rem]">
             <div class="chldimg cursor-pointer h-[6.813rem] w-[5.875rem]">
-                <img class="" src="${data.Tshorts[id].images[0]}" alt="Home Jersey">
+                <img class="" src="${data.Tshorts[id-1].images[0]}" alt="Home Jersey">
             </div>
             <div class="chldimg cursor-pointer h-[6.813rem] w-[5.875rem]">
-                <img class="" src="${data.Tshorts[id].images[1]}" alt="Away Jersey">
+                <img class="" src="${data.Tshorts[id-1].images[1]}" alt="Away Jersey">
             </div>
             <div class="chldimg cursor-pointer h-[6.813rem] w-[5.875rem]">
-                <img class="" src="${data.Tshorts[id].images[2]}" alt="Jersey Training">
+                <img class="" src="${data.Tshorts[id-1].images[2]}" alt="Jersey Training">
             </div>
             <div class="chldimg cursor-pointer h-[6.813rem] w-[5.875rem]">
-                <img class="" src="${data.Tshorts[id].images[0]}" alt="Home Jersey">
+                <img class="" src="${data.Tshorts[id-1].images[0]}" alt="Home Jersey">
             </div>
           </div>
 
@@ -40,17 +40,17 @@ fetch(apiUrl)
                   <div id="bgcrssl" class="relative cursor-pointer h-[19.063rem] pt-[20%] md:h-[27.688rem] md:w-[22.813rem] md:pt-[15.5%] lg:h-[29.688rem] lg:w-[24.813rem] lg:pt-[12.5%] xl:h-[31.813rem] xl:w-[30.063rem] xl:pt-[0%]">
 
                       <div class="fdrimg" >
-                          <img src="${data.Tshorts[id].images[0]}"
+                          <img src="${data.Tshorts[id-1].images[0]}"
                               class="object-cover" alt="Home Jersey">
                       </div>
 
                       <div class="fdrimg hidden duration-700 ease-in-out">
-                          <img src="${data.Tshorts[id].images[1]}"
+                          <img src="${data.Tshorts[id-1].images[1]}"
                               class="object-cover" alt="Home Jersey">
                       </div>
 
                       <div class="fdrimg hidden duration-700 ease-in-out">
-                          <img src="${data.Tshorts[id].images[2]}"
+                          <img src="${data.Tshorts[id-1].images[2]}"
                               class="object-cover" alt="Home Jersey">
                       </div>
 
@@ -75,18 +75,18 @@ fetch(apiUrl)
 
 
             infosctnr2.innerHTML =`
-            <h1 class="marqname mb-2 text-lg font-medium text-gray-900 dark:text-white md:font-medium md:text-3xl lg:font-medium lg:text-5xl">${data.Tshorts[id].category}</h1>        
-            <p class="teamname mb-3 text-sm font-normal text-gray-700 dark:text-gray-400 md:text-2xl md:w-[15rem] md:font-semibold lg:text-4xl lg:w-[20rem] lg:font-semibold">T-shirt <span class="spneqpnm">${data.Tshorts[id].title}</span> Originals</p>
+            <h1 class="marqname mb-2 text-lg font-medium text-gray-900 dark:text-white md:font-medium md:text-3xl lg:font-medium lg:text-5xl">${data.Tshorts[id-1].category}</h1>        
+            <p class="teamname mb-3 text-sm font-normal text-gray-700 dark:text-gray-400 md:text-2xl md:w-[15rem] md:font-semibold lg:text-4xl lg:w-[20rem] lg:font-semibold">T-shirt <span class="spneqpnm">${data.Tshorts[id-1].title}</span> Originals</p>
             <div class="prix inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white bg-secondary md:text-xl md:font-normal lg:text-2xl">
-            ${data.Tshorts[id].price} MAD
+            ${data.Tshorts[id-1].price} MAD
             </div>
             `;
 
             infosctnr.innerHTML =`
-            <h1 class="marqname mb-2 text-xl font-medium text-gray-900 dark:text-white md:font-medium md:text-4xl lg:font-medium lg:text-6xl">${data.Tshorts[id].category}</h1>        
-            <p class="teamname mb-3 text-sm font-normal text-gray-700 dark:text-gray-400 md:text-2xl md:w-[15rem] md:font-semibold lg:text-4xl lg:w-[20rem] lg:font-semibold">T-shirt <span class="spneqpnm">${data.Tshorts[id].title}</span> Originals</p>
+            <h1 class="marqname mb-2 text-xl font-medium text-gray-900 dark:text-white md:font-medium md:text-4xl lg:font-medium lg:text-6xl">${data.Tshorts[id-1].category}</h1>        
+            <p class="teamname mb-3 text-sm font-normal text-gray-700 dark:text-gray-400 md:text-2xl md:w-[15rem] md:font-semibold lg:text-4xl lg:w-[20rem] lg:font-semibold">T-shirt <span class="spneqpnm">${data.Tshorts[id-1].title}</span> Originals</p>
             <div class="prix inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white bg-secondary md:text-xl md:font-normal lg:text-2xl">
-            ${data.Tshorts[id].price} MAD
+            ${data.Tshorts[id-1].price} MAD
             </div>
             `;
 
@@ -95,18 +95,20 @@ fetch(apiUrl)
             tshrttype.innerHTML = `
 
             <div id="lclimg" class="cursor-pointer">
-                  <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem] lg:h-[5.85rem] lg:w-[5.55rem] xl:h-[5.5rem] xl:w-[5.25rem]" src="${data.Tshorts[id].images[0]}" alt="Home Jersey">
+                  <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem] lg:h-[5.85rem] lg:w-[5.55rem] xl:h-[5.5rem] xl:w-[5.25rem]" src="${data.Tshorts[id-1].images[0]}" alt="Home Jersey">
               </div>
               <div id="homimg" class="cursor-pointer">
-                  <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem] lg:h-[5.85rem] lg:w-[5.55rem] xl:h-[5.5rem] xl:w-[5.25rem]" src="${data.Tshorts[id].images[1]}" alt="Away Jersey">
+                  <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem] lg:h-[5.85rem] lg:w-[5.55rem] xl:h-[5.5rem] xl:w-[5.25rem]" src="${data.Tshorts[id-1].images[1]}" alt="Away Jersey">
               </div>
               <div id="awyimg" class="cursor-pointer">
-                  <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem] lg:h-[5.85rem] lg:w-[5.55rem] xl:h-[5.5rem] xl:w-[5.25rem]" src="${data.Tshorts[id].images[2]}" alt="Jersey Training">
+                  <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem] lg:h-[5.85rem] lg:w-[5.55rem] xl:h-[5.5rem] xl:w-[5.25rem]" src="${data.Tshorts[id-1].images[2]}" alt="Jersey Training">
               </div>
             
             
             
             `;
+            
+
 
 
 
@@ -131,7 +133,7 @@ fetch(apiUrl)
                         </th>
                         
                         <td id="marqprdt" class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-secondary text-white md:w-[13.75rem] lg:w-[15.75rem] xl:w-[21rem] xl:h-[2.5rem]">
-                        ${data.Tshorts[id].category}
+                        ${data.Tshorts[id-1].category}
                         </td>
 
                     </tr>
@@ -143,7 +145,7 @@ fetch(apiUrl)
                         </th>
                         
                         <td id="dcrptprdt" class="px-4 py-[0.32rem] bg-secondary text-white w-[21rem] h-[2.5rem]">
-                        ${data.Tshorts[id].description}
+                        ${data.Tshorts[id-1].description}
                         </td>
 
                     </tr>
@@ -155,7 +157,7 @@ fetch(apiUrl)
                         </th>
                         
                         <td id="cltrprdt" class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-secondary text-white  md:w-[13.75rem] lg:w-[15.75rem] xl:w-[21rem] xl:h-[2.5rem]">
-                            Rouge
+                            Domicile
                         </td>
 
                     </tr>
@@ -166,13 +168,13 @@ fetch(apiUrl)
                         </th>
                         
                         <td id="payprdt" class="px-4 py-[0.32rem] bg-secondary text-white w-[21rem] h-[2.5rem]">
-                        ${data.Tshorts[id].country}
+                        ${data.Tshorts[id-1].country}
                         </td>
 
                     </tr>
             
             `;
-
+            changercouleur();
             
 
 
@@ -190,14 +192,54 @@ fetch(apiUrl)
 
 
 
+/** Validation REJEX */
 
-psnlcard.addEventListener('submit', () => {
-
+psnlcard.addEventListener('submit', (e) => {
+    e.preventDefault();
     stockerdata();
 
 });
 
 
+/**////////////////////////////////////////////////////// */
+
+
+/** Choix de Couleur  */
+
+function changercouleur(){
+    const lclimg = document.getElementById("lclimg");
+    const homimg = document.getElementById("homimg");
+    const awyimg = document.getElementById("awyimg");
+    const cltrprdt = document.getElementById("cltrprdt");
+
+    lclimg.addEventListener('click', () => {
+        chxclrprdt.textContent = "Domicile";
+        cltrprdt.textContent = "Domicile";
+    });
+
+    homimg.addEventListener('click', () => {
+        chxclrprdt.textContent = "Extérieur";
+        cltrprdt.textContent = "Extérieur";
+    });
+
+    awyimg.addEventListener('click', () => {
+        chxclrprdt.textContent = "Third";
+        cltrprdt.textContent = "Third";
+    });
+};
+
+
+
+
+/**////////////////////////////////////////////////////// */
+
+
+
+/** Stocker Data dans local storage */
+
+const taislct = document.getElementById("taislct");
+let chxclrprdt = document.getElementById("chxclrprdt");
+let prices = document.querySelectorAll(' .prix');
 
 
 
@@ -206,11 +248,12 @@ let dataprdts = JSON.parse(localStorage.getItem('produits')) || [];
 function stockerdata() {
 
     let prdt = {
-        
+
         taille: taislct.value,
-        couleur: chxclrprdt.value,
+        couleur: chxclrprdt.textContent,
         nombre: vleprd.value,
         identifiant: id
+
     };
 
     dataprdts.push(prdt);
@@ -270,8 +313,7 @@ const payprdt = document.getElementById("payprdt");
 
 
 
-const taislct = document.getElementById("taislct");
-const chxclrprdt = document.getElementById("chxclrprdt");
+
 
 
 /**////////////////////////////////////////////////////// */

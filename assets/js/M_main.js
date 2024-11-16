@@ -398,7 +398,6 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
 document.getElementById("shoping-icon-md").addEventListener("click", function () {
     const shoppingIconMd = document.getElementById("shoping-icon-md");
     const panelCard = document.getElementById("panel-aside-bar");
-
     panelCard.classList.remove("hidden");
 })
 

@@ -92,7 +92,7 @@
                 <i class="fa-solid fa-cart-shopping text-2xl cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer hidden"></i></a>
             </li> -->
           </ul>
-          <i class="fa-solid fa-cart-shopping hidden sm:hidden md:flex text-3xl md:text-2xl sm:text-5xl text-primary cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer mr-6 sm:mr-10 md:mx-4 md:w-6 md:h-6 md:hover:text-secondary"></i>
+          <i id="shoping-icon-md" class="fa-solid fa-cart-shopping hidden sm:hidden md:flex text-3xl md:text-2xl sm:text-5xl text-primary cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer mr-6 sm:mr-10 md:mx-4 md:w-6 md:h-6 md:hover:text-secondary"></i>
         </div>
       </div>
       <div class="flex w-full px-4 md:justify-center">
@@ -111,6 +111,75 @@
     </nav>
   </head>
   <!-- Header End -->
+
+  <!-- side bar panier start -->
+   <!-- ajouter hidden au class -->
+   <div id="panel-aside-bar" class="hidden relative z-10 transition-opacity" aria-labelledby="slide-over-title"
+   role="dialog" aria-modal="true">
+   <div class="fixed inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
+   <div class="fixed inset-0 overflow-hidden">
+     <div class="absolute inset-0 overflow-hidden">
+       <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+         <div class="pointer-events-auto relative w-screen max-w-md">
+           <div class="absolute left-0 top-0 -ml-8 flex pr-2 pt-4 sm:-ml-10 sm:pr-4">
+             <button id="close-btn" type="button"
+               class="relative rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white">
+               <span class="absolute -inset-2.5"></span>
+               <span class="sr-only">Close panel</span>
+               <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                 aria-hidden="true" data-slot="icon">
+                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+               </svg>
+             </button>
+           </div>
+           <div class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
+             <div class="px-4 sm:px-6">
+               <h2 class="text-secondary font-bold text-xl" id="slide-over-title">Votre Panier :</h2>
+             </div>
+             <div id="aside-panel" class="product-card relative mt-6 flex-1 px-4 sm:px-6">
+               <div class="item1 flex bg-red-100 mb-4 p-4 rounded-lg justify-between">
+                 <div class="item-pic w-1/4">
+                   <div class="flex flex-col justify-center m-auto">
+                     <img class="h-full w-full rounded-lg" src="../assets/imgs/atm.png" alt="">
+                     <div class="flex rounded-md shadow-sm justify-around mt-2" role="group">
+                       <button type="button" class="bg-primary text-sm h-6 px-1 rounded-l-lg text-accent-2 "><i
+                           class="fa-solid fa-minus"></i></button>
+                       <button type="button" class="bg-primary text-sm h-6 px-4 text-accent-2 "><span>1</span></button>
+                       <button type="button" class="bg-primary text-sm h-6 px-1 rounded-r-lg text-accent-2 "><i
+                           class="fa-solid fa-plus"></i></button>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="infos bg-accent-2 w-[70%] flex flex-col justify-between rounded-lg">
+                   <div class="p-3">
+                     <div class="title-price flex justify-between ">
+                       <h3 class="text-lg">T-shirt</h3>
+                       <i
+                         class="fa-solid fa-trash text-secondary text-right cursor-pointer mt-1 sm:text-2xl sm:mt-0"></i>
+                     </div>
+                     <div class="title-price flex justify-between">
+                       <h5 class="text-sm">Livraison gratuite</h5>
+                     </div>
+                   </div>
+                   <div class="p-3">
+                     <h3 class="font-bold text-primary text-right"><span>299,99</span> MAD</h3>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <div class="flex justify-between px-4 w-full" id="aside-panel-footer">
+               <button id="see-panel" class="w-1/3 bg-primary px-4 rounded-lg text-accent-2 font-bold">Voir le panier</button>
+               <div id="total-panel" class="w-1/3 flex w-3/5 py-2 rounded-lg bg-secondary text-accent-2 font-bold">
+                 <span class="mx-auto">TOTAL PANIER : <span>299,00</span></span>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ <!-- side bar panier end -->
 
 
 
@@ -190,96 +259,96 @@
               </div>
           
           </div>       -->
-      </div>
+        </div>
 
       
-      <div class="">
-         
-          <div id="infosctnr2" class=" hidden ml-[20%] max-w-52 p-6 bg-accent-2 rounded-lg xl:block xl:pt-[6.7rem] xl:pb-0">
-
-              <!-- <h1 class="marqname mb-2 text-4xl font-medium text-gray-900 "></h1>        
-              <p class="teamname mb-3 text-2xlm font-medium text-gray-700 ">T-shirt <span class="spneqpnm"></span> Originals</p>
-              <div class="prix inline-flex items-center px-3 py-2 text-base font-medium text-center text-white bg-secondary ">
-                  
-              </div> -->
-          </div>
-
-        <form id="psnlcard" action="">
-            
-          <h2 class="font-medium text-xs ml-[25%] text-gray-500 mt-[5%] mb-[3%] md:text-lg lg:text-2xl xl:text-base xl:mt-[1%] xl:ml-[24%] xl:mb-2"> Couleur : <span id="chxclrprdt" class="italic text-black">Domicile</span></h2>
-          <div id="tshrttype" class="flex gap-[1.063rem] ml-[25%] md:mb-[2%] xl:ml-[23%] xl:mb-[0%]">
-              <!-- <div id="lclimg" class="cursor-pointer">
-                  <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem] lg:h-[5.85rem] lg:w-[5.55rem] xl:h-[5.5rem] xl:w-[5.25rem]" src="" alt="Home Jersey">
-              </div>
-              <div id="homimg" class="cursor-pointer">
-                  <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem] lg:h-[5.85rem] lg:w-[5.55rem] xl:h-[5.5rem] xl:w-[5.25rem]" src="" alt="Away Jersey">
-              </div>
-              <div id="awyimg" class="cursor-pointer">
-                  <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem] lg:h-[5.85rem] lg:w-[5.55rem] xl:h-[5.5rem] xl:w-[5.25rem]" src="" alt="Jersey Training">
-              </div> -->
-          </div>
-
-          
-          <div class="grid grid-rows-4 ml-[25%] xl:ml-[23%]">
-              <h3 class="font-medium text-primary text-xs pt-[2%] mt-[5%] ml-[1%] h-[1.25rem] md:font-semibold md:text-lg md:mt-[0%] xl:font-semibold xl:text-lg xl:ml-[0%]">Guide des Tailles:  </h3>
-
-              <select id="taislct" class="px-5 py-2 w-[13.313rem] mb-[2%] cursor-pointer font-medium text-xs text-center text-white bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary md:w-[21.625rem] md:h-[3.125rem] md:font-medium md:text-xl lg:w-[23.825rem] lg:h-[3.725rem] lg:text-2xl xl:w-[21.625rem] xl:h-[3.063rem] xl:text-lg">
-                  <option value="initial" class="hidden px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-primary0 bg-white hover:bg-primary hover:text-white focus:ring-4 focus:outline-none focus:ring-primary">Choisissez Votre Taille</option>
-                  <option value="small" class="px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-primary bg-white hover:bg-primary hover:text-white focus:ring-4 focus:outline-none focus:ring-primary">Small</option>
-                  <option value="medium" class="px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-primary bg-white hover:bg-primary hover:text-white focus:ring-4 focus:outline-none focus:ring-primary">Medium</option>
-                  <option value="large" class="px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-primary bg-white hover:bg-primary hover:text-white focus:ring-4 focus:outline-none focus:ring-primary">Large</option>
-              </select>
-              
-              <div class="inline-flex ml-[16%] md:ml-[11%] md:mt-[1.5%] xl:mt-0">
-                  <button type="button" id="monprd" class="bg-accent hover:bg-gray-400 text-white font-bold text-2xl pb-2 pl-1 w-[15%] md:w-[4.5rem] md:h-[3rem]">
-                    -
-                  </button>
-                  
-                  <input id="vleprd" type="text" class="bg-white border-2 border-accent h-11 text-center text-accent text-sm block w-[17%] py-2.5 md:w-[4rem] md:h-[3rem] md:border-[1px] xl:py-[0%]" placeholder="0"/>
-                  
-                  <button type="button" id="plsprd" class="bg-accent hover:bg-gray-400 text-white font-bold text-2xl pb-2 pl-1 w-[15%] md:w-[4.5rem] md:h-[3rem]">
-                    +
-                  </button>
-              </div>
-              <button id="pniajt" type="submit" class="px-5 py-2 w-[13.313rem] mt-[2%] font-medium text-xs text-center text-white bg-secondary hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-secondary md:w-[21.625rem] md:h-[3.125rem] md:font-medium md:text-xl lg:text-2xl lg:w-[23.825rem] lg:h-[3.725rem] xl:w-[21.625rem] xl:h-[3.063rem] xl:text-lg xl:mt-0"> Ajouter Au Panier </button>
-          </div>
-        </form>
-        </div>
-  </section>
-
-    <!-- Ligne Bleu-->
-    <div class="h-[0.55rem] mt-[1.2rem] bg-primary md:h-[1.3rem] md:mt-[2rem] lg:h-[2rem]">
-
-    </div>
-
-<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->       
-  <!-- Section des Informations sur le produit-->
-  <section class="">
-    <!-- Premier Grand div-->
-    <div class="mx-auto w-[13.25rem] px-4 mb-[1rem] md:w-[21.625rem] md:ml-[25%] lg:w-[23.625rem] lg:ml-[25%] xl:ml-[60%]">
-        <div class="border-stroke border-b border-gray-500">
-          <h2 class="text-dark text-[0.938rem] font-normal pt-1 mt-4 md:text-xl md:font-medium lg:text-2xl">
-            Disponibilité en magasin
-          </h2>
-          <a href="#" class="font-normal text-xs text-primary md:text-base lg:text-lg"> Consultez nos magasins</a>
-        </div>
-    </div>
-
-    <!-- Deuxieme Grand div-->
-    <div class="xl:grid xl:grid-cols-2">
-        <!-- div 1-->
-        <div class="mb-[5%]">
-            <div class="mx-auto w-[14.25rem] px-4 mb-[1rem] md:w-[21.625rem] md:ml-[25%] lg:w-[23.625rem] lg:ml-[25%] xl:w-[33.3rem]">
-                <div class="border-stroke border-b border-gray-500">
-                  <h2 class="text-dark text-[0.91rem] font-bold mb-[0.5rem] pt-1 mt-4 md:text-lg lg:text-xl lg:mt-6">
-                    Description produit
-                  </h2>
-                </div>
+        <div class="">
+           
+            <div id="infosctnr2" class=" hidden ml-[20%] max-w-52 p-6 bg-accent-2 rounded-lg xl:block xl:pt-[6.7rem] xl:pb-0">
+  
+                <!-- <h1 class="marqname mb-2 text-4xl font-medium text-gray-900 "></h1>        
+                <p class="teamname mb-3 text-2xlm font-medium text-gray-700 ">T-shirt <span class="spneqpnm"></span> Originals</p>
+                <div class="prix inline-flex items-center px-3 py-2 text-base font-medium text-center text-white bg-secondary ">
+                    
+                </div> -->
             </div>
+  
+          <form id="psnlcard" action="">
+              
+            <h2 class="font-medium text-xs ml-[25%] text-gray-500 mt-[5%] mb-[3%] md:text-lg lg:text-2xl xl:text-base xl:mt-[1%] xl:ml-[24%] xl:mb-2"> Couleur : <span id="chxclrprdt" class="italic text-black">Domicile</span></h2>
+            <div id="tshrttype" class="flex gap-[1.063rem] ml-[25%] md:mb-[2%] xl:ml-[23%] xl:mb-[0%]">
+                <!-- <div id="lclimg" class="cursor-pointer">
+                    <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem] lg:h-[5.85rem] lg:w-[5.55rem] xl:h-[5.5rem] xl:w-[5.25rem]" src="" alt="Home Jersey">
+                </div>
+                <div id="homimg" class="cursor-pointer">
+                    <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem] lg:h-[5.85rem] lg:w-[5.55rem] xl:h-[5.5rem] xl:w-[5.25rem]" src="" alt="Away Jersey">
+                </div>
+                <div id="awyimg" class="cursor-pointer">
+                    <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem] lg:h-[5.85rem] lg:w-[5.55rem] xl:h-[5.5rem] xl:w-[5.25rem]" src="" alt="Jersey Training">
+                </div> -->
+            </div>
+  
+            
+            <div class="grid grid-rows-4 ml-[25%] xl:ml-[23%]">
+                <h3 class="font-medium text-primary text-xs pt-[2%] mt-[5%] ml-[1%] h-[1.25rem] md:font-semibold md:text-lg md:mt-[0%] xl:font-semibold xl:text-lg xl:ml-[0%]">Guide des Tailles:  </h3>
+  
+                <select id="taislct" class="px-5 py-2 w-[13.313rem] mb-[2%] cursor-pointer font-medium text-xs text-center text-white bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary md:w-[21.625rem] md:h-[3.125rem] md:font-medium md:text-xl lg:w-[23.825rem] lg:h-[3.725rem] lg:text-2xl xl:w-[21.625rem] xl:h-[3.063rem] xl:text-lg">
+                    <option value="initial" class="hidden px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-primary0 bg-white hover:bg-primary hover:text-white focus:ring-4 focus:outline-none focus:ring-primary">Choisissez Votre Taille</option>
+                    <option value="small" class="px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-primary bg-white hover:bg-primary hover:text-white focus:ring-4 focus:outline-none focus:ring-primary">Small</option>
+                    <option value="medium" class="px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-primary bg-white hover:bg-primary hover:text-white focus:ring-4 focus:outline-none focus:ring-primary">Medium</option>
+                    <option value="large" class="px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-primary bg-white hover:bg-primary hover:text-white focus:ring-4 focus:outline-none focus:ring-primary">Large</option>
+                </select>
+                
+                <div class="inline-flex ml-[16%] md:ml-[11%] md:mt-[1.5%] xl:mt-0">
+                    <button type="button" id="monprd" class="bg-accent hover:bg-gray-400 text-white font-bold text-2xl pb-2 pl-1 w-[15%] md:w-[4.5rem] md:h-[3rem]">
+                      -
+                    </button>
+                    
+                    <input id="vleprd" type="text" class="bg-white border-2 border-accent h-11 text-center text-accent text-sm block w-[17%] py-2.5 md:w-[4rem] md:h-[3rem] md:border-[1px] xl:py-[0%]" placeholder="0"/>
+                    
+                    <button type="button" id="plsprd" class="bg-accent hover:bg-gray-400 text-white font-bold text-2xl pb-2 pl-1 w-[15%] md:w-[4.5rem] md:h-[3rem]">
+                      +
+                    </button>
+                </div>
+                <button id="pniajt" type="submit" class="px-5 py-2 w-[13.313rem] mt-[2%] font-medium text-xs text-center text-white bg-secondary hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-secondary md:w-[21.625rem] md:h-[3.125rem] md:font-medium md:text-xl lg:text-2xl lg:w-[23.825rem] lg:h-[3.725rem] xl:w-[21.625rem] xl:h-[3.063rem] xl:text-lg xl:mt-0"> Ajouter Au Panier </button>
+            </div>
+          </form>
+          </div>
+    </section>
+  
+      <!-- Ligne Bleu-->
+      <div class="h-[0.55rem] mt-[1.2rem] bg-primary md:h-[1.3rem] md:mt-[2rem] lg:h-[2rem]">
+  
+      </div>
+  
+  <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->       
+    <!-- Section des Informations sur le produit-->
+    <section class="">
+      <!-- Premier Grand div-->
+      <div class="mx-auto w-[13.25rem] px-4 mb-[1rem] md:w-[21.625rem] md:ml-[25%] lg:w-[23.625rem] lg:ml-[25%] xl:ml-[60%]">
+          <div class="border-stroke border-b border-gray-500">
+            <h2 class="text-dark text-[0.938rem] font-normal pt-1 mt-4 md:text-xl md:font-medium lg:text-2xl">
+              Disponibilité en magasin
+            </h2>
+            <a href="../vues/catalogue.html" class="font-normal text-xs text-primary md:text-base lg:text-lg"> Consultez nos magasins</a>
+          </div>
+      </div>
+  
+      <!-- Deuxieme Grand div-->
+      <div class="xl:grid xl:grid-cols-2">
+          <!-- div 1-->
+          <div class="mb-[5%]">
+              <div class="mx-auto w-[14.25rem] px-4 mb-[1rem] md:w-[21.625rem] md:ml-[25%] lg:w-[23.625rem] lg:ml-[25%] xl:w-[33.3rem]">
+                  <div class="border-stroke border-b border-gray-500">
+                    <h2 class="text-dark text-[0.91rem] font-bold mb-[0.5rem] pt-1 mt-4 md:text-lg lg:text-xl lg:mt-6">
+                      Information sur le T-shirt
+                    </h2>
+                  </div>
+              </div>
 
-            <table class="text-sm ml-[27%] text-left rtl:text-right text-gray-500 lg:ml-[26.7%]">
-                <tbody>
-                    <tr class="border-b-[0.6rem] border-white">
+              <table class="text-sm ml-[27%] text-left rtl:text-right text-gray-500 lg:ml-[26.7%]">
+                <tbody id="tableauinfos">
+                    <!-- <tr class="border-b-[0.6rem] border-white">
 
                         <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 md:w-[5.875rem] xl:w-[11.25rem]">
                             Taille
@@ -336,7 +405,7 @@
                             Angletere
                         </td>
 
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>

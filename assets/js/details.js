@@ -1,12 +1,14 @@
 /** Consommation de l'API */
 const apiUrl = 'https://mohamedmoustir.github.io/api/';
 // let datatprds = [];
+// let datatprds = [];
 let id = location.href.split("?")[1].split("=")[1];
 
 let tshrtcart = document.getElementById("affchg1");
 let infosctnr2 = document.getElementById("infosctnr2");
 let infosctnr = document.getElementById("infosctnr");
 let tshrttype = document.getElementById("tshrttype");
+let tableauinfos = document.getElementById("tableauinfos");
 
 
 fetch(apiUrl)
@@ -107,6 +109,71 @@ fetch(apiUrl)
             
             `;
 
+
+
+
+            tableauinfos.innerHTML = `
+            <tr class="border-b-[0.6rem] border-white">
+
+                        <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 md:w-[5.875rem] xl:w-[11.25rem]">
+                            Taille
+                        </th>
+                        
+                        <td id="tailleprdt" class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-secondary text-white md:w-[13.75rem] lg:w-[15.75rem] xl:w-[21rem] xl:h-[2.5rem]">
+                            Medium
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b-[0.6rem] border-white">
+
+                        <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 md:w-[5.875rem] xl:w-[11.25rem]">
+                            League
+                        </th>
+                        
+                        <td id="marqprdt" class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-secondary text-white md:w-[13.75rem] lg:w-[15.75rem] xl:w-[21rem] xl:h-[2.5rem]">
+                        ${data.Tshorts[id].category}
+                        </td>
+
+                    </tr>
+
+                    <tr class="hidden border-b-[0.6rem] border-white xl:table-row">
+
+                        <th class="border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 w-[11.25rem]">
+                            Description
+                        </th>
+                        
+                        <td id="dcrptprdt" class="px-4 py-[0.32rem] bg-secondary text-white w-[21rem] h-[2.5rem]">
+                        ${data.Tshorts[id].description}
+                        </td>
+
+                    </tr>
+
+                    <tr class="border-b-[0.6rem] border-white">
+
+                        <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 md:w-[5.875rem] xl:w-[11.25rem]">
+                            Couleur
+                        </th>
+                        
+                        <td id="cltrprdt" class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-secondary text-white  md:w-[13.75rem] lg:w-[15.75rem] xl:w-[21rem] xl:h-[2.5rem]">
+                            Rouge
+                        </td>
+
+                    </tr>
+
+                    <tr class="hidden border-b-[0.6rem] border-white xl:table-row">
+                        <th class="border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 w-[11.25rem]">
+                            Pays d'expédition
+                        </th>
+                        
+                        <td id="payprdt" class="px-4 py-[0.32rem] bg-secondary text-white w-[21rem] h-[2.5rem]">
+                        ${data.Tshorts[id].country}
+                        </td>
+
+                    </tr>
+            
+            `;
+
             
 
 
@@ -118,12 +185,6 @@ fetch(apiUrl)
 
 
 
-
-function afficherProduit() {
-    
-
-
-};
 
 
 
@@ -165,6 +226,32 @@ console.log(dataprdts);
 
 
 /**////////////////////////////////////////////////////// */
+
+
+// ---JavaScript--- :
+
+document.getElementById("shoping-icon-md").addEventListener("click", function () {
+    const shoppingIconMd = document.getElementById("shoping-icon-md");
+    const panelCard = document.getElementById("panel-aside-bar");
+
+    panelCard.classList.remove("hidden");
+  })
+
+  document.getElementById("close-btn").addEventListener("click", function () {
+    const panelCard = document.getElementById("panel-aside-bar");
+
+    panelCard.classList.add("hidden");
+  })
+
+  const seePanel = document.getElementById("see-panel");
+  seePanel.addEventListener("click", function(){
+    const panelCard = document.getElementById("panel-aside-bar");
+    panelCard.classList.add("hidden");
+    window.location.href = "../vues/panier.html";
+
+  })
+
+// --- JavaScript End---
 
 
 

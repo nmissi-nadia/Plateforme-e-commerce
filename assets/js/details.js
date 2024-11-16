@@ -226,8 +226,6 @@ function changercouleur(){
         chxclrprdt.textContent = "Third";
         cltrprdt.textContent = "Third";
     });
-
-
 };
 
 
@@ -250,11 +248,12 @@ let dataprdts = JSON.parse(localStorage.getItem('produits')) || [];
 function stockerdata() {
 
     let prdt = {
-        
+
         taille: taislct.value,
         couleur: chxclrprdt.textContent,
         nombre: vleprd.value,
         identifiant: id
+
     };
 
     dataprdts.push(prdt);

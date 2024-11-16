@@ -408,7 +408,6 @@ document.getElementById("close-btn").addEventListener("click", function () {
 
 const testimnal= document.getElementById("testimnal")
 function NextSlide() {
-    
     testimnal.style.scrollBehavior = "smooth"
     testimnal.scrollLeft += 500;
 }

@@ -76,6 +76,7 @@
     </script>
   </head>
  
+ 
   <body>
     <header>
       <!-- Header start -->
@@ -181,6 +182,7 @@
       </div>
 
       
+      
     </header>
     <!-- side bar panier start -->
   <div id="panel-aside-bar" class="hidden relative z-10 transition-opacity z-20" aria-labelledby="slide-over-title"
@@ -256,7 +258,9 @@
             <span class="text-gray-700 font-medium">Filtre</span>
           </div>
           <div id="filterSidebar" class="fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 overflow-y-auto z-20">
+          <div id="filterSidebar" class="fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 overflow-y-auto z-20">
     <!-- Header de la Sidebar -->
+    <div class="flex justify-between items-center p-4 bg-gray-100 border-b border-gray-300 ">
     <div class="flex justify-between items-center p-4 bg-gray-100 border-b border-gray-300 ">
       <h2 class="text-lg font-semibold">Filtres</h2>
       <button onclick="toggleSidebar(false)" class="text-gray-500 hover:text-black">&times;</button>
@@ -266,26 +270,39 @@
     <div class="p-4 space-y-6">
 
       <!-- Filtre Couleur -->
+
+      <!-- Filtre Couleur -->
       <div>
+        <h3 class="text-gray-700 font-medium">Category</h3>
         <h3 class="text-gray-700 font-medium">Category</h3>
         <div class="mt-2 space-y-1">
           <label class="flex items-center">
+            <input type="radio" name="category" value="La Liga" class="form-checkbox text-red-500">
+            <span class="ml-2">LA LIGA</span>
             <input type="radio" name="category" value="La Liga" class="form-checkbox text-red-500">
             <span class="ml-2">LA LIGA</span>
           </label>
           <label class="flex items-center">
             <input type="radio" name="category" value="Premier League" class="form-checkbox text-gray-900">
             <span class="ml-2">Premier League</span>
+            <input type="radio" name="category" value="Premier League" class="form-checkbox text-gray-900">
+            <span class="ml-2">Premier League</span>
           </label>
           <label class="flex items-center">
+            <input type="radio" name="category" value="Bundesliga" class="form-checkbox text-gray-500">
+            <span class="ml-2">Bundesliga</span>
             <input type="radio" name="category" value="Bundesliga" class="form-checkbox text-gray-500">
             <span class="ml-2">Bundesliga</span>
           </label>
           <label class="flex items-center">
             <input type="radio" name="category" value="Ligue 1" class="form-checkbox text-blue-500">
             <span class="ml-2">Ligue 1</span>
+            <input type="radio" name="category" value="Ligue 1" class="form-checkbox text-blue-500">
+            <span class="ml-2">Ligue 1</span>
           </label>
           <label class="flex items-center">
+            <input type="radio" name="category" value="Serie A" class="form-checkbox text-blue-500">
+            <span class="ml-2">Serie A</span>
             <input type="radio" name="category" value="Serie A" class="form-checkbox text-blue-500">
             <span class="ml-2">Serie A</span>
           </label>
@@ -415,15 +432,12 @@
                 <a href="#" class="text-gray-300 hover:text-white">HTML</a>
               </li>
               <li>
-                <a href="#" class="text-gray-300 hover:text-white">CSS</a>
+                <a href="#" class="text-gray-300 hover:text-white">TAILWIND CSS</a>
               </li>
               <li>
                 <a href="#" class="text-gray-300 hover:text-white"
                   >JavaScript</a
                 >
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">Java</a>
               </li>
               <li>
                 <a href="#" class="text-gray-300 hover:text-white">JSON</a>
@@ -495,4 +509,5 @@
     </footer>
     <script src="../assets/js/catalo.js"></script>
   </body>
+     
      

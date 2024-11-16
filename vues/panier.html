@@ -385,6 +385,14 @@
       panelCard.classList.add("hidden");
     })
 
+    const seePanel = document.getElementById("see-panel");
+    seePanel.addEventListener("click", function(){
+      const panelCard = document.getElementById("panel-aside-bar");
+      panelCard.classList.add("hidden");
+      window.location.href = "../vues/panier.html";
+
+    })
+
     //------------------------------------------------------------------------------------------
     const cart = [
       {
@@ -491,6 +499,7 @@
          </a>
        </div>
     `;
+    //container.appendChild(productCard)
         container.innerHTML += productCard; // Ajouter la carte au conteneur
 
         const asideProductCard = `

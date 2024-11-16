@@ -32,7 +32,6 @@ tailwind.config = {
     }
 }
 
-
 let carousel_cards = document.getElementById('carousel-cards');
 
 function slideLeft() {
@@ -49,6 +48,13 @@ function slideRighe() {
 
 
 
+
+
+
+
+
+
+
 function openMenu() {
 
     document.getElementById("navbar-default").style.scrollBehavior = "smooth"
@@ -62,6 +68,7 @@ const slides = document.getElementById('carousel-images');
 slides.addEventListener("wheel", (evnt) => {
     slides.scrollLeft += evnt.deltaX
 })
+
 //carousel-cards
 
 
@@ -89,7 +96,6 @@ document.getElementById("rightBtn").addEventListener("click", () => {
         document.getElementById("one").style.background = "none"
 
     } else if (carousel_cards_words.scrollLeft >= 1500) {
-
         document.getElementById("two").style.background = "none"
         document.getElementById("three").style.background = "#608BC1"
 
@@ -101,9 +107,7 @@ document.getElementById("rightBtn").addEventListener("click", () => {
 
 // left
 document.getElementById("leftBtn").addEventListener("click", () => {
-
     carousel_cards_words.style.scrollBehavior = "smooth"
-
     carousel_cards_words.scrollLeft -= 1500;
 
     if (carousel_cards_words.scrollLeft > 1500) {
@@ -111,10 +115,8 @@ document.getElementById("leftBtn").addEventListener("click", () => {
         document.getElementById("three").style.background = "none"
 
     } else if (carousel_cards_words.scrollLeft <= 1500) {
-
         document.getElementById("two").style.background = "none"
         document.getElementById("one").style.background = "#608BC1"
-
 
     }
 
@@ -123,7 +125,7 @@ document.getElementById("leftBtn").addEventListener("click", () => {
 
 
 function slideNum(value) {
-
+    console.log(value);
 
     if (value == "one") {
         document.getElementById("one").style.background = "#608BC1"
@@ -145,14 +147,15 @@ function slideNum(value) {
     }
 
     if (value == "three") {
-
         carousel_cards_words.scrollBehavior = "smooth"
         document.getElementById("three").style.background = "#608BC1"
         carousel_cards_words.scrollLeft = 3000;
         document.getElementById("one").style.background = "none"
         document.getElementById("two").style.background = "none"
 
+
     }
+
 
 
 }
@@ -166,18 +169,16 @@ fetch("https://mohamedmoustir.github.io/api/")
     )
 
     .then(function (data) {
+        let cloths = data.Tshorts
 
-        let cloths=data.Tshorts
-         
-        for (let i = 1; i < 13; i++) {
-         
-            
+        for (let i = 1; i < 15; i++) {
+
+
             carousel_cards.innerHTML += `
         
-     <div class =" mx-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow max-h-[600px]">
+     <div class =" mx-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow max-h-[500px]">
                  <a href="#">
-                     <img class="p-8 w-[100%] border max-h-[65%] rounded-t-lg" src="${cloths[i].images[1]}" alt="product image" />
-
+                     <img class="p-8 w-[100%] border max-h-[55%] rounded-t-lg" src="${cloths[i].images[2]}" alt="product image" />
                  </a>
                  <div class="px-8 pb-5 w-[350px]">
                     <a href="#">
@@ -224,13 +225,8 @@ fetch("https://mohamedmoustir.github.io/api/")
              </div>
      
      `
-
-
-        }   
-    }).catch(error=>console.log(erorr))
-
-
-
+        }
+    })
 
 // .catch(error => console.log(erorr))
 
@@ -241,7 +237,6 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
 
         const carousel_cards_words = document.getElementById('carousel-cards_Words');
         for (let i = 0; i < 3; i++) {
-
             let worldfot = data.worldfot
 
             carousel_cards_words.innerHTML += `
@@ -258,7 +253,7 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white w-full">
                                ${worldfot[0].name}</h5>
                         </a>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> ${worldfot[0].description.slice(0, 100)}.</p>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> ${worldfot[0].description.slice(0, 100)}...</p>
                         <a href="#"
                             class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                             Read more
@@ -396,28 +391,22 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
      `
         }
 
-
     }).catch(error => console.log(erorr))
-
 
 // Fonction d'Afficher et cacher aside barre
 document.getElementById("shoping-icon-md").addEventListener("click", function () {
     const shoppingIconMd = document.getElementById("shoping-icon-md");
     const panelCard = document.getElementById("panel-aside-bar");
-
     panelCard.classList.remove("hidden");
 })
 
 document.getElementById("close-btn").addEventListener("click", function () {
     const panelCard = document.getElementById("panel-aside-bar");
-
     panelCard.classList.add("hidden");
 });
 
-// testimonal
-const testimnal= document.getElementById("testimnal")
+const testimnal = document.getElementById("testimnal")
 function NextSlide() {
-    
     testimnal.style.scrollBehavior = "smooth"
     testimnal.scrollLeft += 500;
 }
@@ -426,7 +415,3 @@ function PreviousSlide() {
     testimnal.style.scrollBehavior = "smooth"
     testimnal.scrollLeft -= 500;
 }
-
-
-
-    

@@ -32,7 +32,36 @@ tailwind.config = {
     }
 }
 
+let carousel_cards = document.getElementById('carousel-cards');
 
+function slideLeft() {
+    carousel_cards.style.scrollBehavior = "smooth"
+    carousel_cards.scrollLeft -= 500
+
+}
+
+
+function slideRighe() {
+    carousel_cards.style.scrollBehavior = "smooth"
+    carousel_cards.scrollLeft += 500
+}
+
+
+
+
+
+
+
+
+
+
+function openMenu() {
+
+    document.getElementById("navbar-default").style.scrollBehavior = "smooth"
+    document.getElementById("navbar-default").classList.toggle("hidden")
+
+
+}
 
 //carousel-images header
 const slides = document.getElementById('carousel-images');
@@ -42,7 +71,7 @@ slides.addEventListener("wheel", (evnt) => {
 
 //carousel-cards
 
-let carousel_cards = document.getElementById('carousel-cards');
+
 carousel_cards.addEventListener("wheel", (evnt) => {
     carousel_cards.scrollLeft += evnt.deltaX
 })
@@ -54,7 +83,8 @@ carousel_cards.addEventListener("wheel", (evnt) => {
 //slide-images catgory
 
 const carousel_cards_words = document.getElementById('carousel-cards_Words');
-document.getElementById("1").style.background = "#608BC1"
+document.getElementById("one").style.background = "#608BC1"
+// right
 document.getElementById("rightBtn").addEventListener("click", () => {
 
     carousel_cards_words.style.scrollBehavior = "smooth"
@@ -62,29 +92,31 @@ document.getElementById("rightBtn").addEventListener("click", () => {
 
 
     if (carousel_cards_words.scrollLeft < 1500) {
-        document.getElementById("2").style.background = "#608BC1"
-        document.getElementById("1").style.background = "none"
+        document.getElementById("two").style.background = "#608BC1"
+        document.getElementById("one").style.background = "none"
 
     } else if (carousel_cards_words.scrollLeft >= 1500) {
-        document.getElementById("2").style.background = "none"
-        document.getElementById("3").style.background = "#608BC1"
+        document.getElementById("two").style.background = "none"
+        document.getElementById("three").style.background = "#608BC1"
+
+
 
     }
-    
+
 })
 
-
+// left
 document.getElementById("leftBtn").addEventListener("click", () => {
     carousel_cards_words.style.scrollBehavior = "smooth"
     carousel_cards_words.scrollLeft -= 1500;
 
     if (carousel_cards_words.scrollLeft > 1500) {
-        document.getElementById("2").style.background = "#608BC1"
-        document.getElementById("3").style.background = "none"
+        document.getElementById("two").style.background = "#608BC1"
+        document.getElementById("three").style.background = "none"
 
     } else if (carousel_cards_words.scrollLeft <= 1500) {
-        document.getElementById("2").style.background = "none"
-        document.getElementById("1").style.background = "#608BC1"
+        document.getElementById("two").style.background = "none"
+        document.getElementById("one").style.background = "#608BC1"
 
     }
 
@@ -92,37 +124,38 @@ document.getElementById("leftBtn").addEventListener("click", () => {
 
 
 
-function slideNum(id) {
+function slideNum(value) {
+    console.log(value);
 
-    if (id == "1") {
-        document.getElementById("1").style.background = "#608BC1"
+    if (value == "one") {
+        document.getElementById("one").style.background = "#608BC1"
         carousel_cards_words.style.scrollBehavior = "smooth"
-        document.getElementById("2").style.background = "none"
-        document.getElementById("3").style.background = "none"
+        document.getElementById("two").style.background = "none"
+        document.getElementById("three").style.background = "none"
         carousel_cards_words.scrollLeft = 0;
-    
+
     }
 
-    if (id == "2") {
-        document.getElementById("2").style.background = "#608BC1"
+    if (value == "two") {
+        document.getElementById("two").style.background = "#608BC1"
         carousel_cards_words.style.scrollBehavior = "smooth"
         carousel_cards_words.scrollLeft = 1500;
-        document.getElementById("1").style.background = "none"
-        document.getElementById("3").style.background = "none"
+        document.getElementById("one").style.background = "none"
+        document.getElementById("three").style.background = "none"
 
 
     }
 
-    if (id == "3") {
-        document.getElementById("3").style.background = "#608BC1"
+    if (value == "three") {
         carousel_cards_words.scrollBehavior = "smooth"
+        document.getElementById("three").style.background = "#608BC1"
         carousel_cards_words.scrollLeft = 3000;
-        document.getElementById("1").style.background = "none"
-        document.getElementById("2").style.background = "none"
-        
+        document.getElementById("one").style.background = "none"
+        document.getElementById("two").style.background = "none"
+
 
     }
-    
+
 
 
 }
@@ -132,10 +165,15 @@ function slideNum(id) {
 //option methode status:200 - 404 - 500 - 403
 
 fetch("https://mohamedmoustir.github.io/api/")
-    .then(result => result.json())
+    .then(result => result.json()
+    )
+
     .then(function (data) {
-        for (let i = 0; i < data.Tshorts.length; i++) {
-            let cloths = data.Tshorts
+        let cloths = data.Tshorts
+
+        for (let i = 1; i < 15; i++) {
+
+
             carousel_cards.innerHTML += `
         
      <div class =" mx-8 max-w-sm bg-white border border-gray-200 rounded-lg shadow max-h-[500px]">
@@ -143,8 +181,8 @@ fetch("https://mohamedmoustir.github.io/api/")
                      <img class="p-8 w-[100%] border max-h-[55%] rounded-t-lg" src="${cloths[i].images[2]}" alt="product image" />
                  </a>
                  <div class="px-8 pb-5 w-[350px]">
-                     <a href="#">
-                         <h5 class="text-xl  font-semibold tracking-tight text-gray-900 dark:text-white">${cloths[i].description.slice(0, 100)}</h5>
+                    <a href="#">
+                         <h5 class="text-xl  font-semibold tracking-tight text-gray-900 dark:text-white">${cloths[i].description.slice(0, 90)}...</h5>
                      </a>
                      <div class="flex items-center mt-2.5 mb-5">
                          <div class="flex items-center space-x-1 rtl:space-x-reverse">
@@ -188,7 +226,9 @@ fetch("https://mohamedmoustir.github.io/api/")
      
      `
         }
-    }).catch(error=>console.log(erorr))
+    })
+
+// .catch(error => console.log(erorr))
 
 
 fetch("https://mohamedmoustir.github.io/nweapi/")
@@ -198,7 +238,6 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
         const carousel_cards_words = document.getElementById('carousel-cards_Words');
         for (let i = 0; i < 3; i++) {
             let worldfot = data.worldfot
-
 
             carousel_cards_words.innerHTML += `
      
@@ -214,7 +253,7 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white w-full">
                                ${worldfot[0].name}</h5>
                         </a>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> ${worldfot[0].description.slice(0, 100)}.</p>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> ${worldfot[0].description.slice(0, 100)}...</p>
                         <a href="#"
                             class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                             Read more
@@ -352,392 +391,27 @@ fetch("https://mohamedmoustir.github.io/nweapi/")
      `
         }
 
-
-
-
-    }
-  })
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }).catch(error => console.log(erorr))
+
+// Fonction d'Afficher et cacher aside barre
+document.getElementById("shoping-icon-md").addEventListener("click", function () {
+    const shoppingIconMd = document.getElementById("shoping-icon-md");
+    const panelCard = document.getElementById("panel-aside-bar");
+    panelCard.classList.remove("hidden");
+})
+
+document.getElementById("close-btn").addEventListener("click", function () {
+    const panelCard = document.getElementById("panel-aside-bar");
+    panelCard.classList.add("hidden");
+});
+
+const testimnal = document.getElementById("testimnal")
+function NextSlide() {
+    testimnal.style.scrollBehavior = "smooth"
+    testimnal.scrollLeft += 500;
+}
+
+function PreviousSlide() {
+    testimnal.style.scrollBehavior = "smooth"
+    testimnal.scrollLeft -= 500;
+}

@@ -22,11 +22,78 @@ YouMarket lance une plateforme e-commerce innovante pour une expérience d'achat
 ---
 
 ## 📖 Aperçu du Projet
-Cette application web permet aux amateurs de football de :  
-- Naviguer à travers une large gamme de produits.
-- Rechercher des articles spécifiques.
-- Appliquer des filtres avancés (prix, catégorie).
-- Ajouter des produits au panier pour une expérience d'achat optimisée.
+# Rôles & Missions :
+
+​
+
+## Conception et Maquettage (D & M) : 🖌️
+
+Maquettes : Élaboration de maquettes attractives, incluant un slider et des effets visuels interactifs pour optimiser l’expérience utilisateur.
+
+​
+
+## Développement : 💻
+
+- **Carrousel :** Intégration d'un carrousel dynamique pour présenter les produits phares et promotions.
+- **Galerie :** Création d'une galerie permettant de visualiser les produits sous différents angles et options.
+- **Validation REGEX :** Implémentation de validations avec des expressions régulières pour garantir la qualité des données saisies (ex. nom, adresse, e-mail).
+- **Filtre et recherche :** Développement de fonctionnalités de filtrage avancées, permettant aux utilisateurs de rechercher facilement les produits selon différents critères (taille, couleur, caractéristiques techniques, etc.).
+- **Personnalisation des produits :** Permettre aux utilisateurs de configurer les caractéristiques de chaque produit, avec une mise à jour du prix.
+- **Panier :** Mise en place d’un panier interactif qui ajuste les quantités si le produit est déjà sélectionné, tout en affichant le prix total actualisé.
+- **Devis :** Génération d'un devis au format PDF, récapitulant les choix et personnalisations, pour offrir aux clients la possibilité d’archiver ou partager leurs commandes.
+- **Local Storage :** Utilisation du localStorage pour sauvegarder les préférences de l’utilisateur, permettant une navigation plus fluide et un retour aux choix précédents.
+- **Consommation API :** Intégration d'une API pour récupérer les informations sur les produits, améliorant ainsi l’efficacité et la flexibilité de la gestion des données.
+​
+
+​
+
+## Pages à développer : 📄
+
+​
+
+- **Page Accueil :**
+
+Présentation de YouMarket et des valeurs qui la différencient.
+Mise en avant des produits et services les plus populaires, grâce à un carrousel JavaScript.
+Accès rapide aux différentes sections du site, notamment le catalogue, catégories, le panier, A propos…
+Mise en place d’une pagination fluide pour organiser efficacement les résultats de recherche par différentes catégories (un maximum de 6 catégories par page "systeme de pagination").
+​
+
+- **Page Catalogue :**
+
+Affichage de la liste complète des produits disponibles, avec des options de filtrage et de tri pour faciliter la navigation.
+Moteur de recherche par mots-clés pour une expérience utilisateur optimisée (Bonus).
+Chaque produit dispose d'un lien vers une page détaillée, incluant toutes les informations nécessaires.
+Pagination fluide pour organiser efficacement les résultats de recherche(avec un maximum de 12 produits par page).
+​
+
+- **Page Détails du Produit :**
+
+Affichage d’une description détaillée des produits, incluant leurs caractéristiques principales.
+Options de personnalisation (choix des caractéristiques techniques, accessoires, etc.) avec mise à jour du prix en fonction des sélections.
+Affichage du prix total et des caractéristiques sélectionnées pour un aperçu clair de l'achat.
+Intégrez un bouton d’ajout au panier et calculez le prix final en fonction des options sélectionnées.
+​
+
+- **Page Panier :**
+
+Liste des produits ajoutés au panier avec les options choisies.
+Possibilité de modifier les quantités ou de retirer des articles, avec une mise à jour automatique du prix total.
+Affichage d’un récapitulatif de la commande(devis) et option de finaliser l’achat(valider).
+​
+
+- **Page Devis :**
+
+Génération d’un devis clair et détaillé, récapitulant toutes les sélections et personnalisations du client.
+Option d’impression au format PDF, permettant aux utilisateurs de conserver leur devis.
+​
+
+- **Page À Propos :**
+
+Présentation de l’histoire, de la mission et de l’équipe de YouMarket.
+Informations sur les valeurs et engagements de l’entreprise, renforçant la relation de confiance avec les clients
+Des avis authentiques de nos utilisateurs sur leur expérience d'achat, illustrant notre engagement à satisfaire leurs besoins.
+FAQ.
 
 ---
 

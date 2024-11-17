@@ -2,7 +2,7 @@
 YouMarket lance une plateforme e-commerce innovante pour une expérience d'achat fluide et personnalisée. Les utilisateurs pourront configurer leurs produits et utiliser des outils avancés pour la recherche, la navigation et la gestion des commandes. En utilisant HTML, CSS, Tailwind et JavaScript.
 
 
-# 🎯 Site e-commerce pour vente  les t-shirts de football 
+# 🎯 SPORTEEZ : Site e-commerce pour vente  les t-shirts de football 
 
 > Une application web moderne permettant aux utilisateurs de parcourir, rechercher et acheter des T-shirts de football. Cette application utilise une API pour fournir des données dynamiques et propose une expérience utilisateur fluide.
 
@@ -109,7 +109,7 @@ FAQ.
 ## 💻 Technologies Utilisées
 - **Frontend :**
   - HTML5, CSS3 (Tailwind CSS)
-  - JavaScript (ES6+)
+  - JavaScript 
 - **Backend :**
   - API REST externe
 - **Stockage local :**
@@ -118,12 +118,14 @@ FAQ.
   - Tailwind CSS pour un design réactif et moderne.
 
 ---
+## 🌐 Hébergement
+- **Lien vers le site web :** [Lien ici]
 
 ## 🚀 Installation et Utilisation
 1. **Cloner le dépôt** :
    ```bash
    git clone https://github.com/nmissi-nadia/Plateforme-e-commerce
-   cd nom-repository
+   cd Plateforme-e-commerce
    ```
 
 2. **Ouvrir le fichier HTML principal** :
@@ -133,6 +135,7 @@ FAQ.
    - Page d'accueil : .
    - Page catalogue : Liste des produits avec filtres et recherche.
    - Détails du produit : Informations détaillées sur un produit spécifique.
+   - Page A propos : Une page décrivant la mission, la vision et les détails de l'équipe derrière le projet.
    - Page panier : Visualisation des articles ajoutés.
 
 4. **Dépendances :**  
@@ -153,10 +156,12 @@ Plateforme-e-commerce/
 │       └── catalo.js
 │       └── details.js
 ├── vues/
-│   ├── index.html
+│   ├── home.html
+│   ├── catalogue.html
 │   ├── details.html
-│   ├── cart.html
+│   ├── panier.html
 ├   |── about.html
+├── index.html
 ├── README.md
 ```
 

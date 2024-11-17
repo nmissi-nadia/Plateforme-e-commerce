@@ -46,7 +46,7 @@ function afficherProduits(page) {
         </div>
         
         <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <button class="bg-white text-orange-500 font-semibold py-2 px-4 rounded-md mb-4 justify-between" onclick="ajouteraupanier('${produit.id}', '${produit.title}', '${produit.price}','${produit.images[0]}')">
+          <button class="bg-white text-orange-500 font-semibold py-2 px-4 rounded-md mb-4 justify-between" onclick="ajouteraupanier('${produit.id}')">
             Ajouter au panier
             <i class="fa-solid fa-cart-shopping"></i>
           </button>
@@ -114,7 +114,7 @@ function toggleSidebar1(show) {
 
 
 // Ajouter au panier
-function ajouteraupanier(id, title, price, image) {
+function ajouteraupanier(id) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const existingProduct = cart.find(item => item.id === id);
     let L ='large';
@@ -122,7 +122,7 @@ function ajouteraupanier(id, title, price, image) {
     if (existingProduct) {
       existingProduct.quantity += 1;
     } else {
-      cart.push({ id, title: title, price, couleur, quantity: 1,taille:L });
+      cart.push({ id,couleur, quantity: 1,taille:L });
     }
   
     localStorage.setItem('cart', JSON.stringify(cart));

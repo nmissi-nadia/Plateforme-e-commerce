@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Page | Details</title>
+    <title> SPORTEEZ</title>
     <!-- Lien du Fichier CSS-->
     <link rel="stylesheet" href="../assets/css/details.css">
 
@@ -12,7 +12,6 @@
 
     <!-- Lien EnLigne des icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     
     <!-- Les Lien de la Barre de Navigation-->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
@@ -57,490 +56,408 @@
     </script>
 
 </head>
-<body>
-    <!-- Barre de Navigation-->
-    <nav class="bg-white border-gray-200 dark:bg-accent-2 shadow-lg">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="assets/imgs/red-blue-logo.png" class="h-8" alt="Flowbite Logo" />
-          </a>
-          <div>
-            <i
-              class="fa-solid fa-cart-shopping text-2xl text-primary cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer mr-6"></i>
-            <button data-collapse-toggle="navbar-default" type="button"
-              class="inline-flex items-center p-1 w-8 h-8 justify-center text-sm text-accent-2 rounded-lg md:hidden bg-primary hover:text-accent-2 focus:outline-none focus:ring-2 focus:ring-gray-200"
-              aria-controls="navbar-default" aria-expanded="false">
-              <span class="sr-only">Open main menu</span>
-              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M1 1h15M1 7h15M1 13h15" />
-              </svg>
-            </button>
-          </div>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul
-              class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg bg-accent-2 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-accent-2 bg-accent-2 md:bg-accent-2 border-gray-700">
-              <li>
-                <a href="#" class="block py-2 px-3 rounded text-primary hover:text-accent-2 hover:bg-primary "
-                  aria-current="page">Accueil</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="block py-2 px-3 rounded text-primary hover:text-accent-2 hover:bg-primary md:hover:bg-transparent md:border md:p-0 md:hover:text-secondary md:hover:bg-transparent">Catalogue</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="block py-2 px-3 rounded text-primary hover:text-accent-2 hover:bg-primary md:hover:bg-transparent md:border md:p-0 dark:hover:text-white md:dark:hover:bg-transparent"> À
-                  propos</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="block py-2 px-3 rounded text-primary hover:text-accent-2 hover:bg-primary md:hover:bg-transparent md:border md:p-0 dark:hover:text-white md:dark:hover:bg-transparent">Login</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="block py-2 px-3 rounded text-primary hover:text-accent-2 hover:bg-primary md:hover:bg-transparent md:border md:p-0 dark:hover:text-white md:dark:hover:bg-transparent"><i
-                    class="fa-solid fa-cart-shopping text-2xl cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer hidden"></i></a>
-              </li>
-            </ul>
-          </div>
+<body class="font-roboto bg-accent-2">
+  <!-- Header start -->
+  <head>
+    <nav class="bg-white border-gray-200 shadow-lg">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="#" class="flex items-center">
+          <img src="../assets/imgs/red-blue-logo.png" class="h-8 sm:h-12 md:h-8" alt="Sporteez Logo" />
+        </a>
+        <div class="flex md:flex">
+          <i class="fa-solid fa-cart-shopping text-3xl sm:text-5xl text-primary cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer mr-6 sm:mr-10 md:hidden"></i>
+          <button data-collapse-toggle="navbar-default" type="button"
+            class="inline-flex items-center p-1 h-8 w-8 sm:w-12 sm:h-12 justify-center text-sm text-accent-2 rounded-lg md:hidden bg-primary focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <i class="fa-solid fa-bars sm:text-4xl"></i>
+          </button>
         </div>
-        <div class="flex w-full px-4">
-          <form class="max-w-md w-full mb-2">
-            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Rechercher</label>
-            <div class="relative">
-              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="none" viewBox="0 0 20 20">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                </svg>
-              </div>
-              <input type="search" id="default-search"
-                class="block w-full px-4 py-3 ps-10 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-accent-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-accent-2 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Recherche..." required />
-              <button type="submit"
-                class="text-primary text-xl absolute end-2.5 bottom-1 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-4 py-1 transition-colors duration-500 ease-in-out cursor-pointer"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-          </form>
+        <div class="hidden w-full md:flex md:w-auto" id="navbar-default">
+          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg bg-accent-2 md:flex-row md:space-x-4 md:mt-0 md:border-0 bg-accent-2 md:bg-accent-2">
+            <li>
+              <a href="../vues/home.html" class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1 " aria-current="page">Accueil</a>
+            </li>
+            <li>
+              <a href="../vues/catalogue.html" class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1">Catalogue</a>
+            </li>
+            <li>
+              <a href="../vues/about.html" class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1">À propos</a>
+            </li>
+            <li>
+              <a href="../vues/panier.html" class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1">Login</a>
+            </li>
+            <!-- <li>
+              <a href="#">
+                <i class="fa-solid fa-cart-shopping text-2xl cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer hidden"></i></a>
+            </li> -->
+          </ul>
+          <i id="shoping-icon-md" class="fa-solid fa-cart-shopping hidden sm:hidden md:flex text-3xl md:text-2xl sm:text-5xl text-primary cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer mr-6 sm:mr-10 md:mx-4 md:w-6 md:h-6 md:hover:text-secondary"></i>
         </div>
+      </div>
+      <div class="flex w-full px-4 md:justify-center">
+        <form class="w-full sm:w-full mb-2 md:w-4/5">
+          <!-- <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Rechercher</label> -->
+          <div class="relative">
+            <input type="search" id="default-search"
+              class="flex w-full sm:w-full px-4 py-3 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-accent-2 focus:ring-primary focus:border-primary "
+              placeholder="Recherche..." required />
+            <button type="submit"
+              class="text-primary text-xl absolute end-2.5 bottom-1 focus:ring-4 focus:outline-none focus:ring-primary font-medium rounded-xl text-sm px-4 py-1 transition-colors duration-500 ease-in-out cursor-pointer"><i
+                class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </form>
+      </div>
     </nav>
+  </head>
+  <!-- Header End -->
+
+  <!-- side bar panier start -->
+   <!-- ajouter hidden au class -->
+   <div id="panel-aside-bar" class="hidden relative z-10 transition-opacity" aria-labelledby="slide-over-title"
+   role="dialog" aria-modal="true">
+   <div class="fixed inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
+   <div class="fixed inset-0 overflow-hidden">
+     <div class="absolute inset-0 overflow-hidden">
+       <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+         <div class="pointer-events-auto relative w-screen max-w-md">
+           <div class="absolute left-0 top-0 -ml-8 flex pr-2 pt-4 sm:-ml-10 sm:pr-4">
+             <button id="close-btn" type="button"
+               class="relative rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white">
+               <span class="absolute -inset-2.5"></span>
+               <span class="sr-only">Close panel</span>
+               <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                 aria-hidden="true" data-slot="icon">
+                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+               </svg>
+             </button>
+           </div>
+           <div class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
+             <div class="px-4 sm:px-6">
+               <h2 class="text-secondary font-bold text-xl" id="slide-over-title">Votre Panier :</h2>
+             </div>
+             <div id="aside-panel" class="product-card relative mt-6 flex-1 px-4 sm:px-6">
+               <div class="item1 flex bg-red-100 mb-4 p-4 rounded-lg justify-between">
+                 <div class="item-pic w-1/4">
+                   <div class="flex flex-col justify-center m-auto">
+                     <img class="h-full w-full rounded-lg" src="../assets/imgs/atm.png" alt="">
+                     <div class="flex rounded-md shadow-sm justify-around mt-2" role="group">
+                       <button type="button" class="bg-primary text-sm h-6 px-1 rounded-l-lg text-accent-2 "><i
+                           class="fa-solid fa-minus"></i></button>
+                       <button type="button" class="bg-primary text-sm h-6 px-4 text-accent-2 "><span>1</span></button>
+                       <button type="button" class="bg-primary text-sm h-6 px-1 rounded-r-lg text-accent-2 "><i
+                           class="fa-solid fa-plus"></i></button>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="infos bg-accent-2 w-[70%] flex flex-col justify-between rounded-lg">
+                   <div class="p-3">
+                     <div class="title-price flex justify-between ">
+                       <h3 class="text-lg">T-shirt</h3>
+                       <i
+                         class="fa-solid fa-trash text-secondary text-right cursor-pointer mt-1 sm:text-2xl sm:mt-0"></i>
+                     </div>
+                     <div class="title-price flex justify-between">
+                       <h5 class="text-sm">Livraison gratuite</h5>
+                     </div>
+                   </div>
+                   <div class="p-3">
+                     <h3 class="font-bold text-primary text-right"><span>299,99</span> MAD</h3>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <div class="flex justify-between px-4 w-full" id="aside-panel-footer">
+               <button id="see-panel" class="w-1/3 bg-primary px-4 rounded-lg text-accent-2 font-bold">Voir le panier</button>
+               <div id="total-panel" class="w-1/3 flex w-3/5 py-2 rounded-lg bg-secondary text-accent-2 font-bold">
+                 <span class="mx-auto">TOTAL PANIER : <span>299,00</span></span>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ <!-- side bar panier end -->
 
 
-    <!-- Contenue de la page Details-->
-    <main>
-        <!-- Ligne Bleu-->
-        <div class="h-[0.78rem] bg-blue-800 md:h-[2.688rem]">
-
-        </div>
 
 
-        <!-- Information sur le produit-->
-        <div class="ml-[20%] max-w-52 p-6 bg-white rounded-lg ">
-
-            <h1 class="mb-2 text-xl font-medium text-gray-900 dark:text-white md:font-medium md:text-4xl">Nike</h1>        
-            <p class="mb-3 text-sm font-normal text-gray-700 dark:text-gray-400 md:text-2xl md:w-[15rem] md:font-semibold">T-shirt Man United Originals</p>
-            <div class="inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white bg-red-500 md:text-xl md:font-normal">
+  
 
 
-</head>
-<body>
-    <header>
+<!-- Contenue de la page Details-->
+<main>
+    <!-- Ligne Bleu-->
+    <div class="h-[0.78rem] bg-primary md:h-[2.688rem] lg:h-[3.3rem] xl:h-[2.563rem]">
 
-    </header>
+    </div>
 
-    <main>
-        <div class="ml-[20%] max-w-52 p-6 bg-white rounded-lg ">
 
-            <h1 class="mb-2 text-xl font-medium text-gray-900 dark:text-white">Nike</h1>        
-            <p class="mb-3 text-sm font-normal text-gray-700 dark:text-gray-400">T-shirt Man United Originals</p>
-            <div class="inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white bg-red-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+    <!-- Information sur le produit-->
+    <div id="infosctnr" class=" ml-[20%] max-w-52 p-6 bg-accent-2 rounded-lg lg:ml-[26%] xl:hidden">
 
-                MAD 324.50
-            </div>
-        </div>
+        <!-- <h1 class="marqname mb-2 text-xl font-medium text-gray-900 dark:text-white md:font-medium md:text-4xl lg:font-medium lg:text-6xl"></h1>        
+        <p class="teamname mb-3 text-sm font-normal text-gray-700 dark:text-gray-400 md:text-2xl md:w-[15rem] md:font-semibold lg:text-4xl lg:w-[20rem] lg:font-semibold">T-shirt <span class="spneqpnm"></span> Originals</p>
+        <div class="prix inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white bg-secondary md:text-xl md:font-normal lg:text-2xl">
+            
+        </div> -->
+    </div>
+    
+  <!-- Section de Presentation et Personnalisation-->
+  <section class="xl:grid xl:grid-cols-2">
         
-        <!-- Section de Presentation et Personnalisation-->
-        <section class="">
-            <!-- Premier Grand div-->
+        <div id="affchg1" class="xl:grid xl:grid-cols-2 xl:w-[610px] xl:pt-[7.188rem]">
+          
+          <!-- <div id="qtrimgs" class="hidden h-[6.813rem] w-[5.875rem] grid grid-cols-1 gap-y-[1.625rem] ml-[25%] xl:grid xl:pl-[6rem]">
+            <div class="chldimg cursor-pointer h-[6.813rem] w-[5.875rem]">
+                <img class="" src="" alt="Home Jersey">
+            </div>
+            <div class="chldimg cursor-pointer h-[6.813rem] w-[5.875rem]">
+                <img class="" src="" alt="Away Jersey">
+            </div>
+            <div class="chldimg cursor-pointer h-[6.813rem] w-[5.875rem]">
+                <img class="" src="" alt="Jersey Training">
+            </div>
+            <div class="chldimg cursor-pointer h-[6.813rem] w-[5.875rem]">
+                <img class="" src="" alt="Home Jersey">
+            </div>
+          </div>
 
-            <div class="">
-                <!-- div 1-->
-                <div class="hidden grid grid-cols-1 gap-[1.063rem] ml-[25%]">
-                  <div class="cursor-pointer">
-                      <img class="h-[6.75rem] w-[5.875rem]" src="../assets/imgs/details-imgs/figmamanuntd.png" alt="">
+          
+          <div class="max-w-[55%] mr-[20%] mx-auto md:h-[27.688rem] md:w-[22.813rem] md:ml-[23%] md:mb-[7%] lg:h-[29.688rem] lg:w-[24.813rem] lg:ml-[27%] xl:h-[31.813rem] xl:w-[30.063rem] xl:pt-[0%] xl:max-w-[481px] xl:ml-[0]">
+
+              <div class="relative xl:h-[31.813rem] xl:w-[30.063rem] xl:pt-[0%]">
+                  
+                  <div id="bgcrssl" class="relative cursor-pointer h-[19.063rem] pt-[20%] md:h-[27.688rem] md:w-[22.813rem] md:pt-[15.5%] lg:h-[29.688rem] lg:w-[24.813rem] lg:pt-[12.5%] xl:h-[31.813rem] xl:w-[30.063rem] xl:pt-[0%]">
+
+                      <div class="fdrimg" >
+                          <img src=""
+                              class="object-cover" alt="Home Jersey">
+                      </div>
+
+                      <div class="fdrimg hidden duration-700 ease-in-out">
+                          <img src=""
+                              class="object-cover" alt="Home Jersey">
+                      </div>
+
+                      <div class="fdrimg hidden duration-700 ease-in-out">
+                          <img src=""
+                              class="object-cover" alt="Home Jersey">
+                      </div>
+
                   </div>
-                  <div class="cursor-pointer">
-                      <img class="h-[6.75rem] w-[5.875rem]" src="../assets/imgs/details-imgs/manuntdblue.png" alt="">
-                  </div>
-                  <div class="cursor-pointer">
-                      <img class="h-[6.75rem] w-[5.875rem]" src="../assets/imgs/details-imgs/manuntdblack.jpg" alt="">
-                  </div>
-                  <div class="cursor-pointer">
-                      <img class="h-[6.75rem] w-[5.875rem]" src="../assets/imgs/details-imgs/figmamanuntd.png" alt="">
+                  
+                  <button id="btnlft" type="button" class="absolute top-[50%] right-[96%] md:right-[100%]">
+                      <i class="fa-solid fa-chevron-left text-[2rem] " style="color: #B5B5B5;"></i>
+                  </button>
+
+                  <button id="btnrgt" type="button" class="absolute top-[50%] left-[96%] md:left-[100%]">
+                      <i class="fa-solid fa-chevron-right text-[2rem]" style="color: #B5B5B5;"></i>
+                  </button>
+              </div>
+          
+          </div>       -->
+        </div>
+
+      
+        <div class="">
+           
+            <div id="infosctnr2" class=" hidden ml-[20%] max-w-52 p-6 bg-accent-2 rounded-lg xl:block xl:pt-[6.7rem] xl:pb-0">
+  
+                <!-- <h1 class="marqname mb-2 text-4xl font-medium text-gray-900 "></h1>        
+                <p class="teamname mb-3 text-2xlm font-medium text-gray-700 ">T-shirt <span class="spneqpnm"></span> Originals</p>
+                <div class="prix inline-flex items-center px-3 py-2 text-base font-medium text-center text-white bg-secondary ">
+                    
+                </div> -->
+            </div>
+  
+          <form id="psnlcard" action="">
+              
+            <h2 class="font-medium text-xs ml-[25%] text-gray-500 mt-[5%] mb-[3%] md:text-lg lg:text-2xl xl:text-base xl:mt-[1%] xl:ml-[24%] xl:mb-2"> Couleur : <span id="chxclrprdt" class="italic text-black">Domicile</span></h2>
+            <div id="tshrttype" class="flex gap-[1.063rem] ml-[25%] md:mb-[2%] xl:ml-[23%] xl:mb-[0%]">
+                <!-- <div id="lclimg" class="cursor-pointer">
+                    <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem] lg:h-[5.85rem] lg:w-[5.55rem] xl:h-[5.5rem] xl:w-[5.25rem]" src="" alt="Home Jersey">
+                </div>
+                <div id="homimg" class="cursor-pointer">
+                    <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem] lg:h-[5.85rem] lg:w-[5.55rem] xl:h-[5.5rem] xl:w-[5.25rem]" src="" alt="Away Jersey">
+                </div>
+                <div id="awyimg" class="cursor-pointer">
+                    <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem] lg:h-[5.85rem] lg:w-[5.55rem] xl:h-[5.5rem] xl:w-[5.25rem]" src="" alt="Jersey Training">
+                </div> -->
+            </div>
+  
+            
+            <div class="grid grid-rows-4 ml-[25%] xl:ml-[23%]">
+                <h3 class="font-medium text-primary text-xs pt-[2%] mt-[5%] ml-[1%] h-[1.25rem] md:font-semibold md:text-lg md:mt-[0%] xl:font-semibold xl:text-lg xl:ml-[0%]">Guide des Tailles:  </h3>
+  
+                <select id="taislct" class="px-5 py-2 w-[13.313rem] mb-[2%] cursor-pointer font-medium text-xs text-center text-white bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary md:w-[21.625rem] md:h-[3.125rem] md:font-medium md:text-xl lg:w-[23.825rem] lg:h-[3.725rem] lg:text-2xl xl:w-[21.625rem] xl:h-[3.063rem] xl:text-lg">
+                    <option value="initial" class="hidden px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-primary0 bg-white hover:bg-primary hover:text-white focus:ring-4 focus:outline-none focus:ring-primary">Choisissez Votre Taille</option>
+                    <option value="small" class="px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-primary bg-white hover:bg-primary hover:text-white focus:ring-4 focus:outline-none focus:ring-primary">Small</option>
+                    <option value="medium" class="px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-primary bg-white hover:bg-primary hover:text-white focus:ring-4 focus:outline-none focus:ring-primary">Medium</option>
+                    <option value="large" class="px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-primary bg-white hover:bg-primary hover:text-white focus:ring-4 focus:outline-none focus:ring-primary">Large</option>
+                </select>
+                <h2 id="alert1" class="hidden font-semibold text-xs ml-[0%] text-red-500 mt-[5%] mb-[3%] md:text-lg lg:text-2xl xl:text-base xl:mt-[0%] xl:ml-[0%] xl:mb-2"> Choisissez Votre Taille !</h2>
+                
+                <div class="inline-flex ml-[16%] md:ml-[11%] md:mt-[1.5%] xl:mt-0">
+                    <button type="button" id="monprd" class="bg-accent hover:bg-gray-400 text-white font-bold text-2xl pb-2 pl-1 w-[15%] md:w-[4.5rem] md:h-[3rem]">
+                      -
+                    </button>
+                    
+                    <input id="vleprd" type="text" class="bg-white border-2 border-accent h-11 text-center text-accent text-sm block w-[17%] py-2.5 md:w-[4rem] md:h-[3rem] md:border-[1px] xl:py-[0%]" placeholder="0"/>
+                    
+                    <button type="button" id="plsprd" class="bg-accent hover:bg-gray-400 text-white font-bold text-2xl pb-2 pl-1 w-[15%] md:w-[4.5rem] md:h-[3rem]">
+                      +
+                    </button>
+                </div>
+                <h2 id="alert2" class="hidden font-semibold text-xs ml-[0%] text-red-500 mt-[5%] mb-[3%] md:text-lg lg:text-2xl xl:text-base xl:mt-[0%] xl:ml-[0%] xl:mb-2"> Saisissez Une Quantite !</h2>
+
+                <button id="pniajt" type="submit" class="px-5 py-2 w-[13.313rem] mt-[2%] font-medium text-xs text-center text-white bg-secondary hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-secondary md:w-[21.625rem] md:h-[3.125rem] md:font-medium md:text-xl lg:text-2xl lg:w-[23.825rem] lg:h-[3.725rem] xl:w-[21.625rem] xl:h-[3.063rem] xl:text-lg xl:mt-0"> Ajouter Au Panier </button>
+                <h2 id="alert3" class="hidden font-semibold text-xs ml-[0%] text-green-500 mt-[5%] mb-[3%] md:text-lg lg:text-2xl xl:text-base xl:mt-[0%] xl:ml-[0%] xl:mb-2"> Votre Commande est Ajoutee avec Succes !</h2>
+              </div>
+          </form>
+          </div>
+    </section>
+  
+      <!-- Ligne Bleu-->
+      <div class="h-[0.55rem] mt-[1.2rem] bg-primary md:h-[1.3rem] md:mt-[2rem] lg:h-[2rem]">
+  
+      </div>
+  
+  <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->  
+   
+  
+    <!-- Section des Informations sur le produit-->
+    <section class="">
+      <!-- Premier Grand div-->
+      <div class="mx-auto w-[13.25rem] px-4 mb-[1rem] md:w-[21.625rem] md:ml-[25%] lg:w-[23.625rem] lg:ml-[25%] xl:ml-[60%]">
+          <div class="border-stroke border-b border-gray-500">
+            <h2 class="text-dark text-[0.938rem] font-normal pt-1 mt-4 md:text-xl md:font-medium lg:text-2xl">
+              Disponibilité en magasin
+            </h2>
+            <a href="../vues/catalogue.html" class="font-normal text-xs text-primary md:text-base lg:text-lg"> Consultez nos magasins</a>
+          </div>
+      </div>
+  
+      <!-- Deuxieme Grand div-->
+      <div class="xl:grid xl:grid-cols-2">
+          <!-- div 1-->
+          <div class="mb-[5%]">
+              <div class="mx-auto w-[14.25rem] px-4 mb-[1rem] md:w-[21.625rem] md:ml-[25%] lg:w-[23.625rem] lg:ml-[25%] xl:w-[33.3rem]">
+                  <div class="border-stroke border-b border-gray-500">
+                    <h2 class="text-dark text-[0.91rem] font-bold mb-[0.5rem] pt-1 mt-4 md:text-lg lg:text-xl lg:mt-6">
+                      Information sur le T-shirt
+                    </h2>
                   </div>
               </div>
 
-                <!-- div 2-->
-                <div class="max-w-[55%] mr-[20%] mx-auto md:h-[27.688rem] md:w-[22.813rem] md:ml-[23%] md:mb-[7%]">
+              <table class="text-sm ml-[27%] text-left rtl:text-right text-gray-500 lg:ml-[26.7%]">
+                <tbody id="tableauinfos">
+                    <!-- <tr class="border-b-[0.6rem] border-white">
 
-                    <div id="default-carousel" class="relative">
-                        <!-- Carousel-->
-                        <div class="relative cursor-pointer h-[19.063rem] pt-[20%] md:h-[27.688rem] md:w-[22.813rem] md:pt-[15.5%]">
-
-
-            <div>
-                <!-- div 1-->
-                <div class=" hidden ">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-
-                <!-- div 2-->
-                <div class="max-w-[55%] mr-[20%] mx-auto">
-
-                    <div id="default-carousel" class="relative  shadow-lg">
-                        <!-- Carousel wrapper -->
-                        <div class="relative h-[19.063rem] pt-[20%] md:h-96">
-                            <!-- Item 1 -->
-
-                            <div class="" >
-                                <img src="../assets/imgs/details-imgs/figmamanuntd.png"
-                                    class="object-cover w-full" alt="Slide 1">
-                            </div>
-
-
-
-                            <!-- Item 2 -->
-
-                            <div class="hidden duration-700 ease-in-out">
-                                <img src="../assets/imgs/details-imgs/figmamanuntd.png"
-                                    class="object-cover w-full h-full" alt="Slide 2">
-                            </div>
-
-                            <!-- Item 3 -->
-
-                            <div class="hidden duration-700 ease-in-out">
-                                <img src="../assets/imgs/details-imgs/figmamanuntd.png"
-                                    class="object-cover w-full h-full" alt="Slide 3">
-                            </div>
-
-                        </div>
-
+                        <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 md:w-[5.875rem] xl:w-[11.25rem]">
+                            Taille
+                        </th>
                         
-                        <button type="button" class="absolute top-[50%] right-[96%] md:right-[100%]">
-                            <i class="fa-solid fa-chevron-left text-[2rem] " style="color: #B5B5B5;"></i>
-                        </button>
+                        <td id="tailleprdt" class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-secondary text-white md:w-[13.75rem] lg:w-[15.75rem] xl:w-[21rem] xl:h-[2.5rem]">
+                            Medium
+                        </td>
 
-                        <button type="button" class="absolute top-[50%] left-[96%] md:left-[100%]">
+                    </tr>
 
-                        <!-- Slider controls -->
-                        <button type="button" class="absolute top-[50%] right-[96%]">
-                            <i class="fa-solid fa-chevron-left text-[2rem] " style="color: #B5B5B5;"></i>
-                        </button>
+                    <tr class="border-b-[0.6rem] border-white">
 
-                        <button type="button" class="absolute top-[50%] left-[96%]">
-
-                            <i class="fa-solid fa-chevron-right text-[2rem]" style="color: #B5B5B5;"></i>
-                        </button>
-                    </div>
-                
-                </div>      
-            </div>
-
-            <!-- Deuxieme Grand div-->
-            <div class="">
-                <!-- div 1-->
-                <div class="hidden ml-[20%] max-w-52 p-6 bg-white rounded-lg ">
-
-                    <h1 class="mb-2 text-xl font-medium text-gray-900 dark:text-white">Nike</h1>        
-                    <p class="mb-3 text-sm font-normal text-gray-700 dark:text-gray-400">T-shirt Man United Originals</p>
-                    <div class="inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white bg-red-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                        MAD 324.50
-                    </div>
-                </div>
-
-                <!-- div 2-->
-                <h2 class="font-medium text-xs ml-[25%] text-gray-500 mt-[5%] mb-[3%] md:text-lg"> Couleur : <span class="italic text-black">Blanc</span></h2>
-                <div class="flex gap-[1.063rem] ml-[25%] md:mb-[2%]">
-                    <div class="cursor-pointer">
-                        <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem]" src="../assets/imgs/details-imgs/figmamanuntd.png" alt="">
-                    </div>
-                    <div class="cursor-pointer">
-                        <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem]" src="../assets/imgs/details-imgs/manuntdblue.png" alt="">
-                    </div>
-                    <div class="cursor-pointer">
-                        <img class="h-[3.313rem] w-[3.188rem] md:h-[5.5rem] md:w-[5.25rem]" src="../assets/imgs/details-imgs/manuntdblack.jpg" alt="">
-                    </div>
-                </div>
-
-                <!-- div 3-->
-                <div class="grid grid-rows-4 ml-[25%]">
-                    <h3 class="font-medium text-blue-900 text-xs pt-[2%] mt-[5%] ml-[1%] h-[1.25rem] md:font-semibold md:text-lg md:mt-[0%]">Guide des Tailles:  </h3>
-
-                    <select class="px-5 py-2 w-[13.313rem] mb-[2%] cursor-pointer font-medium text-xs text-center text-white bg-blue-800 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 md:w-[21.625rem] md:h-[3.125rem] md:font-medium md:text-xl">
-                        <option value="initial" class="hidden px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-blue-900 bg-white hover:bg-blue-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300">Choisissez Votre Taille</option>
-                        <option value="small" class="px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-blue-900 bg-white hover:bg-blue-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300">Small</option>
-                        <option value="medium" class="px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-blue-900 bg-white hover:bg-blue-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300">Medium</option>
-                        <option value="large" class="px-5 py-1 w-[13.313rem] font-medium text-xs text-center text-blue-900 bg-white hover:bg-blue-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300">Large</option>
-                    </select>
-                    
-                    <div class="inline-flex ml-[16%] md:ml-[11%] md:mt-[1.5%]">
-                        <button class="bg-black hover:bg-gray-400 text-white font-bold text-2xl pb-2 pl-1 w-[15%] md:w-[4.5rem] md:h-[3rem]">
-                          +
-                        </button>
+                        <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 md:w-[5.875rem] xl:w-[11.25rem]">
+                            Brand
+                        </th>
                         
-                        <input type="text" class="bg-white border-2 border-black h-11 text-center text-black text-sm block w-[17%] py-2.5 md:w-[4rem] md:h-[3rem] md:border-[1px]" placeholder="0"/>
+                        <td id="marqprdt" class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-secondary text-white md:w-[13.75rem] lg:w-[15.75rem] xl:w-[21rem] xl:h-[2.5rem]">
+                            Adidas
+                        </td>
+
+                    </tr>
+
+                    <tr class="hidden border-b-[0.6rem] border-white xl:table-row">
+
+                        <th class="border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 w-[11.25rem]">
+                            Description
+                        </th>
                         
-                        <button class="bg-black hover:bg-gray-400 text-white font-bold text-2xl pb-2 pl-1 w-[15%] md:w-[4.5rem] md:h-[3rem]">
-                          -
-                        </button>
-                    </div>
-                    <button type="button" class="px-5 py-2 w-[13.313rem] mt-[2%] font-medium text-xs text-center text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 md:w-[21.625rem] md:h-[3.125rem] md:font-medium md:text-xl"> Ajouter Au Panier </button>
-                </div>
-                <!-- Ligne Bleu-->
-                <div class="h-[0.55rem] mt-[1.2rem] bg-blue-800 md:h-[1.3rem] md:mt-[2rem]">
+                        <td id="dcrptprdt" class="px-4 py-[0.32rem] bg-secondary text-white w-[21rem] h-[2.5rem]">
+                            Perferendis asperiores repudiandae sed beatae nulla repellendus vitae quaerat, quam, veniam veritatis unde debitis ratione autem reprehenderit est minima fugit itaque. Molestiae.
+                        </td>
 
-                </div>
+                    </tr>
 
+                    <tr class="border-b-[0.6rem] border-white">
 
+                        <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 md:w-[5.875rem] xl:w-[11.25rem]">
+                            Couleur
+                        </th>
+                        
+                        <td id="cltrprdt" class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-secondary text-white  md:w-[13.75rem] lg:w-[15.75rem] xl:w-[21rem] xl:h-[2.5rem]">
+                            Rouge
+                        </td>
 
+                    </tr>
 
-=======
-                </div>
-                
-                
-                
+                    <tr class="hidden border-b-[0.6rem] border-white xl:table-row">
+                        <th class="border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 w-[11.25rem]">
+                            Pays d'expédition
+                        </th>
+                        
+                        <td id="payprdt" class="px-4 py-[0.32rem] bg-secondary text-white w-[21rem] h-[2.5rem]">
+                            Angletere
+                        </td>
 
-
-
-<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-
-        <!-- Section des Informations sur le produit-->
-        <section class="">
-            <!-- Premier Grand div-->
-            <div class="mx-auto w-[13.25rem] px-4 mb-[1rem] md:w-[21.625rem] md:ml-[25%]">
-                <div class="border-stroke border-b border-gray-500">
-                   <h2 class="text-dark text-[0.938rem] font-normal pt-1 mt-4 md:text-xl md:font-medium">
-                    Disponibilité en magasin
-                   </h2>
-                   <a href="#" class="font-normal text-xs text-blue-900 md:text-base"> Consultez nos magasins</a>
-                </div>
-            </div>
-
-            <!-- Deuxieme Grand div-->
-            <div class="">
-                <!-- div 1-->
-                <div class="mb-[5%]">
-                    <div class="mx-auto w-[14.25rem] px-4 mb-[1rem] md:w-[21.625rem] md:ml-[25%]">
-                        <div class="border-stroke border-b border-gray-500">
-                           <h2 class="text-dark text-[0.91rem] font-bold mb-[0.5rem] pt-1 mt-4 md:text-lg">
-                            Description produit
-                           </h2>
-                        </div>
-                    </div>
-
-                    <table class="text-sm ml-[27%] text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                        <tbody>
-                            <tr class="border-b-[0.6rem] border-white">
-
-                                <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 md:w-[5.875rem]">
-                                    Taille
-                                </th>
-                                
-                                <td class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-red-600 text-white md:w-[13.75rem]">
-                                    Medium
-                                </td>
-
-                            </tr>
-
-                            <tr class="border-b-[0.6rem] border-white">
-
-                                <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 md:w-[5.875rem]">
-                                    Brand
-                                </th>
-                                
-                                <td class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-red-600 text-white md:w-[13.75rem]">
-                                    Adidas
-                                </td>
-
-                            </tr>
-
-                            <tr class="hidden border-b-[0.6rem] border-white">
-
-                                <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 md:w-[5.875rem]">
-                                    Description
-                                </th>
-                                
-                                <td class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-red-600 text-white md:w-[13.75rem]">
-                                    Perferendis asperiores repudiandae sed beatae nulla repellendus vitae quaerat, quam, veniam veritatis unde debitis ratione autem reprehenderit est minima fugit itaque. Molestiae.
-                                </td>
-
-                            </tr>
-
-                            <tr class="border-b-[0.6rem] border-white">
-
-                                <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 md:w-[5.875rem]">
-                                    Couleur
-                                </th>
-                                
-                                <td class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-red-600 text-white  md:w-[13.75rem]">
-                                    Rouge
-                                </td>
-
-                            </tr>
-
-                            <tr class="hidden border-b-[0.6rem] border-white">
-
-                                <th class="w-[4.875rem] h-[1.25rem] border-r-[0.34rem] border-white px-4 py-[0.32rem] font-medium text-gray-900 bg-gray-300 md:w-[5.875rem]">
-                                    Pays d'expédition
-                                </th>
-                                
-                                <td class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-red-600 text-white  md:w-[13.75rem]">
-                                    Angletere
-                                </td>
-
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- div 2-->
-                <div class="w-[14.5rem] h-[5.5rem] ml-[27%] mb-[7%] bg-blue-800 md:w-[19.8rem] md:h-[6rem]">
-              
-                    <div class="grid grid-cols-2 gap-x-5 pl-3 pt-1 lg:grid-cols-3 md:grid-cols-2 max-md:max-w-lg mx-auto md:pt-2 md:pl-7">
-
-                      <div class="w-[7.063rem] h-[1.7rem] py-2 flex mb-3">
-                        <i class="fa-solid fa-map-location-dot text-white mt-[0.3rem] mr-[0.6rem]"></i>
-                        <h3 class="text-white text-[0.56rem] font-medium ">Livraison partout au Maroc</h3>
-                      
-                      </div>
-              
-                      <div class="w-[6.625rem] h-[1.625rem] py-2 flex">
-                        <i class="fa-solid fa-money-bill-transfer text-white mt-[0.4rem] mr-[0.6rem]"></i>
-                        <h3 class="text-white text-[0.56rem] font-medium ">Satisfait ou remboursé</h3>
-                    
-                      </div>
-              
-                      <div class="w-[7.063rem] h-[1.625rem] py-2 flex ml-[0.2rem] ">
-                        <i class="fa-solid fa-globe text-white mt-[0.4rem] mr-[0.6rem]"></i>
-                        <h3 class="text-white text-[0.56rem] font-medium ">Offre nationale et internationale</h3>
-                      
-                      </div>
-              
-                      <div class="w-[6.625rem] h-[1.625rem] py-2 flex">
-                        <i class="fa-solid fa-award text-white mt-[0.3rem] mr-[1rem]"></i>
-                        <h3 class="text-white text-[0.56rem] font-medium ">Produits 100% authentiques</h3>
-                    
-                      </div>
-              
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-         
-        <!-- Ligne Rouge-->
-        <div class="h-[0.55rem] mt-[1.2rem] bg-red-500 md:h-[2rem] md:mt-[2rem]">
-
+                    </tr> -->
+                </tbody>
+            </table>
         </div>
 
-        
-        
+        <!-- div 2-->
+        <div class="cursor-pointer w-[14.5rem] h-[5.5rem] ml-[27%] mb-[7%] bg-primary md:w-[19.8rem] md:h-[6rem] lg:w-[20.8rem] lg:h-[7rem] lg:ml-[27.5%] xl:ml-[22%] xl:mt-[3%]">
+      
+            <div class="grid grid-cols-2 gap-x-5 pl-3 pt-1 lg:grid-cols-2 md:grid-cols-2 max-md:max-w-lg mx-auto md:pt-2 md:pl-7">
 
-    </main>
-
-
-
-
-    <footer class="bg-blue-900 text-white py-10 px-6">
-        <div class="container mx-auto flex flex-wrap justify-between items-start space-y-8 lg:space-y-0 lg:space-x-8">
-          <!-- Logo and Social Media -->
-          <div class="space-y-2 md:flex-row">
-            <!-- <h2 class="text-2xl font-bold text-red-500">SPORTEEZ</h2> -->
-             <img class="w-36" src="../assets/imgs/red_logo.png" alt="logo de site Sporteez">
-            <!-- <p class="text-sm text-gray-400">Football Vie</p> -->
-            <div class="flex space-x-6 text-red-500 ">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
+              <div class="w-[7.063rem] h-[1.7rem] py-2 flex mb-3 lg:mb-5 lg:w-[7.563rem]">
+                <i class="fa-solid fa-map-location-dot text-white mt-[0.3rem] mr-[0.6rem]"></i>
+                <h3 class="text-white text-[0.56rem] font-medium lg:text-xs">Livraison partout au Maroc</h3>
+              
+              </div>
       
-          <!-- Links Section -->
-          <div class="flex flex-wrap w-full lg:w-auto hidden md:flex">
-            <div class="w-1/2 lg:w-auto lg:mr-10 block">
-              <h3 class="font-bold">Pages</h3>
-              <ul class="mt-2 space-y-2">
-                <li><a href="#" class="text-gray-300 hover:text-white">Accueil</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white">Catalogue</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white">A propos</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white">Panier</a></li>
-              </ul>
-            </div>
+              <div class="w-[6.625rem] h-[1.625rem] py-2 flex">
+                <i class="fa-solid fa-money-bill-transfer text-white mt-[0.4rem] mr-[0.6rem]"></i>
+                <h3 class="text-white text-[0.56rem] font-medium lg:text-xs">Satisfait ou remboursé</h3>
+            
+              </div>
       
-            <div class="w-1/2 lg:w-auto lg:mr-10">
-              <h3 class="font-bold">Service</h3>
-              <ul class="mt-2 space-y-2">
-                <li><a href="#" class="text-gray-300 hover:text-white">Shopify</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white">WordPress</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white">UI/UX Design</a></li>
-              </ul>
-            </div>
+              <div class="w-[7.063rem] h-[1.625rem] py-2 flex ml-[0.2rem] lg:w-[7.563rem]">
+                <i class="fa-solid fa-globe text-white mt-[0.4rem] mr-[0.6rem]"></i>
+                <h3 class="text-white text-[0.56rem] font-medium lg:text-xs">Offre nationale et internationale</h3>
+              
+              </div>
       
-            <div class="w-1/2 lg:w-auto lg:mr-10">
-              <h3 class="font-bold">Resource</h3>
-              <ul class="mt-2 space-y-2">
-                <li><a href="#" class="text-gray-300 hover:text-white">HTML</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white">CSS</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white">JavaScript</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white">Java</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white">JSON</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white">UI/UX Design</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white">Component</a></li>
-              </ul>
-            </div>
+              <div class="w-[6.625rem] h-[1.625rem] py-2 flex">
+                <i class="fa-solid fa-award text-white mt-[0.3rem] mr-[1rem] lg:mt-[0.6rem]"></i>
+                <h3 class="text-white text-[0.56rem] font-medium lg:text-xs">Produits 100% authentiques</h3>
+            
+              </div>
       
-            <div class="w-1/2 lg:w-auto">
-              <h3 class="font-bold">Company</h3>
-              <ul class="mt-2 space-y-2">
-                <li><a href="#" class="text-gray-300 hover:text-white">Tarifs</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white">Sécurité</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white">Politique de confidentialité</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white">Conditions d'utilisation</a></li>
-                <li><a href="#" class="text-gray-300 hover:text-white">Rue</a></li>
-              </ul>
             </div>
-          </div>
-      
-          <!-- Contact Form -->
-          <div class="space-y-4">
-            <h3 class="font-bold">À propos de nous</h3>
-            <p class="text-gray-300 text-sm">Vous pouvez nous contacter pour nous envoyer un email</p>
-            <div class="relative">
-              <input type="email" placeholder="Votre email" class="w-full py-2 px-4 text-gray-900 rounded-full focus:outline-none">
-              <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-red-500 text-white rounded-full p-2">
-                <i class="fas fa-paper-plane"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      
-        <!-- Footer Bottom -->
-        <div class="text-center border-t border-gray-600 mt-8 pt-4 text-sm text-gray-400">
-          © 2024 Sporteez | Powered by Youcode
         </div>
 
-    <footer>
-        
+    </div>
 
-    </footer>
-    
+  </section>
+
+  <!-- Ligne Rouge-->
+  <div class="h-[0.55rem] mt-[1.2rem] bg-secondary md:h-[2rem] md:mt-[2rem] lg:h-[3rem]">
+
+  </div>
+
+</main>
 
 
 
@@ -548,8 +465,95 @@
 
 
 
-    
-    <!-- Fichier JavaScript-->
-    <script src="../assets/js/details.js"></script>
+<footer class="bg-primary text-white py-10 px-6">
+  <div class="container mx-auto flex flex-wrap justify-between items-start space-y-8 lg:space-y-0 lg:space-x-8">
+    <!-- Logo and Social Media -->
+    <div class="space-y-2 md:flex-row">
+      <!-- <h2 class="text-2xl font-bold text-red-500">SPORTEEZ</h2> -->
+       <img class="w-36" src="../assets/imgs/red_logo.png" alt="logo de site Sporteez">
+      <!-- <p class="text-sm text-gray-400">Football Vie</p> -->
+      <div class="flex space-x-6 text-secondary ">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- Links Section -->
+    <div class="flex flex-wrap w-full lg:w-auto hidden md:flex">
+      <div class="w-1/2 lg:w-auto lg:mr-10 block">
+        <h3 class="font-bold">Pages</h3>
+        <ul class="mt-2 space-y-2">
+          <li><a href="#" class="text-gray-300 hover:text-white">Accueil</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">Catalogue</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">A propos</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">Panier</a></li>
+        </ul>
+      </div>
+
+      <div class="w-1/2 lg:w-auto lg:mr-10">
+        <h3 class="font-bold">Service</h3>
+        <ul class="mt-2 space-y-2">
+          <li><a href="#" class="text-gray-300 hover:text-white">Shopify</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">WordPress</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">UI/UX Design</a></li>
+        </ul>
+      </div>
+
+      <div class="w-1/2 lg:w-auto lg:mr-10">
+        <h3 class="font-bold">Resource</h3>
+        <ul class="mt-2 space-y-2">
+          <li><a href="#" class="text-gray-300 hover:text-white">HTML</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">CSS</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">JavaScript</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">Java</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">JSON</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">UI/UX Design</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">Component</a></li>
+        </ul>
+      </div>
+
+      <div class="w-1/2 lg:w-auto">
+        <h3 class="font-bold">Company</h3>
+        <ul class="mt-2 space-y-2">
+          <li><a href="#" class="text-gray-300 hover:text-white">Tarifs</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">Sécurité</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">Politique de confidentialité</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">Conditions d'utilisation</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">Rue</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="space-y-4">
+      <h3 class="font-bold">À propos de nous</h3>
+      <p class="text-gray-300 text-sm">Vous pouvez nous contacter pour nous envoyer un email</p>
+      <div class="relative">
+        <input type="email" placeholder="Votre email" class="w-full py-2 px-4 text-gray-900 rounded-full focus:outline-none">
+        <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-secondary text-white rounded-full p-2">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="text-center border-t border-gray-600 mt-8 pt-4 text-sm text-gray-400">
+    © 2024 Sporteez | Powered by Youcode
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+<!-- Fichier JavaScript-->
+<script src="../assets/js/details.js"></script>
 </body>
 </html>

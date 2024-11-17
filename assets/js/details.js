@@ -192,6 +192,7 @@ fetch(apiUrl)
 
 
 
+
 /** Validation des Inputs */
 
 psnlcard.addEventListener('submit', (e) => {
@@ -223,8 +224,7 @@ psnlcard.addEventListener('submit', (e) => {
         alert1.style.display = 'none';
         alert2.style.display = 'none';
         alert3.style.display = 'none';
-    }, 2500);
-    
+    }, 2500);    
 
 });
 
@@ -248,7 +248,7 @@ function changercouleur(){
     homimg.addEventListener('click', () => {
         chxclrprdt.textContent = "Extérieur";
         cltrprdt.textContent = "Extérieur";
-        
+
     });
 
     awyimg.addEventListener('click', () => {
@@ -284,6 +284,7 @@ function stockerdata() {
         couleur: chxclrprdt.textContent
         
         
+
 
     };
 

@@ -125,7 +125,7 @@ function ajouteraupanier(id, title, price, image) {
     }
   
     localStorage.setItem('cart', JSON.stringify(cart));
-    console.log(`${title} ajouté au panier!`);
+    alert(`${title} ajouté au panier!`);
   }
 
   function applyFilters() {

@@ -3,10 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Découvrez notre boutique en ligne dédiée aux fans de football. Parcourez des t-shirts exclusifs des plus grandes ligues comme La Liga, Premier League, Bundesliga, Ligue 1 et Serie A. Profitez d'un design moderne et d'une expérience utilisateur fluide pour trouver vos produits préférés.">
-  <meta name="keywords" content="football, t-shirts, boutique en ligne, La Liga, Premier League, Bundesliga, Ligue 1, Serie A, produits dérivés, shopping, mode sportive, t-shirts football">
+  <meta name="description"
+    content="Découvrez notre boutique en ligne dédiée aux fans de football. Parcourez des t-shirts exclusifs des plus grandes ligues comme La Liga, Premier League, Bundesliga, Ligue 1 et Serie A. Profitez d'un design moderne et d'une expérience utilisateur fluide pour trouver vos produits préférés.">
+  <meta name="keywords"
+    content="football, t-shirts, boutique en ligne, La Liga, Premier League, Bundesliga, Ligue 1, Serie A, produits dérivés, shopping, mode sportive, t-shirts football">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/Plateforme-e-commerce/assets/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,7 +65,7 @@
         </a>
         <div class="flex md:flex">
           <i
-            class="fa-solid fa-cart-shopping text-3xl sm:text-5xl text-primary cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer mr-6 sm:mr-10 md:hidden"></i>
+            class="panel-icons fa-solid fa-cart-shopping text-3xl sm:text-5xl text-primary cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer mr-6 sm:mr-10 md:hidden"></i>
           <button data-collapse-toggle="navbar-default" type="button"
             class="inline-flex items-center p-1 h-8 w-8 sm:w-12 sm:h-12 justify-center text-sm text-accent-2 rounded-lg md:hidden bg-primary focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-controls="navbar-default" aria-expanded="false">
@@ -71,28 +75,28 @@
         </div>
         <div class="hidden w-full md:flex md:w-auto" id="navbar-default">
           <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg bg-accent-2 md:flex-row md:space-x-4 md:mt-0 md:border-0 bg-accent-2 md:bg-accent-2">
+            class="font-medium flex flex-col md:p-0 mt-4 rounded-lg bg-accent-2 md:flex-row md:space-x-4 md:mt-0 md:border-0 bg-accent-2 md:bg-accent-2">
             <li>
               <a href="../vues/home.html"
-                class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1 "
+                class="flex justify-center items-center rounded text-primary h-10 my-auto hover:bg-primary hover:text-accent-2 md:hover:text-accent-2 md:hover:bg-primary md:px-4 md:py-1 md:transition md:ease-in-out md:duration-300"
                 aria-current="page">Accueil</a>
             </li>
             <li>
               <a href="../vues/catalogue.html"
-                class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1">Catalogue</a>
+                class="flex justify-center items-center rounded text-primary h-10 my-auto hover:bg-primary hover:text-accent-2 md:hover:text-accent-2 md:hover:bg-primary md:px-4 md:py-1 md:transition md:ease-in-out md:duration-300">Catalogue</a>
             </li>
             <li>
               <a href="../vues/about.html"
-                class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1">À
+                class="flex justify-center items-center rounded text-primary h-10 my-auto hover:bg-primary hover:text-accent-2 md:hover:text-accent-2 md:hover:bg-primary md:px-4 md:py-1 md:transition md:ease-in-out md:duration-300">À
                 propos</a>
             </li>
             <li>
               <a href="#"
-                class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1">Login</a>
+                class="flex justify-center items-center rounded text-primary h-10 my-auto hover:bg-primary hover:text-accent-2 md:hover:text-accent-2 md:hover:bg-primary md:px-4 md:py-1 md:transition md:ease-in-out md:duration-300">Login</a>
             </li>
           </ul>
           <i id="shoping-icon-md"
-            class="fa-solid fa-cart-shopping hidden sm:hidden md:flex text-3xl md:text-2xl sm:text-5xl text-primary cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer mr-6 sm:mr-10 md:mx-4 md:w-6 md:h-6 md:hover:text-secondary"></i>
+            class="panel-icons fa-solid fa-cart-shopping hidden sm:hidden md:flex text-3xl md:text-2xl sm:text-5xl text-primary cursor-pointer transition-colors duration-300 ease-in-out hover:text-secondary hover:cursor-pointer mr-6 sm:mr-10 md:mx-4 md:w-6 md:h-6 md:hover:text-secondary"></i>
         </div>
       </div>
       <div class="flex w-full px-4 md:justify-center">
@@ -113,8 +117,7 @@
   <!-- Header End -->
 
   <!-- side bar panier start -->
-   <!-- ajouter hidden au class -->
-  <div id="panel-aside-bar" class=" relative z-10 transition-opacity" aria-labelledby="slide-over-title"
+  <div id="panel-aside-bar" class="hidden relative z-10 transition duration-500" aria-labelledby="slide-over-title"
     role="dialog" aria-modal="true">
     <div class="fixed inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
     <div class="fixed inset-0 overflow-hidden">
@@ -132,12 +135,14 @@
                 </svg>
               </button>
             </div>
-            <div class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
+            <div id="cart-items" class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
               <div class="px-4 sm:px-6">
                 <h2 class="text-secondary font-bold text-xl" id="slide-over-title">Votre Panier :</h2>
               </div>
+              <!-- exemple de la carte à afficher dans aside panel -->
+
               <div id="aside-panel" class="product-card relative mt-6 flex-1 px-4 sm:px-6">
-                <div class="item1 flex bg-red-100 mb-4 p-4 rounded-lg justify-between">
+                <div class="flex bg-red-100 mb-4 p-4 rounded-lg justify-between">
                   <div class="item-pic w-1/4">
                     <div class="flex flex-col justify-center m-auto">
                       <img class="h-full w-full rounded-lg" src="../assets/imgs/atm.png" alt="">
@@ -167,10 +172,12 @@
                   </div>
                 </div>
               </div>
+              <!-- -------------------------------------------------------------------------------------- -->
               <div class="flex justify-between px-4 w-full" id="aside-panel-footer">
-                <button id="see-panel" class="w-1/3 bg-primary px-4 rounded-lg text-accent-2 font-bold">Voir le panier</button>
+                <button id="see-panel" class="w-1/3 bg-primary px-4 rounded-lg text-accent-2 font-bold">Voir le
+                  panier</button>
                 <div id="total-panel" class="w-1/3 flex w-3/5 py-2 rounded-lg bg-secondary text-accent-2 font-bold">
-                  <span class="mx-auto">TOTAL PANIER : <span>299,00</span></span>
+                  <span class="mx-auto"><span id="total-price"></span></span>
                 </div>
               </div>
             </div>
@@ -186,10 +193,6 @@
   <div class="md:px-30 lg:px-20">
     <button class="text-accent-2 bg-primary mx-4 p-2" onclick="displayProducts()">afficher produit</button>
   </div>
-
-  
-
-
   <div class="md:flex md:px-30 lg:px-20">
     <div id="pannel" class="pannel bg-red-100 p-2 m-2 rounded-lg">
       <div class="item md:flex">
@@ -264,17 +267,39 @@
         </div>
       </div>
       <div class="validate-btn flex justify-center">
-        <button type="submit" class="bg-primary text-accent-2 font-bold px-10 py-2 rounded-3xl my-2 shadow-3xl">Valider
+        <button id="ok" type="submit" class="bg-primary text-accent-2 font-bold px-10 py-2 rounded-3xl my-2 shadow-3xl">Valider
           mon panier</button>
       </div>
     </div>
   </div>
-  <!-- Validation Panier Start -->
-  <div class="validate-btn flex justify-center">
-    <button type="submit" class="bg-primary text-accent-2 font-bold px-10 py-2 rounded-3xl mb-4 mt-6 shadow-3xl">Générer
-      mon Devis</button>
+
+  <!-- Formulaire de demande de devis -->
+  <div class="flex flex-col w-11/12 sm:w-3/4 md:w-1/2 lg:w-1/3 mx-auto p-8 bg-red-100 rounded-3xl mb-12">
+    <form action="" id="devis-form">
+      <label for="client-name" class="sr-only"></label>
+      <input class="mb-2 border-1 border-primary rounded" id="client-name" type="text" placeholder="Nom Complet">
+      <label for="client-phone" class="sr-only"></label>
+      <input class="mb-2 border-1 border-primary rounded" id="client-phone" type="tel" placeholder="N° de téléphone">
+      <label for="client-adress" class="sr-only"></label>
+      <input class="mb-2 border-1 border-primary rounded" id="client-adress" type="text" placeholder="Adresse complète">
+      <input id="generer-devis-btn" class="bg-secondary text-accent-2 py-2 rounded cursor-pointer" type="submit" value="Générer Mon devis">
+    </form>
+    <!-- message d'erreur si les information ne sont pas bien remplies -->
+    <div id="error-message" class="text-accent-2 bg-primary mt-2 mb-6 rounded hidden">
+      <h3 class="text-center">Veuillez remplir tous les champs correctement.</h3>
+      <h3 class="text-center"><i class="fa-solid fa-circle-info text-2xl mb-2"></i></h3>
+    </div>
   </div>
-  <!-- Validation Panier end -->
+  <!-- Devis (masqué par défaut) -->
+  <div id="devis" class="p-5 mx-20 shadow-2xl bg-accent-2 flex flex-col mb-4 hidden">
+    <div id="devis-content">
+    </div>
+  </div>
+  <div class="flex justify-center">
+    <button id="download-devis-btn" type="submit"
+      class="bg-secondary text-accent-2 font-bold px-10 py-2 rounded-3xl mb-4 mt-6 shadow-3xl hidden">Télécharger Devis</button>
+  </div>
+
   <!-- Footer Start -->
   <footer class="bg-primary px-10">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -370,14 +395,17 @@
   </footer>
   <!-- Footer End -->
 
-  <script>
-// Fonction d'Afficher et cacher aside barre
-    document.getElementById("shoping-icon-md").addEventListener("click", function () {
-      const shoppingIconMd = document.getElementById("shoping-icon-md");
-      const panelCard = document.getElementById("panel-aside-bar");
+  <script> //----------------------------------------------------------------------------------------------------------
 
-      panelCard.classList.remove("hidden");
-    })
+const panelIcons = document.querySelectorAll(".panel-icons");
+
+panelIcons.forEach(function(icon) {
+  icon.addEventListener("click", function () {
+    const panelCard = document.getElementById("panel-aside-bar");
+    displayCartItems();
+    panelCard.classList.remove("hidden");
+  });
+});
 
     document.getElementById("close-btn").addEventListener("click", function () {
       const panelCard = document.getElementById("panel-aside-bar");
@@ -386,19 +414,19 @@
     })
 
     const seePanel = document.getElementById("see-panel");
-    seePanel.addEventListener("click", function(){
+    seePanel.addEventListener("click", function () {
       const panelCard = document.getElementById("panel-aside-bar");
       panelCard.classList.add("hidden");
       window.location.href = "../vues/panier.html";
 
     })
-
     //------------------------------------------------------------------------------------------
-    const cart = [
+    const carts = [
       {
         "id": 1,
         "title": "Real Madrid",
         "price": 109.95,
+        "quantity": 2,
         "description": "Sac à dos robuste conçu pour les joueurs de football du Real Madrid, avec une poche rembourrée pour les ordinateurs portables jusqu'à 15 pouces. Ligue : La Liga, Pays : Espagne.",
         "category": "La Liga",
         "country": "Espagne",
@@ -416,6 +444,7 @@
         "id": 2,
         "title": "FC Barcelona",
         "price": 22.3,
+        "quantity": 2,
         "description": "T-shirt d'entraînement de football ajusté avec un tissu anti-humidité pour une respirabilité et un confort lors des matchs et des entraînements intensifs. Ligue : La Liga, Pays : Espagne.",
         "category": "La Liga",
         "country": "Espagne",
@@ -433,6 +462,7 @@
         "id": 3,
         "title": "Manchester United",
         "price": 55.99,
+        "quantity": 1,
         "description": "Veste légère en coton pour les joueurs de football, idéale pour les échauffements et les détentes. Matériau respirant pour un ajustement confortable. Ligue : Premier League, Pays : Angleterre.",
         "category": "Premier League",
         "country": "Angleterre",
@@ -448,96 +478,200 @@
       }
     ];
     //----------------------------------------------------------------------------------------------------------------------------------
+localStorage.setItem("carts", JSON.stringify(carts));
 
-    localStorage.setItem("cart", JSON.stringify(cart));
-    const itemsAddedToCard = JSON.parse(localStorage.getItem("cart"));
-    console.log(itemsAddedToCard);
+    // Simuler l'importation des données depuis "cart" (tableau partagé entre les pages)
+let cart = JSON.parse(localStorage.getItem('carts')) || [];
+console.log(cart);
 
-    function displayProducts() {
-      const itemsAddedToCard = JSON.parse(localStorage.getItem("cart")) || [];
-      const container = document.getElementById("pannel");
-      const asideContainer = document.getElementById("aside-panel");
+// Afficher les produits dans le panier
+function displayCartItems() {
+  const cartItemsDiv = document.getElementById('aside-panel');
+  const totalPriceDiv = document.getElementById('total-price');
 
-      container.innerHTML = "";
-      asideContainer.innerHTML = "";
-      
-      if (itemsAddedToCard.length === 0) {
-        container.innerHTML = `<p class="text-secondary">Aucun produit trouvé !</p>`;
-        return;
-      }
+  cartItemsDiv.innerHTML = '';
+  let totalPrice = 0;
 
-      itemsAddedToCard.forEach((product) => {
-        const productCard = `
-      <div class="item md:flex">
-         <a href="#" class="flex flex-col items-center border border-gray-200 rounded-lg shadow md:flex-row md:max-w-3xl bg-gray-100 p-4 m-3">
-           <div class="flex md:w-full md:h-full">
-             <img class="rounded-t-lg border border-primary border-b-0 md:border-0 md:cover" src="${product.images[0]}" alt="Maillot de ${product.title}">
-           </div>
-           <div class=" md:w-full md:h-full flex flex-col w-full p-4 bg-accent-2 border border-t-0 border-primary md:border md:border-0 md:shadow-2xl rounded-b-lg md:rounded-lg">
-             <div class="flex sm:justify-between items-center">
-               <h5 class="mb-2 text-large font-bold text-primary">Maillot de ${product.title}</h5>
-               <i class="fa-solid fa-trash text-secondary text-right cursor-pointer mt-1 sm:text-2xl sm:mt-0"></i>
-             </div>
-             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${product.description}</p>
-             <h3 class="mb-2 text-sm font-bold tracking-tight text-primary">Livraison entre le 12 et 17 Novembre 2024</h3>
-             <div class="flex justify-between sm:px-10 md:flex md:justify-between md:px-2">
-               <div class="inline-flex rounded-md shadow-sm" role="group">
-                 <button type="button"
-                   class="px-2 py-2 md:py-0 text-sm font-medium text-accent-2 bg-secondary border border-gray-200 rounded-s-lg hover:bg-pink-hover hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700"><i
-                     class="fa-solid fa-minus"></i></button>
-                 <button type="button"
-                   class="px-4 py-2 text-sm font-medium text-accent-2 bg-secondary border-t border-b border-gray-200 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 md:py-1">1</button>
-                 <button type="button"
-                   class="px-2 py-2 text-sm font-medium text-accent-2 bg-secondary border border-gray-200 rounded-e-lg hover:bg-pink-hover hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700"><i
-                     class="fa-solid fa-plus"></i></button>
-               </div>
-               <div class="md:flex md:items-center">
-                 <h2 class="text-xl text-primary font-bold md:text-sm md:px-0">${product.price} MAD</h2>
-               </div>
-             </div>
+  if (cart.length === 0) {
+    cartItemsDiv.innerHTML = '<p>Votre panier est vide.</p>'; // à modifier le message de panier vide
+    totalPriceDiv.innerHTML = '';
+    return;
+  }
+
+  cart.forEach((item, index) => {
+    const productDiv = document.createElement('div');
+    productDiv.className = 'cart-item';
+    productDiv.innerHTML = `
+      <div class="flex bg-red-100 mb-4 p-4 rounded-lg justify-between">
+        <div class="item-pic w-1/4">
+          <div class="flex flex-col justify-center m-auto">
+            <img class="h-full w-full rounded-lg" src="${item.images[0]}" alt="${item.title}">
+            <div class="flex rounded-md shadow-sm justify-around mt-2" role="group">
+              <button type="button" class="bg-primary text-sm h-6 px-1 rounded-l-lg text-accent-2 "><i class="fa-solid fa-minus"></i></button>
+              <button type="button" class="bg-primary text-sm h-6 px-4 text-accent-2 "><span>${item.quantity}</span></button>
+              <button type="button" class="bg-primary text-sm h-6 px-1 rounded-r-lg text-accent-2 "><i class="fa-solid fa-plus"></i></button>
+            </div>
           </div>
-         </a>
-       </div>
+        </div>
+        <div class="infos bg-accent-2 w-[70%] flex flex-col justify-between rounded-lg">
+          <div class="p-3">
+            <div class="title-price flex justify-between ">
+              <h3 class="text-lg">${item.title}</h3>
+              <i class="fa-solid fa-trash text-secondary text-right cursor-pointer mt-1 sm:text-2xl sm:mt-0"></i>
+            </div>
+            <div class="title-price flex justify-between">
+              <h5 class="text-sm">Livraison gratuite</h5>
+            </div>
+          </div>
+          <div class="p-3">
+            <h3 class="font-bold text-primary text-right"><span>${item.price}</span> €</h3>
+          </div>
+        </div>
+      </div>
     `;
-    //container.appendChild(productCard)
-        container.innerHTML += productCard; // Ajouter la carte au conteneur
+    totalPrice += item.price * item.quantity;
+    cartItemsDiv.appendChild(productDiv);
+  });
 
-        const asideProductCard = `
-      <div class="product-card relative mt-6 flex-1 px-4 sm:px-6">
-                <div class="item1 flex bg-red-100 mb-4 p-4 rounded-lg justify-between">
-                  <div class="item-pic w-1/4">
-                    <div class="flex flex-col justify-center m-auto">
-                      <img class="h-full w-full rounded-lg" src="${product.images[0]}" alt="Maillot de ${product.title}">
-                      <div class="flex rounded-md shadow-sm justify-around mt-2" role="group">
-                        <button type="button" class="bg-primary text-sm h-6 px-1 rounded-l-lg text-accent-2 "><i
-                            class="fa-solid fa-minus"></i></button>
-                        <button type="button" class="bg-primary text-sm h-6 px-4 text-accent-2 "><span>1</span></button>
-                        <button type="button" class="bg-primary text-sm h-6 px-1 rounded-r-lg text-accent-2 "><i
-                            class="fa-solid fa-plus"></i></button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="infos bg-accent-2 w-[70%] flex flex-col justify-between rounded-lg">
-                    <div class="p-3">
-                      <div class="title-price flex justify-between ">
-                        <h3 class="text-lg">${product.title}</h3>
-                        <i
-                          class="fa-solid fa-trash text-secondary text-right cursor-pointer mt-1 sm:text-2xl sm:mt-0"></i>
-                      </div>
-                      <div class="title-price flex justify-between">
-                        <h5 class="text-sm">Livraison gratuite</h5>
-                      </div>
-                    </div>
-                    <div class="p-3">
-                      <h3 class="font-bold text-primary text-right"><span>${product.price}</span> MAD</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
+  totalPriceDiv.innerHTML = `<p>TOTAL PANIER : ${totalPrice} €</p>`;
+}
+// Générer un devis ----------------------------------------------------------------------------------
+document.getElementById('devis-form').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const clientName = document.getElementById('client-name').value;
+  const clientPhone = document.getElementById('client-phone').value;
+  const clientAdress = document.getElementById('client-adress').value;
+
+  const quoteDiv = document.getElementById('devis');
+  const quoteContent = document.getElementById('devis-content');
+
+  const today = new Date();
+  const formattedDate = `${today.getDate().toString().padStart(2, '0')}/${(today.getMonth() + 1).toString().padStart(2, '0')}/${today.getFullYear()}`;
+
+  quoteContent.innerHTML = `
+      <div id="entete" class="flex justify-between mb-14 mt-6">
+        <h1 class="text-lg font-bold">DEVIS N° <span>001</span>/<span>2024</span></h1>
+        <img class="w-1/3" src="../assets/imgs/red-blue-logo.png" alt="sporteez logo">
+      </div>
+      <div id="infos" class="flex mb-8 justify-between">
+        <div>
+          <h2 class="font-bold">SPORTEEZ</h2>
+          <p>3, Avenue Roches Noires <br>10 000, Casablanca, Maroc <br>Téléphone : +2126 66 66 66 66</p>
+        </div>
+        <div class="w-1/3">
+          <h3 class="font-bold text-sm">Destinataire :</h3>
+          <h5>${clientName}</h5>
+          <h6>${clientAdress}</h6>
+        </div>
+      </div>
+      <hr class="mb-4 border-1 border-primary color-primary">
+      <div class="flex justify-between mb-8">
+        <div>
+          <h6>Date du devis :</h6>
+          <h6>Référence du devis :</h6>
+          <h6>Date de validité du devis :</h6>
+          <h6>Emis par :</h6>
+          <h6>Contact Client :</h6>
+          <h6>Date de débit de la présentation :</h6>
+        </div>
+        <div class="mr-14">
+          <h6>${formattedDate}</h6>
+          <h6>001/2024</h6>
+          <h6>02/12/2024</h6>
+          <h6>Dadssi</h6>
+          <h6>${clientPhone}</h6>
+          <h6>25/11/2024</h6>
+        </div>
+      </div>
+      <hr class="mb-4 border-1 border-primary color-primary">
+      <div id="item-line-container" class="flex flex-col w-full mb-4">
+      
+      </div>
+      <div class="flex w-full justify-end">
+        <div id="totals">
+          <h3 class="font-bold text-xs">TOTAL HT</h3>
+          <h3 class="font-bold text-xs">TOTAL TVA</h3>
+          <h3 class="font-bold text-xs">TOTAL TTC</h3>
+        </div>
+        <div class="ml-28 mr-6" id="totals-chiffres">
+          <h3 class="font-bold text-xs">300.00</h3>
+          <h3 class="font-bold text-xs">60.00</h3>
+          <h3 class="font-bold text-xs">360.00</h3>
+        </div>
+      </div>
+      <hr class="mb-14 mt-10 border-1 border-primary color-primary">
+      <div class="flex justify-between" id="devis-footer">
+        <div>
+          <h4 class="font-bold text-xs mb-4">Siège Sociale</h4>
+          <h6 class="text-xs">3, Avenue Roches Noires</h6>
+          <h6 class="text-xs">10 000, Casablanca, Maroc</h6>
+        </div>
+        <div>
+          <h4 class="font-bold text-xs mb-4">Cordonnées</h4>
+          <h6 class="text-xs">Téléphone : +212 6 66 66 66 66</h6>
+          <h6 class="text-xs">Email : client@sporteez.com</h6>
+          <h6 class="text-xs">www.sporteez.com</h6>
+        </div>
+        <div>
+          <h4 class="font-bold text-xs mb-4">Données bancaires</h4>
+          <h6 class="text-xs">Banque : Bank of Africa</h6>
+          <h6 class="text-xs">Code banque : 011 234</h6>
+          <h6 class="text-xs">RIB : 001 234 45678905 432 345 6789</h6>
+          <h6 class="text-xs">IBAN :4535 001 234 45678905 432 345 6789</h6>
+        </div>
+      </div>
+  `;
+  document.getElementById("download-devis-btn").style.display = "flex";
+  
+  const itemLineContainer = document.getElementById("item-line-container");
+
+  if (!itemLineContainer){
+    console.error('element with ID "item-line-container" not found');
+    return;
+  }
+
+  cart.forEach((item) => {
+    const itemLine = document.createElement('div');
+    itemLine.className = 'item-line flex justify-between';
+    itemLine.innerHTML = `
+      <h3 class="w-1/5">${item.title}</h3>
+      <h3 class="w-1/5">${item.price}</h3>
+      <h3 class="w-1/5">${item.quantity}</h3>
+      <h3 class="w-1/5">${item.price * item.quantity}</h3>
     `;
-        asideContainer.innerHTML += asideProductCard;
-      });
-    }
+    itemLineContainer.appendChild(itemLine);
+  });
+
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  document.getElementById("totals-chiffres").innerHTML = `
+    <h3 class="font-bold text-xs">${total.toFixed(2)}</h3>
+    <h3 class="font-bold text-xs">${(total * 0.2).toFixed(2)}</h3>
+    <h3 class="font-bold text-xs">${(total * 1.2).toFixed(2)}</h3>
+  `;
+
+  quoteDiv.style.display = 'block';
+});
+
+// Télécharger le devis en PDF
+document.getElementById('download-devis-btn').addEventListener('click', function () {
+  const element = document.getElementById('devis-content');
+
+  html2canvas(element).then((canvas) => {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    const imgData = canvas.toDataURL('image/png'); 
+    const imgWidth = 190; 
+    const imgHeight = (canvas.height * imgWidth) / canvas.width; 
+
+    // Ajouter l'image au PDF
+    doc.addImage(imgData, 'PNG', 10, 10, imgWidth, imgHeight);
+    doc.save('devis.pdf'); // Télécharger le PDF
+  }).catch((error) => {
+    console.error('Erreur lors de la génération du PDF :', error);
+  });
+});
   </script>
   <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </body>

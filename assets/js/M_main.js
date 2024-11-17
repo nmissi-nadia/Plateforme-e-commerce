@@ -63,7 +63,6 @@ tailwind.config = {
 
 
 
-
 let carousel_cards = document.getElementById('carousel-cards');
 
 function slideLeft() {
@@ -94,7 +93,6 @@ function openMenu() {
 
 
 }
-
 //carousel-images header
 const slides = document.getElementById('carousel-images');
 slides.addEventListener("wheel", (evnt) => {

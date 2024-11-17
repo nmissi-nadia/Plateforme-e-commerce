@@ -284,7 +284,7 @@ panelIcons.forEach(function(icon) {
 // Afficher les produits dans le panier
 function displayCartItems() {
 
-  const cart = getCartFromLocalStorage();
+  const carts = getCartFromLocalStorage();
 
 
   const cartItemsDiv = document.getElementById('aside-panel');
@@ -293,7 +293,7 @@ function displayCartItems() {
   cartItemsDiv.innerHTML = '';
   let totalPrice = 0;
 
-  if (cart.length === 0) {
+  if (carts.length === 0) {
     cartItemsDiv.innerHTML =` 
       <div class="flex w-full mx-2 mt-2 mb- 10">
         <div class="flex justify-center items-center">
@@ -305,7 +305,7 @@ function displayCartItems() {
     return;
   }
 
-  cart.forEach((item) => {
+  carts.forEach((item) => {
     const productDiv = document.createElement('div');
     productDiv.className = 'cart-item';
     productDiv.innerHTML =` 

@@ -46,7 +46,7 @@ function afficherProduits(page) {
         </div>
         
         <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <button class="bg-white text-orange-500 font-semibold py-2 px-4 rounded-md mb-4 justify-between" onclick="ajouteraupanier('${produit.id}')">
+          <button class="bg-white text-orange-500 font-semibold py-2 px-4 rounded-md mb-4 justify-between" onclick="ajouteraupanier('${produit.id}','${produit.title}')">
             Ajouter au panier
             <i class="fa-solid fa-cart-shopping"></i>
           </button>
@@ -114,7 +114,7 @@ function toggleSidebar1(show) {
 
 
 // Ajouter au panier
-function ajouteraupanier(id) {
+function ajouteraupanier(id,title) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const existingProduct = cart.find(item => item.id === id);
     let L ='large';
@@ -155,7 +155,7 @@ function ajouteraupanier(id) {
             <span class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold py-1 px-2 rounded-full">-50%</span>
           </div>
           <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <button class="bg-white text-orange-500 font-semibold py-2 px-4 rounded-md mb-4" onclick="ajouteraupanier('${produit.id}','${produit.title}','${produit.price}','${produit.images[0]}')">
+            <button class="bg-white text-orange-500 font-semibold py-2 px-4 rounded-md mb-4" onclick="ajouteraupanier('${produit.id}','${produit.title}')">
               Ajouter au panier
               <i class="fa-solid fa-cart-shopping"></i>
             </button>
@@ -213,7 +213,7 @@ function afficherProduitsFiltres(produits) {
             <span class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold py-1 px-2 rounded-full">-50%</span>
           </div>
           <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <button class="bg-white text-orange-500 font-semibold py-2 px-4 rounded-md mb-4" onclick="ajouteraupanier('${produit.id}','${produit.title}','${produit.price}','${produit.images[0]}')">
+            <button class="bg-white text-orange-500 font-semibold py-2 px-4 rounded-md mb-4" onclick="ajouteraupanier('${produit.id}','${produit.title}')">
               Ajouter au panier
               <i class="fa-solid fa-cart-shopping"></i>
             </button>

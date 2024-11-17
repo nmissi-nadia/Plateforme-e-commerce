@@ -55,7 +55,8 @@ align-self: center;
     }
 
     #equip_card img{
-    height: 100%;
+    height: 55%;
+    width: 100%;
     }
     
     #Nmissi{
@@ -64,7 +65,16 @@ align-self: center;
       justify-content: center;
       
      }
-
+     #nmissi_card{
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+     }
+     #nmissi_card img{
+      height: 40%;
+      width: 100%;
+       
+     }
     /* #Nmissi_card{
       display: flex;
       flex-direction: column;

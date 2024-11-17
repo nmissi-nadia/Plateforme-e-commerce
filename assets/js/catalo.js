@@ -312,7 +312,7 @@ function displayCartItems() {
       <div class="flex bg-red-100 mb-4 p-4 rounded-lg justify-between">
         <div class="item-pic w-1/4">
           <div class="flex flex-col justify-center m-auto">
-            <img class="h-full w-full rounded-lg" src="${item.images[0]}" alt="${item.title}">
+            <img class="h-full w-full rounded-lg" src="${item.images[2]}" alt="${item.title}">
             <div class="flex rounded-md shadow-sm justify-around mt-2" role="group">
               <button type="button" class="bg-primary text-sm h-6 px-1 rounded-l-lg text-accent-2 "><i class="fa-solid fa-minus"></i></button>
               <button type="button" class="bg-primary text-sm h-6 px-4 text-accent-2 "><span>${item.quantity}</span></button>

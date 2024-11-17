@@ -154,8 +154,8 @@
     </header>
 
 
-     <!-- side bar panier start -->
-  <div id="panel-aside-bar" class="hidden relative z-10 transition-opacity z-20" aria-labelledby="slide-over-title"
+      <!-- side bar panier start -->
+  <div id="panel-aside-bar" class="hidden relative z-10 transition duration-500" aria-labelledby="slide-over-title"
   role="dialog" aria-modal="true">
   <div class="fixed inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
   <div class="fixed inset-0 overflow-hidden">
@@ -173,12 +173,12 @@
               </svg>
             </button>
           </div>
-          <div class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
+          <div id="cart-items" class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
             <div class="px-4 sm:px-6">
               <h2 class="text-secondary font-bold text-xl" id="slide-over-title">Votre Panier :</h2>
             </div>
             <div id="aside-panel" class="product-card relative mt-6 flex-1 px-4 sm:px-6">
-              <div class="item1 flex bg-red-100 mb-4 p-4 rounded-lg justify-between">
+              <div class="flex bg-red-100 mb-4 p-4 rounded-lg justify-between">
                 <div class="item-pic w-1/4">
                   <div class="flex flex-col justify-center m-auto">
                     <img class="h-full w-full rounded-lg" src="../assets/imgs/atm.png" alt="">
@@ -208,13 +208,21 @@
                 </div>
               </div>
             </div>
+            <!-- -------------------------------------------------------------------------------------- -->
+            <div class="flex justify-between px-4 w-full" id="aside-panel-footer">
+              <button id="see-panel" class="w-1/3 bg-primary px-4 rounded-lg text-accent-2 font-bold">Voir le
+                panier</button>
+              <div id="total-panel" class="w-1/3 flex w-3/5 py-2 rounded-lg bg-secondary text-accent-2 font-bold">
+                <span class="mx-auto"><span id="total-price"></span></span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- side bar panier end -->
+<!-- aside bar panier end -->
 
   <!-- header sectioon -->
     <div class="bg-white">

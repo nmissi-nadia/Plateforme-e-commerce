@@ -253,7 +253,7 @@ const panelIcons = document.querySelectorAll(".panel-icons");
 panelIcons.forEach(function(icon) {
   icon.addEventListener("click", function () {
     const panelCard = document.getElementById("panel-aside-bar");
-    displayCartItems();
+    // displayCartItems();
     panelCard.classList.remove("hidden");
   });
 });

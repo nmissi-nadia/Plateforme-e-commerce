@@ -62,13 +62,11 @@ function openMenu() {
 
 
 }
-
 //carousel-images header
 const slides = document.getElementById('carousel-images');
 slides.addEventListener("wheel", (evnt) => {
     slides.scrollLeft += evnt.deltaX
 })
-
 //carousel-cards
 
 

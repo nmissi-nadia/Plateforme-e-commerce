@@ -121,7 +121,7 @@ fetch(apiUrl)
                         </th>
                         
                         <td id="tailleprdt" class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-secondary text-white md:w-[13.75rem] lg:w-[15.75rem] xl:w-[21rem] xl:h-[2.5rem]">
-                            Medium
+                            Large
                         </td>
 
                     </tr>
@@ -239,6 +239,7 @@ function changercouleur(){
     const homimg = document.getElementById("homimg");
     const awyimg = document.getElementById("awyimg");
     const cltrprdt = document.getElementById("cltrprdt");
+    
 
     lclimg.addEventListener('click', () => {
         chxclrprdt.textContent = "Domicile";
@@ -249,11 +250,14 @@ function changercouleur(){
         chxclrprdt.textContent = "Extérieur";
         cltrprdt.textContent = "Extérieur";
         
+
+        
     });
 
     awyimg.addEventListener('click', () => {
         chxclrprdt.textContent = "Third";
         cltrprdt.textContent = "Third";
+        
     });
 };
 
@@ -272,28 +276,17 @@ let prices = document.querySelectorAll(' .prix');
 
 
 
-let dataprdts = JSON.parse(localStorage.getItem('produits')) || [];
+let cart = JSON.parse(localStorage.getItem('produits')) || [];
 
 function stockerdata() {
 
-    let prdt = {
+    cart.push({id: id, quantity: vleprd.value, taille: taislct.value, couleur: chxclrprdt.textContent });
 
-        id: id,
-        quantity: vleprd.value,
-        taille: taislct.value,
-        couleur: chxclrprdt.textContent
-        
-        
-
-    };
-
-    dataprdts.push(prdt);
-
-    localStorage.setItem('produits', JSON.stringify(dataprdts));
+    localStorage.setItem('produits', JSON.stringify(cart));
 
    
 };
-console.log(dataprdts); 
+console.log(cart); 
 
 
 

@@ -121,7 +121,7 @@ fetch(apiUrl)
                         </th>
                         
                         <td id="tailleprdt" class="w-[9.125rem] h-[1.25rem] px-4 py-[0.32rem] bg-secondary text-white md:w-[13.75rem] lg:w-[15.75rem] xl:w-[21rem] xl:h-[2.5rem]">
-                            Medium
+                            Large
                         </td>
 
                     </tr>
@@ -192,7 +192,6 @@ fetch(apiUrl)
 
 
 
-
 /** Validation des Inputs */
 
 psnlcard.addEventListener('submit', (e) => {
@@ -218,13 +217,17 @@ psnlcard.addEventListener('submit', (e) => {
         alert1.style.display = 'grid';
     }
 
+
     vleprd.value = 0;
 
     setTimeout(() => {
         alert1.style.display = 'none';
         alert2.style.display = 'none';
         alert3.style.display = 'none';
-    }, 2500);    
+
+    }, 2500);
+    
+
 
 });
 
@@ -264,6 +267,7 @@ function changercouleur(){
 
 
 
+
 /** Stocker Data dans local storage */
 
 const taislct = document.getElementById("taislct");
@@ -272,29 +276,17 @@ let prices = document.querySelectorAll(' .prix');
 
 
 
-let dataprdts = JSON.parse(localStorage.getItem('produits')) || [];
+let cart = JSON.parse(localStorage.getItem('produits')) || [];
 
 function stockerdata() {
 
-    let prdt = {
+    cart.push({id: id, quantity: vleprd.value, taille: taislct.value, couleur: chxclrprdt.textContent });
 
-        id: id,
-        quantity: vleprd.value,
-        taille: taislct.value,
-        couleur: chxclrprdt.textContent
-        
-        
-
-
-    };
-
-    dataprdts.push(prdt);
-
-    localStorage.setItem('produits', JSON.stringify(dataprdts));
+    localStorage.setItem('produits', JSON.stringify(cart));
 
    
 };
-console.log(dataprdts); 
+console.log(cart); 
 
 
 
@@ -304,26 +296,32 @@ console.log(dataprdts);
 
 // ---JavaScript--- :
 
-document.getElementById("shoping-icon-md").addEventListener("click", function () {
-    const shoppingIconMd = document.getElementById("shoping-icon-md");
-    const panelCard = document.getElementById("panel-aside-bar");
 
+const panelIcons = document.querySelectorAll(".panel-icons");
+
+panelIcons.forEach(function(icon) {
+  icon.addEventListener("click", function () {
+    const panelCard = document.getElementById("panel-aside-bar");
+    // displayCartItems();
     panelCard.classList.remove("hidden");
-  })
+  });
+});
 
-  document.getElementById("close-btn").addEventListener("click", function () {
-    const panelCard = document.getElementById("panel-aside-bar");
+document.getElementById("close-btn").addEventListener("click", function () {
+const panelCard = document.getElementById("panel-aside-bar");
 
-    panelCard.classList.add("hidden");
-  })
+panelCard.classList.add("hidden");
+})
 
-  const seePanel = document.getElementById("see-panel");
-  seePanel.addEventListener("click", function(){
-    const panelCard = document.getElementById("panel-aside-bar");
-    panelCard.classList.add("hidden");
-    window.location.href = "../vues/panier.html";
+const seePanel = document.getElementById("see-panel");
+seePanel.addEventListener("click", function () {
+const panelCard = document.getElementById("panel-aside-bar");
+panelCard.classList.add("hidden");
+window.location.href = "../vues/panier.html";
 
-  })
+})
+
+
 
 // --- JavaScript End---
 

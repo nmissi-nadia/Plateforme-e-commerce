@@ -305,7 +305,7 @@ function displayCartItems() {
     return;
   }
 
-  cart.forEach((item, index) => {
+  cart.forEach((item) => {
     const productDiv = document.createElement('div');
     productDiv.className = 'cart-item';
     productDiv.innerHTML =` 

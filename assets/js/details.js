@@ -216,6 +216,14 @@ psnlcard.addEventListener('submit', (e) => {
     else{
         alert1.style.display = 'grid';
     }
+
+    vleprd.value = 0;
+
+    setTimeout(() => {
+        alert1.style.display = 'none';
+        alert2.style.display = 'none';
+        alert3.style.display = 'none';
+    }, 2500);
     
 
 });
@@ -270,10 +278,12 @@ function stockerdata() {
 
     let prdt = {
 
+        id: id,
+        quantity: vleprd.value,
         taille: taislct.value,
-        couleur: chxclrprdt.textContent,
-        nombre: vleprd.value,
-        identifiant: id
+        couleur: chxclrprdt.textContent
+        
+        
 
     };
 

@@ -280,7 +280,6 @@ panelIcons.forEach(function(icon) {
       return JSON.parse(localStorage.getItem('cart')) || [];
   }
 
-console.log(cart);
 
 // Afficher les produits dans le panier
 function displayCartItems() {

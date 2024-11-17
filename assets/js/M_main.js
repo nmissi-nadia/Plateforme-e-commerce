@@ -444,4 +444,5 @@ function NextSlide() {
 function PreviousSlide() {
     testimnal.style.scrollBehavior = "smooth"
     testimnal.scrollLeft -= 500;
+    
 }

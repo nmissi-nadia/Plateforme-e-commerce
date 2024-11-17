@@ -214,6 +214,7 @@ fetch("https://mohamedmoustir.github.io/api/")
                     <a href="#">
                          <h5 class="text-xl  font-semibold tracking-tight text-gray-900 dark:text-white">${cloths[i].description.slice(0, 90)}...</h5>
                      </a>
+                     
                      <div class="flex items-center mt-2.5 mb-5">
                          <div class="flex items-center space-x-1 rtl:space-x-reverse">
                              <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"

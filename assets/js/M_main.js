@@ -2,35 +2,66 @@
 
 tailwind.config = {
     theme: {
-        extend: {
-            colors: {
-                clifford: '#da373d',
-                'primary': '#254596', // Blue
-                'secondary': '#FB2649', // Rose
-                'accent': '#343635', // Noir
-                'accent-2': '#F8FCFF', // Blanc
-                'blue-hover': '#3757A7', // couleur du hover sur les boutons bleu
-                'pink-hover': '#E42141' // couleur du hover sur les boutons Pink
-            },
-            fontFamily: {
-                'custom': ['"Roboto"', 'sans-serif'],
-            },
-            spacing: {
-                '18': '4.5rem',  // Espace de 4.5rem pour marges/paddings
-                '22': '5.5rem',  // Espace de 5.5rem pour marges/paddings
-            },
-            borderRadius: {
-                'rounded-20': '20px'
-            },
-            transitionDuration: {
-                '500': '500ms',   //durée de 500ms
-            },
-            width: {
-                '7/10': '70%'
-            },
-        }
+      extend: {
+        colors: {
+          clifford: '#da373d',
+          'primary': '#254596', // Blue
+          'secondary': '#FB2649', // Rose
+          'accent': '#343635', // Noir
+          'accent-2': '#F8FCFF', // Blanc
+          'blue-hover': '#3757A7', // couleur du hover sur les boutons bleu
+          'pink-hover': '#E42141' // couleur du hover sur les boutons Pink
+        },
+        fontFamily: {
+          'custom': ['"Roboto"', 'sans-serif'],
+        },
+        borderRadius: {
+          'rounded-20': '20px'
+        },
+        borderWidth: {
+          '1': '1px', // border de 1px
+        },
+        transitionDuration: {
+          '500': '500ms',   //durée de 500ms
+        },
+        width: {
+          '7/10': '70%'
+        },
+      }
     }
-}
+  }
+  const panelIcons = document.querySelectorAll(".panel-icons");
+
+  panelIcons.forEach(function(icon) {
+    icon.addEventListener("click", function () {
+      const panelCard = document.getElementById("panel-aside-bar");
+      displayCartItems();
+      panelCard.classList.remove("hidden");
+    });
+  });
+  
+      document.getElementById("close-btn").addEventListener("click", function () {
+        const panelCard = document.getElementById("panel-aside-bar");
+  
+        panelCard.classList.add("hidden");
+      })
+  
+      const seePanel = document.getElementById("see-panel");
+      seePanel.addEventListener("click", function () {
+        const panelCard = document.getElementById("panel-aside-bar");
+        panelCard.classList.add("hidden");
+        window.location.href = "../vues/panier.html";
+  
+      })
+      
+      function openmune() {
+        document.getElementById("navbar-default").classList.toggle("hidden")
+      
+      }
+
+
+
+
 
 let carousel_cards = document.getElementById('carousel-cards');
 
@@ -62,7 +93,6 @@ function openMenu() {
 
 
 }
-
 //carousel-images header
 const slides = document.getElementById('carousel-images');
 slides.addEventListener("wheel", (evnt) => {
@@ -184,6 +214,7 @@ fetch("https://mohamedmoustir.github.io/api/")
                     <a href="#">
                          <h5 class="text-xl  font-semibold tracking-tight text-gray-900 dark:text-white">${cloths[i].description.slice(0, 90)}...</h5>
                      </a>
+                     
                      <div class="flex items-center mt-2.5 mb-5">
                          <div class="flex items-center space-x-1 rtl:space-x-reverse">
                              <svg class="w-4 h-4 text-yellow-300" aria-hidden="true"
@@ -217,9 +248,7 @@ fetch("https://mohamedmoustir.github.io/api/")
                      </div>
                      <div class="flex items-center justify-between">
                          <span class="text-3xl font-bold text-gray-900 dark:text-white">${cloths[i].price}$</span>
-                         <a href="#"
-                             class="  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  ">Go
-                             to shopping</a>
+                         
                      </div>
                  </div>
              </div>
@@ -414,4 +443,5 @@ function NextSlide() {
 function PreviousSlide() {
     testimnal.style.scrollBehavior = "smooth"
     testimnal.scrollLeft -= 500;
+    
 }

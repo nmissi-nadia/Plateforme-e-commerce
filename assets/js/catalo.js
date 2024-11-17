@@ -104,7 +104,7 @@ function trierProduits(option) {
 
 fetchProduits();
 
-function toggleSidebar(show) {
+function toggleSidebar1(show) {
     document.getElementById("filterSidebar").style.transform = show ? "translateX(0)" : "translateX(-100%)";
   }
 
@@ -247,6 +247,10 @@ searchButton.addEventListener('click', () => {
     produitContainer.innerHTML = `<p class="text-gray-700 text-center mt-4">Veuillez entrer un terme de recherche.</p>`;
   }
 });
+
+
+
+
 // Fonction d'Afficher et cacher aside barre
 const panelIcons = document.querySelectorAll(".panel-icons");
 

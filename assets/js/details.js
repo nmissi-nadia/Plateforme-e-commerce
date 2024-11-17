@@ -217,17 +217,14 @@ psnlcard.addEventListener('submit', (e) => {
         alert1.style.display = 'grid';
     }
 
-
     vleprd.value = 0;
 
     setTimeout(() => {
         alert1.style.display = 'none';
         alert2.style.display = 'none';
         alert3.style.display = 'none';
-
     }, 2500);
     
-
 
 });
 
@@ -242,6 +239,7 @@ function changercouleur(){
     const homimg = document.getElementById("homimg");
     const awyimg = document.getElementById("awyimg");
     const cltrprdt = document.getElementById("cltrprdt");
+    
 
     lclimg.addEventListener('click', () => {
         chxclrprdt.textContent = "Domicile";
@@ -251,12 +249,15 @@ function changercouleur(){
     homimg.addEventListener('click', () => {
         chxclrprdt.textContent = "Extérieur";
         cltrprdt.textContent = "Extérieur";
+        
 
+        
     });
 
     awyimg.addEventListener('click', () => {
         chxclrprdt.textContent = "Third";
         cltrprdt.textContent = "Third";
+        
     });
 };
 
@@ -264,7 +265,6 @@ function changercouleur(){
 
 
 /**////////////////////////////////////////////////////// */
-
 
 
 
@@ -282,7 +282,7 @@ function stockerdata() {
 
     cart.push({id: id, quantity: vleprd.value, taille: taislct.value, couleur: chxclrprdt.textContent });
 
-    localStorage.setItem('produits', JSON.stringify(cart));
+    localStorage.setItem('cart', JSON.stringify(cart));
 
    
 };

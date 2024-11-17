@@ -282,7 +282,7 @@ function stockerdata() {
 
     cart.push({id: id, quantity: vleprd.value, taille: taislct.value, couleur: chxclrprdt.textContent });
 
-    localStorage.setItem('produits', JSON.stringify(cart));
+    localStorage.setItem('cart', JSON.stringify(cart));
 
    
 };

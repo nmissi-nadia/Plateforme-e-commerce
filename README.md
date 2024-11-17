@@ -119,7 +119,7 @@ FAQ.
 
 ---
 ## 🌐 Hébergement
-- **Lien vers le site web :** [Lien ici]
+- **Lien vers le site web :** [https://nmissi-nadia.github.io/Plateforme-e-commerce/vues/home.html]
 
 ## 🚀 Installation et Utilisation
 1. **Cloner le dépôt** :

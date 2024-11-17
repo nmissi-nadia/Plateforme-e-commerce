@@ -122,7 +122,7 @@ function ajouteraupanier(id, title, price, image) {
     if (existingProduct) {
       existingProduct.quantity += 1;
     } else {
-      cart.push({ id, name: title, price, couleur, quantity: 1,taille:L });
+      cart.push({ id, title: title, price, couleur, quantity: 1,taille:L });
     }
   
     localStorage.setItem('cart', JSON.stringify(cart));

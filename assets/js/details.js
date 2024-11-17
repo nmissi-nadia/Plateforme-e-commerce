@@ -273,6 +273,7 @@ function changercouleur(){
 const taislct = document.getElementById("taislct");
 let chxclrprdt = document.getElementById("chxclrprdt");
 let prices = document.querySelectorAll(' .prix');
+let titles = document.querySelectorAll(' .spneqpnm');
 
 
 
@@ -280,13 +281,14 @@ let cart = JSON.parse(localStorage.getItem('produits')) || [];
 
 function stockerdata() {
 
-    cart.push({id: id, quantity: vleprd.value, taille: taislct.value, couleur: chxclrprdt.textContent });
+    // id, title: title, price, couleur, quantity: 1,taille:L
+
+    cart.push({id: id, couleur: chxclrprdt.textContent, quantity: vleprd.value, taille: taislct.value });
 
     localStorage.setItem('cart', JSON.stringify(cart));
 
    
 };
-console.log(cart); 
 
 
 

@@ -192,11 +192,31 @@ fetch(apiUrl)
 
 
 
-/** Validation REJEX */
+/** Validation des Inputs */
 
 psnlcard.addEventListener('submit', (e) => {
+    
+    const alert1 = document.getElementById("alert1");
+    const alert2 = document.getElementById("alert2");
+    const alert3 = document.getElementById("alert3");
+
     e.preventDefault();
-    stockerdata();
+    if( taislct.value !== "initial") {
+        if(vleprd.value > 0){
+            stockerdata();
+            alert3.style.display = 'grid';
+        }
+        else{
+            
+        alert2.style.display = 'grid';
+        }
+        
+
+    }
+    else{
+        alert1.style.display = 'grid';
+    }
+    
 
 });
 
@@ -220,6 +240,7 @@ function changercouleur(){
     homimg.addEventListener('click', () => {
         chxclrprdt.textContent = "Extérieur";
         cltrprdt.textContent = "Extérieur";
+        
     });
 
     awyimg.addEventListener('click', () => {

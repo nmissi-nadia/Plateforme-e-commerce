@@ -23,71 +23,79 @@ panelIcons.forEach(function(icon) {
 
     })
     //------------------------------------------------------------------------------------------
-    const carts = [
-      {
-        "id": 1,
-        "title": "Real Madrid",
-        "price": 109.95,
-        "quantity": 2,
-        "description": "Sac à dos robuste conçu pour les joueurs de football du Real Madrid, avec une poche rembourrée pour les ordinateurs portables jusqu'à 15 pouces. Ligue : La Liga, Pays : Espagne.",
-        "category": "La Liga",
-        "country": "Espagne",
-        "images": [
-          "https://shop.realmadrid.com/_next/image?url=https%3A%2F%2Flegends.broadleafcloud.com%2Fapi%2Fasset%2Fcontent%2FRMCFMZ0195-01-1.jpg%3FcontextRequest%3D%257B%2522forceCatalogForFetch%2522%3Afalse%2C%2522forceFilterByCatalogIncludeInheritance%2522%3Afalse%2C%2522forceFilterByCatalogExcludeInheritance%2522%3Afalse%2C%2522applicationId%2522%3A%252201H4RD9NXMKQBQ1WVKM1181VD8%2522%2C%2522tenantId%2522%3A%2522REAL_MADRID%2522%257D&w=1200&q=75",
-          "https://shop.realmadrid.com/_next/image?url=https%3A%2F%2Flegends.broadleafcloud.com%2Fapi%2Fasset%2Fcontent%2FRMCFMZ0201-1.jpg%3FcontextRequest%3D%257B%2522forceCatalogForFetch%2522%3Afalse%2C%2522forceFilterByCatalogIncludeInheritance%2522%3Afalse%2C%2522forceFilterByCatalogExcludeInheritance%2522%3Afalse%2C%2522applicationId%2522%3A%252201H4RD9NXMKQBQ1WVKM1181VD8%2522%2C%2522tenantId%2522%3A%2522REAL_MADRID%2522%257D&w=1200&q=75",
-          "https://shop.realmadrid.com/_next/image?url=https%3A%2F%2Flegends.broadleafcloud.com%2Fapi%2Fasset%2Fcontent%2FRMCFMZ0205-01.jpg%3FcontextRequest%3D%257B%2522forceCatalogForFetch%2522%3Afalse%2C%2522forceFilterByCatalogIncludeInheritance%2522%3Afalse%2C%2522forceFilterByCatalogExcludeInheritance%2522%3Afalse%2C%2522applicationId%2522%3A%252201H4RD9NXMKQBQ1WVKM1181VD8%2522%2C%2522tenantId%2522%3A%2522REAL_MADRID%2522%257D&w=1200&q=75"
-        ],
-        "rating": {
-          "rate": 4.5,
-          "count": 120
-        }
-      },
-      {
-        "id": 2,
-        "title": "FC Barcelona",
-        "price": 22.3,
-        "quantity": 2,
-        "description": "T-shirt d'entraînement de football ajusté avec un tissu anti-humidité pour une respirabilité et un confort lors des matchs et des entraînements intensifs. Ligue : La Liga, Pays : Espagne.",
-        "category": "La Liga",
-        "country": "Espagne",
-        "images": [
-          "https://store.fcbarcelona.com/cdn/shop/files/25100BM_1_86eb0beb-5621-4ac0-a371-fffc816c53ae.jpg?v=1728911048&width=493",
-          "https://store.fcbarcelona.com/cdn/shop/files/VO240917A71454_med_4bceeb70-c419-4d90-b73c-1c5995707991.jpg?v=1726649023&width=493",
-          "https://store.fcbarcelona.com/cdn/shop/files/25200C_1.jpg?v=1725428228&width=493"
-        ],
-        "rating": {
-          "rate": 4.1,
-          "count": 259
-        }
-      },
-      {
-        "id": 3,
-        "title": "Manchester United",
-        "price": 55.99,
-        "quantity": 1,
-        "description": "Veste légère en coton pour les joueurs de football, idéale pour les échauffements et les détentes. Matériau respirant pour un ajustement confortable. Ligue : Premier League, Pays : Angleterre.",
-        "category": "Premier League",
-        "country": "Angleterre",
-        "images": [
-          "https://mufc-live.cdn.scayle.cloud/images/8ed8c14d2c334556c14da1116ba32a50.jpg?brightness=1&width=922&height=1230&quality=75&bg=ffffff",
-          "https://mufc-live.cdn.scayle.cloud/images/0410e2099b1d2ba812e40aba0a9719d5.jpg?brightness=1&width=922&height=1230&quality=75&bg=ffffff",
-          "https://mufc-live.cdn.scayle.cloud/images/0dd8a9fe914d7bca2c29eb631fa44e96.jpg?brightness=1&width=922&height=1230&quality=75&bg=ffffff"
-        ],
-        "rating": {
-          "rate": 4.7,
-          "count": 500
-        }
-      }
-    ];
+    // const carts = [
+    //   {
+    //     "id": 1,
+    //     "title": "Real Madrid",
+    //     "price": 109.95,
+    //     "quantity": 2,
+    //     "description": "Sac à dos robuste conçu pour les joueurs de football du Real Madrid, avec une poche rembourrée pour les ordinateurs portables jusqu'à 15 pouces. Ligue : La Liga, Pays : Espagne.",
+    //     "category": "La Liga",
+    //     "country": "Espagne",
+    //     "images": [
+    //       "https://shop.realmadrid.com/_next/image?url=https%3A%2F%2Flegends.broadleafcloud.com%2Fapi%2Fasset%2Fcontent%2FRMCFMZ0195-01-1.jpg%3FcontextRequest%3D%257B%2522forceCatalogForFetch%2522%3Afalse%2C%2522forceFilterByCatalogIncludeInheritance%2522%3Afalse%2C%2522forceFilterByCatalogExcludeInheritance%2522%3Afalse%2C%2522applicationId%2522%3A%252201H4RD9NXMKQBQ1WVKM1181VD8%2522%2C%2522tenantId%2522%3A%2522REAL_MADRID%2522%257D&w=1200&q=75",
+    //       "https://shop.realmadrid.com/_next/image?url=https%3A%2F%2Flegends.broadleafcloud.com%2Fapi%2Fasset%2Fcontent%2FRMCFMZ0201-1.jpg%3FcontextRequest%3D%257B%2522forceCatalogForFetch%2522%3Afalse%2C%2522forceFilterByCatalogIncludeInheritance%2522%3Afalse%2C%2522forceFilterByCatalogExcludeInheritance%2522%3Afalse%2C%2522applicationId%2522%3A%252201H4RD9NXMKQBQ1WVKM1181VD8%2522%2C%2522tenantId%2522%3A%2522REAL_MADRID%2522%257D&w=1200&q=75",
+    //       "https://shop.realmadrid.com/_next/image?url=https%3A%2F%2Flegends.broadleafcloud.com%2Fapi%2Fasset%2Fcontent%2FRMCFMZ0205-01.jpg%3FcontextRequest%3D%257B%2522forceCatalogForFetch%2522%3Afalse%2C%2522forceFilterByCatalogIncludeInheritance%2522%3Afalse%2C%2522forceFilterByCatalogExcludeInheritance%2522%3Afalse%2C%2522applicationId%2522%3A%252201H4RD9NXMKQBQ1WVKM1181VD8%2522%2C%2522tenantId%2522%3A%2522REAL_MADRID%2522%257D&w=1200&q=75"
+    //     ],
+    //     "rating": {
+    //       "rate": 4.5,
+    //       "count": 120
+    //     }
+    //   },
+    //   {
+    //     "id": 2,
+    //     "title": "FC Barcelona",
+    //     "price": 22.3,
+    //     "quantity": 2,
+    //     "description": "T-shirt d'entraînement de football ajusté avec un tissu anti-humidité pour une respirabilité et un confort lors des matchs et des entraînements intensifs. Ligue : La Liga, Pays : Espagne.",
+    //     "category": "La Liga",
+    //     "country": "Espagne",
+    //     "images": [
+    //       "https://store.fcbarcelona.com/cdn/shop/files/25100BM_1_86eb0beb-5621-4ac0-a371-fffc816c53ae.jpg?v=1728911048&width=493",
+    //       "https://store.fcbarcelona.com/cdn/shop/files/VO240917A71454_med_4bceeb70-c419-4d90-b73c-1c5995707991.jpg?v=1726649023&width=493",
+    //       "https://store.fcbarcelona.com/cdn/shop/files/25200C_1.jpg?v=1725428228&width=493"
+    //     ],
+    //     "rating": {
+    //       "rate": 4.1,
+    //       "count": 259
+    //     }
+    //   },
+    //   {
+    //     "id": 3,
+    //     "title": "Manchester United",
+    //     "price": 55.99,
+    //     "quantity": 1,
+    //     "description": "Veste légère en coton pour les joueurs de football, idéale pour les échauffements et les détentes. Matériau respirant pour un ajustement confortable. Ligue : Premier League, Pays : Angleterre.",
+    //     "category": "Premier League",
+    //     "country": "Angleterre",
+    //     "images": [
+    //       "https://mufc-live.cdn.scayle.cloud/images/8ed8c14d2c334556c14da1116ba32a50.jpg?brightness=1&width=922&height=1230&quality=75&bg=ffffff",
+    //       "https://mufc-live.cdn.scayle.cloud/images/0410e2099b1d2ba812e40aba0a9719d5.jpg?brightness=1&width=922&height=1230&quality=75&bg=ffffff",
+    //       "https://mufc-live.cdn.scayle.cloud/images/0dd8a9fe914d7bca2c29eb631fa44e96.jpg?brightness=1&width=922&height=1230&quality=75&bg=ffffff"
+    //     ],
+    //     "rating": {
+    //       "rate": 4.7,
+    //       "count": 500
+    //     }
+    //   }
+    // ];
     //----------------------------------------------------------------------------------------------------------------------------------
-localStorage.setItem("carts", JSON.stringify(carts));
+    function getCartFromLocalStorage() {
+      return JSON.parse(localStorage.getItem('cart')) || [];
+  }
+  
+    // localStorage.setItem("carts", JSON.stringify(carts));
 
-    // Simuler l'importation des données depuis "cart" (tableau partagé entre les pages)
-let cart = JSON.parse(localStorage.getItem('carts')) || [];
+//     // Simuler l'importation des données depuis "cart" (tableau partagé entre les pages)
+// let cart = JSON.parse(localStorage.getItem('carts')) || [];
 console.log(cart);
 
 // Afficher les produits dans le panier
 function displayCartItems() {
+
+  const cart = getCartFromLocalStorage();
+
+
   const cartItemsDiv = document.getElementById('aside-panel');
   const totalPriceDiv = document.getElementById('total-price');
 
@@ -95,8 +103,14 @@ function displayCartItems() {
   let totalPrice = 0;
 
   if (cart.length === 0) {
-    cartItemsDiv.innerHTML = '<p>Votre panier est vide.</p>'; // à modifier le message de panier vide
-    totalPriceDiv.innerHTML = '';
+    cartItemsDiv.innerHTML = `
+      <div class="flex w-full mx-2 mt-2 mb- 10">
+        <div class="flex justify-center items-center">
+          <h3>Votre Panier est vide !</h3>
+        </div>
+      </div>
+    `; // à modifier le message de panier vide
+    totalPriceDiv.innerHTML = '0,00 €';
     return;
   }
 
@@ -137,6 +151,12 @@ function displayCartItems() {
 
   totalPriceDiv.innerHTML = `<p>TOTAL PANIER : ${totalPrice} €</p>`;
 }
+
+
+
+
+
+
 // Générer un devis ----------------------------------------------------------------------------------
 document.getElementById('devis-form').addEventListener('submit', function (event) {
   event.preventDefault();

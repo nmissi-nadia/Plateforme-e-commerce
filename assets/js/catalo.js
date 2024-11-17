@@ -104,7 +104,7 @@ function trierProduits(option) {
 
 fetchProduits();
 
-function toggleSidebar(show) {
+function toggleSidebar1(show) {
     document.getElementById("filterSidebar").style.transform = show ? "translateX(0)" : "translateX(-100%)";
   }
 
@@ -247,16 +247,31 @@ searchButton.addEventListener('click', () => {
     produitContainer.innerHTML = `<p class="text-gray-700 text-center mt-4">Veuillez entrer un terme de recherche.</p>`;
   }
 });
+
+
+
+
 // Fonction d'Afficher et cacher aside barre
-document.getElementById("shoping-icon-md").addEventListener("click", function () {
-    const shoppingIconMd = document.getElementById("shoping-icon-md");
-    const panelCard = document.getElementById("panel-aside-bar");
+const panelIcons = document.querySelectorAll(".panel-icons");
 
+panelIcons.forEach(function(icon) {
+  icon.addEventListener("click", function () {
+    const panelCard = document.getElementById("panel-aside-bar");
+    // displayCartItems();
     panelCard.classList.remove("hidden");
-  })
-
-  document.getElementById("close-btn").addEventListener("click", function () {
-    const panelCard = document.getElementById("panel-aside-bar");
-
-    panelCard.classList.add("hidden");
   });
+});
+
+    document.getElementById("close-btn").addEventListener("click", function () {
+      const panelCard = document.getElementById("panel-aside-bar");
+
+      panelCard.classList.add("hidden");
+    })
+
+    const seePanel = document.getElementById("see-panel");
+    seePanel.addEventListener("click", function () {
+      const panelCard = document.getElementById("panel-aside-bar");
+      panelCard.classList.add("hidden");
+      window.location.href = "../vues/panier.html";
+
+    })

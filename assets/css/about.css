@@ -4,7 +4,7 @@
     justify-content: center;
     gap: 30px;
     margin-top: 80px;
-    margin-right: 50px;
+    margin-right: 100px;
     margin-left: 100px;
 
   }
@@ -27,7 +27,14 @@
       gap: 24px;
       margin-top: 80px;
     }
-  
+    .service_card_container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      margin-top: 80px;
+    }
     .card_container > div {
       width: 100%;
     }

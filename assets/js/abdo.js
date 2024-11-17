@@ -13,7 +13,19 @@ function toggleAnswer(answerId) {
   }
 }
 
+// Fonction d'Afficher et cacher aside barre
+document.getElementById("shoping-icon-md").addEventListener("click", function () {
+  const shoppingIconMd = document.getElementById("shoping-icon-md");
+  const panelCard = document.getElementById("panel-aside-bar");
 
+  panelCard.classList.remove("hidden");
+})
+
+document.getElementById("close-btn").addEventListener("click", function () {
+  const panelCard = document.getElementById("panel-aside-bar");
+
+  panelCard.classList.add("hidden");
+});
 
 
 

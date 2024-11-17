@@ -57,51 +57,96 @@
 
     <header>
       <nav class="bg-white border-gray-200 shadow-lg">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
           <a href="#" class="flex items-center">
-            <img src="../assets/imgs/red-blue-logo.png" class="h-8 sm:h-12 md:h-8" alt="Sporteez Logo" />
+            <img
+              src="../assets/imgs/red-blue-logo.png"
+              class="h-8 sm:h-12 md:h-8"
+              alt="Sporteez Logo"
+            />
           </a>
           <div class="flex md:flex">
-            <i class="fa-solid fa-cart-shopping text-3xl sm:text-5xl text-primary cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer mr-6 sm:mr-10 md:hidden"></i>
-            <button data-collapse-toggle="navbar-default" type="button"
+            <i
+              class="fa-solid fa-cart-shopping text-3xl sm:text-5xl text-primary cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer mr-6 sm:mr-10 md:hidden"
+            ></i>
+            <button
+              data-collapse-toggle="navbar-default"
+              type="button"
               class="inline-flex items-center p-1 h-8 w-8 sm:w-12 sm:h-12 justify-center text-sm text-accent-2 rounded-lg md:hidden bg-primary focus:outline-none focus:ring-2 focus:ring-gray-200"
-              aria-controls="navbar-default" aria-expanded="false">
+              aria-controls="navbar-default"
+              aria-expanded="false"
+            >
               <span class="sr-only">Open main menu</span>
+              <i class="fa-solid fa-bars sm:text-4xl"></i>
               <i class="fa-solid fa-bars sm:text-4xl"></i>
             </button>
           </div>
           <div class="hidden w-full md:flex md:w-auto" id="navbar-default">
-            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg bg-accent-2 md:flex-row md:space-x-4 md:mt-0 md:border-0 bg-accent-2 md:bg-accent-2">
+            <ul
+              class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg bg-accent-2 md:flex-row md:space-x-4 md:mt-0 md:border-0 bg-accent-2 md:bg-accent-2"
+            >
               <li>
-                <a href="../vues/home.html" class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1 " aria-current="page">Accueil</a>
+                <a
+                  href="../vues/home.html"
+                  class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1"
+                  aria-current="page"
+                  >Accueil</a
+                >
               </li>
               <li>
-                <a href="../vues/catalogue.html" class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1">Catalogue</a>
+                <a
+                  href="../vues/catalogue.html"
+                  class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1"
+                  >Catalogue</a
+                >
               </li>
               <li>
-                <a href="../vues/about.html" class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1">À propos</a>
+                <a
+                  href="../vues/about.html"
+                  class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1"
+                  >À propos</a
+                >
               </li>
               <li>
-                <a href="#" class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1">Login</a>
+                <a
+                  href="#"
+                  class="block rounded text-primary md:hover:text-accent-2 md:hover:bg-primary md:border md:px-4 md:py-1"
+                  >Login</a
+                >
               </li>
-              <li>
-                <a href="#">
-                  <i class="fa-solid fa-cart-shopping text-2xl cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer hidden"></i></a>
-              </li>
+              <!-- <li>
+              <a href="#">
+                <i class="fa-solid fa-cart-shopping text-2xl cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer hidden"></i></a>
+            </li> -->
             </ul>
-            <i id="shoping-icon-md" class="fa-solid fa-cart-shopping hidden sm:hidden md:flex text-3xl md:text-2xl sm:text-5xl text-primary cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer mr-6 sm:mr-10 md:mx-4 md:w-6 md:h-6 md:hover:text-secondary"></i>
+            <i
+              id="shoping-icon-md"
+              class="fa-solid fa-cart-shopping hidden sm:hidden md:flex text-3xl md:text-2xl sm:text-5xl text-primary cursor-pointer transition-colors duration-500 ease-in-out hover:text-secondary hover:cursor-pointer mr-6 sm:mr-10 md:mx-4 md:w-6 md:h-6 md:hover:text-secondary"
+            ></i>
           </div>
         </div>
         <div class="flex w-full px-4 md:justify-center">
           <form class="w-full sm:w-full mb-2 md:w-4/5">
             <!-- <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Rechercher</label> -->
+        <div class="flex w-full px-4 md:justify-center">
+          <form class="w-full sm:w-full mb-2 md:w-4/5">
+            <!-- <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Rechercher</label> -->
             <div class="relative">
-              <input type="search" id="default-search"
-                class="flex w-full sm:w-full px-4 py-3 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-accent-2 focus:ring-blue-500 focus:border-blue-500 "
-                placeholder="Recherche..." required />
-              <button type="submit"
-                class="text-primary text-xl absolute end-2.5 bottom-1 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-4 py-1 transition-colors duration-500 ease-in-out cursor-pointer"><i
-                  class="fa-solid fa-magnifying-glass"></i></button>
+              <input
+                type="search"
+                id="searchInput"
+                class="flex w-full sm:w-full px-4 py-3 text-sm text-gray-900 border border-gray-300 rounded-3xl bg-accent-2 focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Recherche..."
+                required
+              />
+              <button
+                type="submit" id="searchButton"
+                class="text-primary text-xl absolute end-2.5 bottom-1 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-4 py-1 transition-colors duration-500 ease-in-out cursor-pointer"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
             </div>
           </form>
         </div>
@@ -109,8 +154,8 @@
     </header>
 
 
-    <!-- side bar panier start -->
-  <div id="panel-aside-bar" class="hidden relative z-10 transition-opacity" aria-labelledby="slide-over-title"
+     <!-- side bar panier start -->
+  <div id="panel-aside-bar" class="hidden relative z-10 transition-opacity z-20" aria-labelledby="slide-over-title"
   role="dialog" aria-modal="true">
   <div class="fixed inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
   <div class="fixed inset-0 overflow-hidden">
@@ -678,7 +723,7 @@
                 </div>
             </figcaption>   
               <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-                    <p class="my-4">"SporTeez est devenu ma référence pour les t-shirts de football ! J'ai pu trouver le t-shirt parfait pour soutenir mon équipe préférée, et j'ai adoré la simplicité du site. En plus, les produits sont authentiques et de grande qualité. Je reviendrai pour d'autres achats, c'est sûr !"</p>
+                    <p class="my-4">"SporTeez est devenu ma référence pour les t-shirts de football !J'ai pu trouver le t-shirt parfait pour soutenir mon équipe préférée,et j'ai adoré la simplicité du site. En plus, les produits sont authentiqueset de grande qualité. Je reviendrai pour d'autres achats, c'est sûr !"</p>
                 </blockquote>
                 <div
                 class="flex items-center mb-9 gap-2 text-amber-500 transition-all duration-500  group-hover:text-indigo-600 swiper-slide-active:text-indigo-600">
@@ -718,7 +763,7 @@
                 </div>
             </figcaption>  
               <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-                    <p class="my-4">"L'expérience avec SporTeez a été au-delà de mes attentes ! J'ai commandé un t-shirt pour moi, et la qualité est incroyable. La livraison a été rapide, et le produit correspondait parfaitement aux photos. Je recommande vivement pour tous les fans de football ! Bravo YouMarket !"</p>
+                    <p class="my-4">"L'expérience avec SporTeez a été au-delà de mes attentes !J'ai commandé un t-shirt pour moi, et la qualité est incroyable.La livraison a été rapide, et le produit correspondait parfaitement aux photos.Je recommande vivement pour tous les fans de football ! Bravo YouMarket !"</p>
                 </blockquote>
                 <div
                 class="flex items-center mb-9 gap-2 text-amber-500 transition-all duration-500  group-hover:text-indigo-600 swiper-slide-active:text-indigo-600">
@@ -759,7 +804,7 @@
                 </div>
             </figcaption>   
               <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-                    <p class="my-4">"J'ai été impressionné par le service client de YouMarket. Avant même de passer ma commande, j'avais des questions, et l'équipe m'a répondu rapidement et avec professionnalisme. La commande est arrivée dans les temps, et la qualité est top !"</p>
+                    <p class="my-4">"J'ai été impressionné par le service client de YouMarket.Avant même de passer ma commande, j'avais des questions, etl'équipe m'a répondu rapidement et avec professionnalisme.La commande est arrivée dans les temps, et la qualité est top !"</p>
                 </blockquote>
                 <div
                 class="flex items-center mb-9 gap-2 text-amber-500 transition-all duration-500  group-hover:text-indigo-600 swiper-slide-active:text-indigo-600">
@@ -799,7 +844,7 @@
                 </div>
             </figcaption>      
               <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-                    <p class="my-4">"J'ai commandé un t-shirt de football comme cadeau, et je suis ravie ! La qualité du tissu et l'impression sont excellentes, la taille était parfaite et le service client a été très attentif. Un grand merci à SporTeez pour cette expérience. Je recommanderai certainement à mes amis !"</p>
+                    <p class="my-4">"J'ai commandé un t-shirt de football comme cadeau, et je suis ravie !La qualité du tissu et l'impression sont excellentes, la taille étaitparfaite et le service client a été très attentif. Un grand merci à SporTeezpour cette expérience. Je recommanderai certainement à mes amis !"</p>
                 </blockquote>
                 <div
                 class="flex items-center mb-9 gap-2 text-amber-500 transition-all duration-500  group-hover:text-indigo-600 swiper-slide-active:text-indigo-600">
@@ -977,6 +1022,7 @@
         © 2024 Sporteez | Powered by Youcode
       </div>
     </footer>
+    <script src="../assets/js/abdo.js"></script>
   </body>
 </html>
 

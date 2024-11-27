@@ -19,7 +19,7 @@ fetch(apiUrl)
             tshrtcart.innerHTML = `
             <div id="qtrimgs" class="hidden h-[6.813rem] w-[5.875rem] grid grid-cols-1 gap-y-[1.625rem] ml-[25%] xl:grid xl:pl-[6rem]">
             <div class="chldimg cursor-pointer h-[6.813rem] w-[5.875rem]">
-                <img class="" src="${data.Tshorts[id-1].images[0]}" alt="Home Jersey">
+                <img class="imgpntk" src="${data.Tshorts[id-1].images[0]}" alt="Home Jersey">
             </div>
             <div class="chldimg cursor-pointer h-[6.813rem] w-[5.875rem]">
                 <img class="" src="${data.Tshorts[id-1].images[1]}" alt="Away Jersey">
@@ -274,6 +274,7 @@ const taislct = document.getElementById("taislct");
 let chxclrprdt = document.getElementById("chxclrprdt");
 let prices = document.querySelectorAll(' .prix');
 let titles = document.querySelectorAll(' .spneqpnm');
+let imgpntk = document.querySelector(' .imgpntk');
 
 
 
@@ -283,7 +284,7 @@ function stockerdata() {
 
     // id, title: title, price, couleur, quantity: 1,taille:L
 
-    cart.push({id: id, couleur: chxclrprdt.textContent, quantity: vleprd.value, taille: taislct.value });
+    cart.push({id: id, title:spneqpnm.textContent , couleur: chxclrprdt.textContent, images:"https://images.footballfanatics.com/chelsea/chelsea-nike-home-stadium-sponsored-shirt-2023-24_ss5_p-200724834+pv-2+u-fus9tiagegulhsk9wau6+v-20hjinr1dn4w0xq4n4ad.jpg?_hv=2&w=900" , quantity: vleprd.value, taille: taislct.value, price: prices.textContent });
 
     localStorage.setItem('cart', JSON.stringify(cart));
 

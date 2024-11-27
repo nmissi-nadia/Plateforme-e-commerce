@@ -237,7 +237,8 @@ function afficherProduitsFiltres(produits) {
 const searchInput = document.getElementById('searchInput');
 const searchButton = document.getElementById('searchButton');
 
-searchButton.addEventListener('click', () => {
+searchButton.addEventListener('click', (event) => {
+  event.preventDefault()
   const query = searchInput.value.trim();
   if (query) {
     fetchAndSearchProduits(query);

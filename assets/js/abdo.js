@@ -1,51 +1,61 @@
-function toggleAnswer(answerId) {
-  const answerElement = document.getElementById(answerId);
-  const icon = answerElement.previousElementSibling.querySelector("svg");
 
-  // Toggle the display of the answer
-  answerElement.classList.toggle('hidden');
-  
-  // Rotate the icon when the answer is shown
-  if (answerElement.classList.contains('hidden')) {
-    icon.style.transform = "rotate(0deg)";
-  } else {
-    icon.style.transform = "rotate(90deg)";
-  }
-}
+// // Fonction d'Afficher et cacher aside barre
+// const panelIcons = document.querySelectorAll(".panel-icons");
+
+// panelIcons.forEach(icon => {
+//   icon.addEventListener("click", function () {
+//     const panelCard = document.getElementById("panel-aside-bar");
+//     displayCartItems();
+//     panelCard.classList.remove("hidden");
+//   });
+// });
+
+//     document.getElementById("close-btn").addEventListener("click", function () {
+//       const panelCard = document.getElementById("panel-aside-bar");
+
+//       panelCard.classList.add("hidden");
+//     })
+
+//     const seePanel = document.getElementById("see-panel");
+//     seePanel.addEventListener("click", function () {
+//       const panelCard = document.getElementById("panel-aside-bar");
+//       panelCard.classList.add("hidden");
+//       window.location.href = "../vues/panier.html";
+
+//     })
+
+//     function getCartFromLocalStorage() {
+//       return JSON.parse(localStorage.getItem('cart')) || [];
+//   }
 
 // Fonction d'Afficher et cacher aside barre
-const panelIcons = document.querySelectorAll(".panel-icons");
+document.getElementById("shoping-icon-md").addEventListener("click", function () {
+  const shoppingIconMd = document.getElementById("shoping-icon-md");
+  const panelCard = document.getElementById("panel-aside-bar");
+  panelCard.classList.remove("hidden");
+})
 
-panelIcons.forEach(function(icon) {
-  icon.addEventListener("click", function () {
-    const panelCard = document.getElementById("panel-aside-bar");
-    displayCartItems();
-    panelCard.classList.remove("hidden");
-  });
+document.getElementById("close-btn").addEventListener("click", function () {
+  const panelCard = document.getElementById("panel-aside-bar");
+  panelCard.classList.add("hidden");
 });
 
-    document.getElementById("close-btn").addEventListener("click", function () {
-      const panelCard = document.getElementById("panel-aside-bar");
+const testimnal = document.getElementById("testimnal")
+function NextSlide() {
+  testimnal.style.scrollBehavior = "smooth"
+  testimnal.scrollLeft += 500;
+}
 
-      panelCard.classList.add("hidden");
-    })
+function PreviousSlide() {
+  testimnal.style.scrollBehavior = "smooth"
+  testimnal.scrollLeft -= 500;
+  
+}
 
-    const seePanel = document.getElementById("see-panel");
-    seePanel.addEventListener("click", function () {
-      const panelCard = document.getElementById("panel-aside-bar");
-      panelCard.classList.add("hidden");
-      window.location.href = "../vues/panier.html";
 
-    })
-
-    function getCartFromLocalStorage() {
-      return JSON.parse(localStorage.getItem('cart')) || [];
-  }
-
-console.log(cart);
 
 // Afficher les produits dans le panier
-function displayCartItems() {
+function displayCartItems() { 
 
   const cart = getCartFromLocalStorage();
 
@@ -64,18 +74,18 @@ function displayCartItems() {
         </div>
       </div>
     `; // à modifier le message de panier vide
-    totalPriceDiv.innerHTML = '0,00 €';
+    totalPriceDiv.innerHTML = '0,00 €'; 
     return;
   }
 
-  cart.forEach((item, index) => {
+  cart.forEach((item) => {
     const productDiv = document.createElement('div');
     productDiv.className = 'cart-item';
     productDiv.innerHTML =` 
       <div class="flex bg-red-100 mb-4 p-4 rounded-lg justify-between">
         <div class="item-pic w-1/4">
           <div class="flex flex-col justify-center m-auto">
-            <img class="h-full w-full rounded-lg" src="${item.images[0]}" alt="${item.title}">
+            <img class="h-full w-full rounded-lg" src="${item.images[2]}" alt="${item.title}">
             <div class="flex rounded-md shadow-sm justify-around mt-2" role="group">
               <button type="button" class="bg-primary text-sm h-6 px-1 rounded-l-lg text-accent-2 "><i class="fa-solid fa-minus"></i></button>
               <button type="button" class="bg-primary text-sm h-6 px-4 text-accent-2 "><span>${item.quantity}</span></button>
@@ -104,4 +114,52 @@ function displayCartItems() {
   });
 
   totalPriceDiv.innerHTML =` <p>TOTAL PANIER : ${totalPrice} €</p>`;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function toggleAnswer(answerId) {
+  const answerElement = document.getElementById(answerId);
+  const icon = answerElement.previousElementSibling.querySelector("svg");
+
+  // Toggle the display of the answer
+  answerElement.classList.toggle('hidden');
+  
+  // Rotate the icon when the answer is shown
+  if (answerElement.classList.contains('hidden')) {
+    icon.style.transform = "rotate(0deg)";
+  } else { 
+    icon.style.transform = "rotate(90deg)";
+  }
 }
+
+
+
+// Ajout de l'événement de recherche
+const searchInput = document.getElementById('searchInput');
+const searchButton = document.getElementById('searchButton');
+
+searchButton.addEventListener('click', () => {
+  const query = searchInput.value.trim();
+  if (query) {
+    fetchAndSearchProduits(query);
+  } else {
+    produitContainer.innerHTML = `<p class="text-gray-700 text-center mt-4">Veuillez entrer un terme de recherche.</p>`;
+  }
+});
+
+
+
+

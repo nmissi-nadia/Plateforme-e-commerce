@@ -301,7 +301,7 @@ function displayCartItems() {
         </div>
       </div>
     `; // à modifier le message de panier vide
-    totalPriceDiv.innerHTML = '0,00 €';
+    totalPriceDiv.innerHTML = '0,00 €'; 
     return;
   }
 

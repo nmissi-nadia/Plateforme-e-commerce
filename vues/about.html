@@ -116,38 +116,37 @@
 
 
 
-      <!-- side bar panier start -->
-  <div id="panel-aside-bar" class="hidden relative z-10 transition duration-500 z-20" aria-labelledby="slide-over-title"
-  role="dialog" aria-modal="true">
-  <div class="fixed inset-0 bg-gray-500/75 transition-opacity z-20" aria-hidden="true"></div>
-  <div class="fixed inset-0 overflow-hidden">
-    <div class="absolute inset-0 overflow-hidden">
-      <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-        <div class="pointer-events-auto relative w-screen max-w-md">
-          <div class="absolute left-0 top-0 -ml-8 flex pr-2 pt-4 sm:-ml-10 sm:pr-4">
-            <button id="close-btn" type="button"
-              class="relative rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white">
-              <span class="absolute -inset-2.5"></span>
-              <span class="sr-only">Close panel</span>
-              <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                aria-hidden="true" data-slot="icon">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-              </svg>
-            </button>
+<!-- side bar panier start -->
+<div id="panel-aside-bar" class="hidden relative z-10 transition duration-500" aria-labelledby="slide-over-title"
+role="dialog" aria-modal="true">
+<div class="fixed inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
+<div class="fixed inset-0 overflow-hidden">
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+      <div class="pointer-events-auto relative w-screen max-w-md">
+        <div class="absolute left-0 top-0 -ml-8 flex pr-2 pt-4 sm:-ml-10 sm:pr-4">
+          <button id="close-btn" type="button"
+            class="relative rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white">
+            <span class="absolute -inset-2.5"></span>
+            <span class="sr-only">Close panel</span>
+            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div id="cart-items" class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
+          <div class="px-4 sm:px-6">
+            <h2 class="text-secondary font-bold text-xl" id="slide-over-title">Votre Panier :</h2>
           </div>
-          <div id="cart-items" class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
-            <div class="px-4 sm:px-6">
-              <h2 class="text-secondary font-bold text-xl" id="slide-over-title">Votre Panier :</h2>
-            </div>
-            <div id="aside-panel" class="product-card relative mt-6 flex-1 px-4 sm:px-6">
-            </div>
-            <!-- -------------------------------------------------------------------------------------- -->
-            <div class="flex justify-between px-4 w-full" id="aside-panel-footer">
-              <button id="see-panel" class="w-1/3 bg-primary px-4 rounded-lg text-accent-2 font-bold">Voir le
-                panier</button>
-              <div id="total-panel" class="w-1/3 flex w-3/5 py-2 rounded-lg bg-secondary text-accent-2 font-bold">
-                <span class="mx-auto"><span id="total-price"></span></span>
-              </div>
+          <div id="aside-panel" class="product-card relative mt-6 flex-1 px-4 sm:px-6">
+          </div>
+          <!-- -------------------------------------------------------------------------------------- -->
+          <div class="flex justify-between px-4 w-full" id="aside-panel-footer">
+            <button id="see-panel" class="w-1/3 bg-primary px-4 rounded-lg text-accent-2 font-bold">Voir le
+              panier</button>
+            <div id="total-panel" class="w-1/3 flex w-3/5 py-2 rounded-lg bg-secondary text-accent-2 font-bold">
+              <span class="mx-auto"><span id="total-price"></span></span>
             </div>
           </div>
         </div>
@@ -155,6 +154,8 @@
     </div>
   </div>
 </div>
+</div>
+
 <!-- aside bar panier end -->
 
   <!-- header sectioon -->
@@ -197,7 +198,7 @@
 
   <!-- header sectioon -->
 
-    
+ <main></main>   
 <!-- section de notre histoir -->
 
     <section class="bg-white">
@@ -823,6 +824,8 @@
              
   <!-- section testimonial  -->
 
+<!-- footer section  -->
+
 <footer class="bg-blue-900 text-white py-10 px-6">
       <div
         class="container mx-auto flex flex-wrap justify-between items-start space-y-8 lg:space-y-0 lg:space-x-8"
@@ -963,6 +966,11 @@
         © 2024 Sporteez | Powered by Youcode
       </div>
     </footer>
+
+<!-- footer section  -->
+
+
+
     <script src="../assets/js/abdo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
   </body>

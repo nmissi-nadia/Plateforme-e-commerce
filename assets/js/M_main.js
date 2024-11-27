@@ -32,14 +32,6 @@ tailwind.config = {
   }
 
 
-
-
-
-
-
-
-
-
       
       function openmune() {
         document.getElementById("navbar-default").classList.toggle("hidden")

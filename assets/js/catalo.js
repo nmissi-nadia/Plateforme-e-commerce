@@ -46,7 +46,7 @@ function afficherProduits(page) {
         </div>
         
         <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <button class="bg-white text-orange-500 font-semibold py-2 px-4 rounded-md mb-4 justify-between" onclick="ajouteraupanier('${produit.id}')">
+          <button class="bg-white text-orange-500 font-semibold py-2 px-4 rounded-md mb-4 justify-between" onclick="ajouteraupanier('${produit.id}','${produit.title}','${produit.images[2]}')">
             Ajouter au panier
             <i class="fa-solid fa-cart-shopping"></i>
           </button>
@@ -114,15 +114,16 @@ function toggleSidebar1(show) {
 
 
 // Ajouter au panier
-function ajouteraupanier(id) {
+function ajouteraupanier(id,title,images) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const existingProduct = cart.find(item => item.id === id);
     let L ='large';
     let couleur ='Domicile';
+    let price=50;
     if (existingProduct) {
       existingProduct.quantity += 1;
     } else {
-      cart.push({ id,couleur, quantity: 1,taille:L });
+      cart.push({ id,title,couleur,images, quantity: 1,taille:L,price });
     }
   
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -155,7 +156,7 @@ function ajouteraupanier(id) {
             <span class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold py-1 px-2 rounded-full">-50%</span>
           </div>
           <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <button class="bg-white text-orange-500 font-semibold py-2 px-4 rounded-md mb-4" onclick="ajouteraupanier('${produit.id}','${produit.title}','${produit.price}','${produit.images[0]}')">
+            <button class="bg-white text-orange-500 font-semibold py-2 px-4 rounded-md mb-4" onclick="ajouteraupanier('${produit.id}','${produit.title}')">
               Ajouter au panier
               <i class="fa-solid fa-cart-shopping"></i>
             </button>
@@ -213,7 +214,7 @@ function afficherProduitsFiltres(produits) {
             <span class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold py-1 px-2 rounded-full">-50%</span>
           </div>
           <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <button class="bg-white text-orange-500 font-semibold py-2 px-4 rounded-md mb-4" onclick="ajouteraupanier('${produit.id}','${produit.title}','${produit.price}','${produit.images[0]}')">
+            <button class="bg-white text-orange-500 font-semibold py-2 px-4 rounded-md mb-4" onclick="ajouteraupanier('${produit.id}','${produit.title}')">
               Ajouter au panier
               <i class="fa-solid fa-cart-shopping"></i>
             </button>
@@ -284,7 +285,7 @@ panelIcons.forEach(function(icon) {
 // Afficher les produits dans le panier
 function displayCartItems() {
 
-  const cart = getCartFromLocalStorage();
+  const carts = getCartFromLocalStorage();
 
 
   const cartItemsDiv = document.getElementById('aside-panel');
@@ -293,7 +294,7 @@ function displayCartItems() {
   cartItemsDiv.innerHTML = '';
   let totalPrice = 0;
 
-  if (cart.length === 0) {
+  if (carts.length === 0) {
     cartItemsDiv.innerHTML =` 
       <div class="flex w-full mx-2 mt-2 mb- 10">
         <div class="flex justify-center items-center">
@@ -301,18 +302,19 @@ function displayCartItems() {
         </div>
       </div>
     `; // à modifier le message de panier vide
-    totalPriceDiv.innerHTML = '0,00 €'; 
+    totalPriceDiv.innerHTML = '0,00 MAD';
     return;
   }
 
-  cart.forEach((item) => {
+  carts.forEach((item) => {
     const productDiv = document.createElement('div');
     productDiv.className = 'cart-item';
+    
     productDiv.innerHTML =` 
       <div class="flex bg-red-100 mb-4 p-4 rounded-lg justify-between">
         <div class="item-pic w-1/4">
           <div class="flex flex-col justify-center m-auto">
-            <img class="h-full w-full rounded-lg" src="${item.images[2]}" alt="${item.title}">
+            <img class="h-full w-full rounded-lg" src="${item.images}" alt="${item.title}">
             <div class="flex rounded-md shadow-sm justify-around mt-2" role="group">
               <button type="button" class="bg-primary text-sm h-6 px-1 rounded-l-lg text-accent-2 "><i class="fa-solid fa-minus"></i></button>
               <button type="button" class="bg-primary text-sm h-6 px-4 text-accent-2 "><span>${item.quantity}</span></button>
@@ -340,5 +342,5 @@ function displayCartItems() {
     cartItemsDiv.appendChild(productDiv);
   });
 
-  totalPriceDiv.innerHTML =` <p>TOTAL PANIER : ${totalPrice} €</p>`;
+  totalPriceDiv.innerHTML =` <p>TOTAL PANIER : ${totalPrice} MAD</p>`;
 }

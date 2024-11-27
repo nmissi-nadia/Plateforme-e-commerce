@@ -281,10 +281,14 @@ let imgpntk = document.querySelector(' .imgpntk');
 let cart = JSON.parse(localStorage.getItem('produits')) || [];
 
 function stockerdata() {
+    
+    // id, title: title, price, couleur, quantity: 1,taille:L
+
 
     // id, title: title, price, couleur, quantity: 1,taille:L
 
     cart.push({id: id, title:spneqpnm.textContent , couleur: chxclrprdt.textContent, images:"https://images.footballfanatics.com/chelsea/chelsea-nike-home-stadium-sponsored-shirt-2023-24_ss5_p-200724834+pv-2+u-fus9tiagegulhsk9wau6+v-20hjinr1dn4w0xq4n4ad.jpg?_hv=2&w=900" , quantity: vleprd.value, taille: taislct.value, price: prices.textContent });
+
 
     localStorage.setItem('cart', JSON.stringify(cart));
 
@@ -295,6 +299,7 @@ function stockerdata() {
 
 
 /**////////////////////////////////////////////////////// */
+
 
 
 // ---JavaScript--- :
@@ -387,7 +392,7 @@ function displayCartItems() {
 
 
 
-// --- JavaScript End---
+
 
 
 

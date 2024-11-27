@@ -130,7 +130,7 @@
   
   
       <div class="bg flex items-center justify-center">
-        <h1 class="font-extrabold text-center text-7xl text-opacity-70 text-zinc-700">Accueil/Catalogue</h1>
+        <h1 class="font-extrabold text-center text-3xl text-opacity-70 text-zinc-700 lg:text-7xl">Accueil/Catalogue</h1>
       </div>
 
       
@@ -283,148 +283,101 @@
       </section>
     </main>
     
-    <footer class="bg-blue-900 text-white py-10 px-6">
-      <div
-        class="container mx-auto flex flex-wrap justify-between items-start space-y-8 lg:space-y-0 lg:space-x-8"
-      >
-        <!-- Logo and Social Media -->
-        <div class="space-y-2 md:flex-row">
-          <!-- <h2 class="text-2xl font-bold text-red-500">SPORTEEZ</h2> -->
-          <img
-            class="w-36"
-            src="../assets/imgs/red_logo.png"
-            alt="logo de site Sporteez"
-          />
-          <!-- <p class="text-sm text-gray-400">Football Vie</p> -->
-          <div class="flex space-x-6 text-red-500">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+    <footer class="bg-primary px-10">
+      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-around">
+          <div class="mb-6 md:mb-0 md:w-1/4">
+            <a href="#" class="flex flex-col items-center">
+              <img src="../assets/imgs/white-red-logo.png" class="h-8 me-3" alt="logo-sporteez" />
+            </a>
+            <form class="max-w-md mx-auto shadow-lg">
+              <div class="relative">
+                <label for="coupon-validate-btn"></label>
+                <input type="search" id="coupon-validate-btn"
+                  class="block w-full px-4 py-3 text-sm text-gray-900 border border-primary rounded-3xl focus:border-secondary mt-2"
+                  placeholder="Votre E-mail.." />
+                <button type="submit"
+                  class="text-secondary absolute end-0 bottom-0 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold text-3xl px-4 py-2"><i
+                    class="fa-solid fa-circle-arrow-right"></i></button>
+              </div>
+            </form>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Liens Rapides</h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Accueil</a>
+                </li>
+                <li>
+                  <a href="catalogue.html" class="hover:underline">Catalogue</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Nous contacter</h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a href="www.whatsapp.com" class="hover:underline ">+212 6 66 66 66 66</a>
+                </li>
+                <li>
+                  <a href="www.sporteez.com" class="hover:underline">contact@sporteez.com</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Mentions Légales</h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Politique de Confidentialité</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Termes &amp; Conditions</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-
-        <!-- Links Section -->
-        <div class="flex flex-wrap w-full lg:w-auto hidden md:flex">
-          <div class="w-1/2 lg:w-auto lg:mr-10 block">
-            <h3 class="font-bold">Pages</h3>
-            <ul class="mt-2 space-y-2">
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">Accueil</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">Catalogue</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">A propos</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">Panier</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="w-1/2 lg:w-auto lg:mr-10">
-            <h3 class="font-bold">Service</h3>
-            <ul class="mt-2 space-y-2">
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">Shopify</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">WordPress</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white"
-                  >UI/UX Design</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="w-1/2 lg:w-auto lg:mr-10">
-            <h3 class="font-bold">Resource</h3>
-            <ul class="mt-2 space-y-2">
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">HTML</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">TAILWIND CSS</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white"
-                  >JavaScript</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">JSON</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white"
-                  >UI/UX Design</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">Component</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="w-1/2 lg:w-auto">
-            <h3 class="font-bold">Company</h3>
-            <ul class="mt-2 space-y-2">
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">Tarifs</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">Sécurité</a>
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white"
-                  >Politique de confidentialité</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white"
-                  >Conditions d'utilisation</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-gray-300 hover:text-white">Rue</a>
-              </li>
-            </ul>
+        <hr class="my-6 border-accent-2 sm:mx-auto lg:my-8" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-accent-2 sm:text-center">© 2023 <a href="https://flowbite.com/"
+              class="hover:underline">Sporteez™</a>. Powered by Youcode.
+          </span>
+          <div class="flex mt-4 sm:justify-center sm:mt-0 ">
+            <a href="#" class="text-accent-2 hover:text-secondary">
+              <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 8 19">
+                <path fill-rule="evenodd"
+                  d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span class="sr-only">Facebook page</span>
+            </a>
+            <a href="#" class="text-accent-2 hover:text-secondary ms-5">
+              <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 20 17">
+                <path fill-rule="evenodd"
+                  d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span class="sr-only">Twitter page</span>
+            </a>
+            <a href="#" class="text-accent-2 hover:text-secondary ms-5">
+              <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                viewBox="0 0 20 20">
+                <path fill-rule="evenodd"
+                  d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span class="sr-only">Dribbble account</span>
+            </a>
           </div>
         </div>
-
-        <!-- Contact Form -->
-        <div class="space-y-4">
-          <h3 class="font-bold">À propos de nous</h3>
-          <p class="text-gray-300 text-sm">
-            Vous pouvez nous contacter pour nous envoyer un email
-          </p>
-          <div class="relative">
-            <input
-              type="email"
-              placeholder="Votre email"
-              class="w-full py-2 px-4 text-gray-900 rounded-full focus:outline-none"
-            />
-            <button
-              class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-red-500 text-white rounded-full p-2"
-            >
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Footer Bottom -->
-      <div
-        class="text-center border-t border-gray-600 mt-8 pt-4 text-sm text-gray-400"
-      >
-        © 2024 Sporteez | Powered by Youcode
       </div>
     </footer>
     <script src="../assets/js/catalo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="../assets/js/script.js"></script>
   </body>
      
 

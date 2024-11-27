@@ -1,3 +1,68 @@
+// const cart = [
+//   {
+//     "id": 1,
+//     "title": "Real Madrid",
+//     "quantity": 3,
+//     "price": 109.95,
+//     "description": "Sac à dos robuste conçu pour les joueurs de football du Real Madrid, avec une poche rembourrée pour les ordinateurs portables jusqu'à 15 pouces. Ligue : La Liga, Pays : Espagne.",
+//     "category": "La Liga",
+//     "country": "Espagne",
+//     "images": [
+//       "https://shop.realmadrid.com/_next/image?url=https%3A%2F%2Flegends.broadleafcloud.com%2Fapi%2Fasset%2Fcontent%2FRMCFMZ0195-01-1.jpg%3FcontextRequest%3D%257B%2522forceCatalogForFetch%2522%3Afalse%2C%2522forceFilterByCatalogIncludeInheritance%2522%3Afalse%2C%2522forceFilterByCatalogExcludeInheritance%2522%3Afalse%2C%2522applicationId%2522%3A%252201H4RD9NXMKQBQ1WVKM1181VD8%2522%2C%2522tenantId%2522%3A%2522REAL_MADRID%2522%257D&w=1200&q=75",
+//       "https://shop.realmadrid.com/_next/image?url=https%3A%2F%2Flegends.broadleafcloud.com%2Fapi%2Fasset%2Fcontent%2FRMCFMZ0201-1.jpg%3FcontextRequest%3D%257B%2522forceCatalogForFetch%2522%3Afalse%2C%2522forceFilterByCatalogIncludeInheritance%2522%3Afalse%2C%2522forceFilterByCatalogExcludeInheritance%2522%3Afalse%2C%2522applicationId%2522%3A%252201H4RD9NXMKQBQ1WVKM1181VD8%2522%2C%2522tenantId%2522%3A%2522REAL_MADRID%2522%257D&w=1200&q=75",
+//       "https://shop.realmadrid.com/_next/image?url=https%3A%2F%2Flegends.broadleafcloud.com%2Fapi%2Fasset%2Fcontent%2FRMCFMZ0205-01.jpg%3FcontextRequest%3D%257B%2522forceCatalogForFetch%2522%3Afalse%2C%2522forceFilterByCatalogIncludeInheritance%2522%3Afalse%2C%2522forceFilterByCatalogExcludeInheritance%2522%3Afalse%2C%2522applicationId%2522%3A%252201H4RD9NXMKQBQ1WVKM1181VD8%2522%2C%2522tenantId%2522%3A%2522REAL_MADRID%2522%257D&w=1200&q=75"
+//     ],
+//     "rating": {
+//       "rate": 4.5,
+//       "count": 120
+//     }
+//   },
+//   {
+//     "id": 2,
+//     "title": "FC Barcelona",
+//     "quantity": 3,
+//     "price": 22.3,
+//     "description": "T-shirt d'entraînement de football ajusté avec un tissu anti-humidité pour une respirabilité et un confort lors des matchs et des entraînements intensifs. Ligue : La Liga, Pays : Espagne.",
+//     "category": "La Liga",
+//     "country": "Espagne",
+//     "images": [
+//       "https://store.fcbarcelona.com/cdn/shop/files/25100BM_1_86eb0beb-5621-4ac0-a371-fffc816c53ae.jpg?v=1728911048&width=493",
+//       "https://store.fcbarcelona.com/cdn/shop/files/VO240917A71454_med_4bceeb70-c419-4d90-b73c-1c5995707991.jpg?v=1726649023&width=493",
+//       "https://store.fcbarcelona.com/cdn/shop/files/25200C_1.jpg?v=1725428228&width=493"
+//     ],
+//     "rating": {
+//       "rate": 4.1,
+//       "count": 259
+//     }
+//   },
+//   {
+//     "id": 3,
+//     "title": "Manchester United",
+//     "quantity": 3,
+//     "price": 55.99,
+//     "description": "Veste légère en coton pour les joueurs de football, idéale pour les échauffements et les détentes. Matériau respirant pour un ajustement confortable. Ligue : Premier League, Pays : Angleterre.",
+//     "category": "Premier League",
+//     "country": "Angleterre",
+//     "images": [
+//       "https://mufc-live.cdn.scayle.cloud/images/8ed8c14d2c334556c14da1116ba32a50.jpg?brightness=1&width=922&height=1230&quality=75&bg=ffffff",
+//       "https://mufc-live.cdn.scayle.cloud/images/0410e2099b1d2ba812e40aba0a9719d5.jpg?brightness=1&width=922&height=1230&quality=75&bg=ffffff",
+//       "https://mufc-live.cdn.scayle.cloud/images/0dd8a9fe914d7bca2c29eb631fa44e96.jpg?brightness=1&width=922&height=1230&quality=75&bg=ffffff"
+//     ],
+//     "rating": {
+//       "rate": 4.7,
+//       "count": 500
+//     }
+//   }
+// ];
+// //--------------------------
+
+
+
+
+
+
+
+
 
 const panelIcons = document.querySelectorAll(".panel-icons");
 
@@ -22,87 +87,34 @@ panelIcons.forEach(function(icon) {
       window.location.href = "../vues/panier.html";
 
     })
-    //------------------------------------------------------------------------------------------
-    // const carts = [
-    //   {
-    //     "id": 1,
-    //     "title": "Real Madrid",
-    //     "price": 109.95,
-    //     "quantity": 2,
-    //     "description": "Sac à dos robuste conçu pour les joueurs de football du Real Madrid, avec une poche rembourrée pour les ordinateurs portables jusqu'à 15 pouces. Ligue : La Liga, Pays : Espagne.",
-    //     "category": "La Liga",
-    //     "country": "Espagne",
-    //     "images": [
-    //       "https://shop.realmadrid.com/_next/image?url=https%3A%2F%2Flegends.broadleafcloud.com%2Fapi%2Fasset%2Fcontent%2FRMCFMZ0195-01-1.jpg%3FcontextRequest%3D%257B%2522forceCatalogForFetch%2522%3Afalse%2C%2522forceFilterByCatalogIncludeInheritance%2522%3Afalse%2C%2522forceFilterByCatalogExcludeInheritance%2522%3Afalse%2C%2522applicationId%2522%3A%252201H4RD9NXMKQBQ1WVKM1181VD8%2522%2C%2522tenantId%2522%3A%2522REAL_MADRID%2522%257D&w=1200&q=75",
-    //       "https://shop.realmadrid.com/_next/image?url=https%3A%2F%2Flegends.broadleafcloud.com%2Fapi%2Fasset%2Fcontent%2FRMCFMZ0201-1.jpg%3FcontextRequest%3D%257B%2522forceCatalogForFetch%2522%3Afalse%2C%2522forceFilterByCatalogIncludeInheritance%2522%3Afalse%2C%2522forceFilterByCatalogExcludeInheritance%2522%3Afalse%2C%2522applicationId%2522%3A%252201H4RD9NXMKQBQ1WVKM1181VD8%2522%2C%2522tenantId%2522%3A%2522REAL_MADRID%2522%257D&w=1200&q=75",
-    //       "https://shop.realmadrid.com/_next/image?url=https%3A%2F%2Flegends.broadleafcloud.com%2Fapi%2Fasset%2Fcontent%2FRMCFMZ0205-01.jpg%3FcontextRequest%3D%257B%2522forceCatalogForFetch%2522%3Afalse%2C%2522forceFilterByCatalogIncludeInheritance%2522%3Afalse%2C%2522forceFilterByCatalogExcludeInheritance%2522%3Afalse%2C%2522applicationId%2522%3A%252201H4RD9NXMKQBQ1WVKM1181VD8%2522%2C%2522tenantId%2522%3A%2522REAL_MADRID%2522%257D&w=1200&q=75"
-    //     ],
-    //     "rating": {
-    //       "rate": 4.5,
-    //       "count": 120
-    //     }
-    //   },
-    //   {
-    //     "id": 2,
-    //     "title": "FC Barcelona",
-    //     "price": 22.3,
-    //     "quantity": 2,
-    //     "description": "T-shirt d'entraînement de football ajusté avec un tissu anti-humidité pour une respirabilité et un confort lors des matchs et des entraînements intensifs. Ligue : La Liga, Pays : Espagne.",
-    //     "category": "La Liga",
-    //     "country": "Espagne",
-    //     "images": [
-    //       "https://store.fcbarcelona.com/cdn/shop/files/25100BM_1_86eb0beb-5621-4ac0-a371-fffc816c53ae.jpg?v=1728911048&width=493",
-    //       "https://store.fcbarcelona.com/cdn/shop/files/VO240917A71454_med_4bceeb70-c419-4d90-b73c-1c5995707991.jpg?v=1726649023&width=493",
-    //       "https://store.fcbarcelona.com/cdn/shop/files/25200C_1.jpg?v=1725428228&width=493"
-    //     ],
-    //     "rating": {
-    //       "rate": 4.1,
-    //       "count": 259
-    //     }
-    //   },
-    //   {
-    //     "id": 3,
-    //     "title": "Manchester United",
-    //     "price": 55.99,
-    //     "quantity": 1,
-    //     "description": "Veste légère en coton pour les joueurs de football, idéale pour les échauffements et les détentes. Matériau respirant pour un ajustement confortable. Ligue : Premier League, Pays : Angleterre.",
-    //     "category": "Premier League",
-    //     "country": "Angleterre",
-    //     "images": [
-    //       "https://mufc-live.cdn.scayle.cloud/images/8ed8c14d2c334556c14da1116ba32a50.jpg?brightness=1&width=922&height=1230&quality=75&bg=ffffff",
-    //       "https://mufc-live.cdn.scayle.cloud/images/0410e2099b1d2ba812e40aba0a9719d5.jpg?brightness=1&width=922&height=1230&quality=75&bg=ffffff",
-    //       "https://mufc-live.cdn.scayle.cloud/images/0dd8a9fe914d7bca2c29eb631fa44e96.jpg?brightness=1&width=922&height=1230&quality=75&bg=ffffff"
-    //     ],
-    //     "rating": {
-    //       "rate": 4.7,
-    //       "count": 500
-    //     }
-    //   }
-    // ];
+    
     //----------------------------------------------------------------------------------------------------------------------------------
     function getCartFromLocalStorage() {
       return JSON.parse(localStorage.getItem('cart')) || [];
   }
+  const carts=JSON.parse(localStorage.getItem('cart')) || [];
+  // Tant que le tableau cart ne se lie pas avec les deux pages catalogue et détails produit , cette logique ne peut pas etre effectuée 
   
     // localStorage.setItem("carts", JSON.stringify(carts));
 
 //     // Simuler l'importation des données depuis "cart" (tableau partagé entre les pages)
 // let cart = JSON.parse(localStorage.getItem('carts')) || [];
-console.log(cart);
+
 
 // Afficher les produits dans le panier
 function displayCartItems() {
 
-  const cart = getCartFromLocalStorage();
+  // const carts = getCartFromLocalStorage();
 
-
+  const pagePannel = document.getElementById('page-panel');
   const cartItemsDiv = document.getElementById('aside-panel');
   const totalPriceDiv = document.getElementById('total-price');
 
   cartItemsDiv.innerHTML = '';
+  pagePannel.innerHTML = '';
   let totalPrice = 0;
-
-  if (cart.length === 0) {
+  console.log(carts);
+  if (carts.length === 0) {
     cartItemsDiv.innerHTML = `
       <div class="flex w-full mx-2 mt-2 mb- 10">
         <div class="flex justify-center items-center">
@@ -111,17 +123,25 @@ function displayCartItems() {
       </div>
     `; // à modifier le message de panier vide
     totalPriceDiv.innerHTML = '0,00 €';
+    pagePannel.innerHTML = `
+      <div class="item md:flex text-red-500 items-center justify-center" id="pannel">
+        <h1 class="text-primary text-center mt-10 text-2xl">Ouups .. Le panier est vide</h1>
+      </div>
+    `;
     return;
   }
 
-  cart.forEach((item, index) => {
+  // cart.forEach((item, index) => {
+  carts.forEach((item) => {
     const productDiv = document.createElement('div');
+    const pageProductDiv = document.createElement('div');
     productDiv.className = 'cart-item';
+    pageProductDiv.className = 'pannel';
     productDiv.innerHTML = `
       <div class="flex bg-red-100 mb-4 p-4 rounded-lg justify-between">
         <div class="item-pic w-1/4">
           <div class="flex flex-col justify-center m-auto">
-            <img class="h-full w-full rounded-lg" src="${item.images[0]}" alt="${item.title}">
+            <img class="h-full w-full rounded-lg" src="${item.images}" alt="${item.title}">
             <div class="flex rounded-md shadow-sm justify-around mt-2" role="group">
               <button type="button" class="bg-primary text-sm h-6 px-1 rounded-l-lg text-accent-2 "><i class="fa-solid fa-minus"></i></button>
               <button type="button" class="bg-primary text-sm h-6 px-4 text-accent-2 "><span>${item.quantity}</span></button>
@@ -140,13 +160,53 @@ function displayCartItems() {
             </div>
           </div>
           <div class="p-3">
-            <h3 class="font-bold text-primary text-right"><span>${item.price}</span> €</h3>
+            <h3 class="font-bold text-primary text-right"><span>${item.price}</span> MAD</h3>
           </div>
         </div>
       </div>
     `;
     totalPrice += item.price * item.quantity;
     cartItemsDiv.appendChild(productDiv);
+    
+    pageProductDiv.innerHTML = `
+    <div id="pannel" class="pannel bg-red-100 p-2 m-2 rounded-lg">
+      <div class="item md:flex">
+        <a href="#"
+          class="flex flex-col items-center border border-gray-200 rounded-lg shadow md:flex-row md:max-w-3xl bg-gray-100 p-4 m-3">
+          <div class="flex md:w-full md:h-full">
+            <img class="rounded-t-lg border border-primary border-b-0 md:border-0 md:cover" src="${item.images}"
+              alt="${item.title}">
+          </div>
+          <div
+            class=" md:w-full md:h-full flex flex-col w-full p-4 bg-accent-2 border border-t-0 border-primary md:border md:border-0 md:shadow-2xl rounded-b-lg md:rounded-lg">
+            <div class="flex sm:justify-between items-center">
+              <h5 class="mb-2 text-large font-bold text-primary">${item.title}</h5>
+              <i class="fa-solid fa-trash text-secondary text-right cursor-pointer mt-1 sm:text-2xl sm:mt-0"></i>
+            </div>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${item.description}</p>
+            <h3 class="mb-2 text-sm font-bold tracking-tight text-primary">Livraison entre le 12 et 17 Novembre 2024
+            </h3>
+            <div class="flex justify-between sm:px-10 md:flex md:justify-between md:px-2">
+              <div class="inline-flex rounded-md shadow-sm" role="group">
+                <button type="button"
+                  class="px-2 py-2 md:py-0 text-sm font-medium text-accent-2 bg-secondary border border-gray-200 rounded-s-lg hover:bg-pink-hover hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700"><i
+                    class="fa-solid fa-minus"></i></button>
+                <button type="button"
+                  class="px-4 py-2 text-sm font-medium text-accent-2 bg-secondary border-t border-b border-gray-200 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 md:py-1">1</button>
+                <button type="button"
+                  class="px-2 py-2 text-sm font-medium text-accent-2 bg-secondary border border-gray-200 rounded-e-lg hover:bg-pink-hover hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700"><i
+                    class="fa-solid fa-plus"></i></button>
+              </div>
+              <div class="md:flex md:items-center">
+                <h2 class="text-xl text-primary font-bold md:text-sm md:px-0">${item.price}</span> MAD</h2>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    `;
+    pagePannel.appendChild(pageProductDiv);
   });
 
   totalPriceDiv.innerHTML = `<p>TOTAL PANIER : ${totalPrice} €</p>`;
@@ -169,6 +229,7 @@ document.getElementById('devis-form').addEventListener('submit', function (event
   const quoteContent = document.getElementById('devis-content');
 
   const today = new Date();
+  console.log(today)
   const formattedDate = `${today.getDate().toString().padStart(2, '0')}/${(today.getMonth() + 1).toString().padStart(2, '0')}/${today.getFullYear()}`;
 
   quoteContent.innerHTML = `
@@ -253,7 +314,7 @@ document.getElementById('devis-form').addEventListener('submit', function (event
     return;
   }
 
-  cart.forEach((item) => {
+  carts.forEach((item) => {
     const itemLine = document.createElement('div');
     itemLine.className = 'item-line flex justify-between';
     itemLine.innerHTML = `
@@ -266,7 +327,7 @@ document.getElementById('devis-form').addEventListener('submit', function (event
     itemLineContainer.appendChild(itemLine);
   });
 
-  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const total = carts.reduce((sum, item) => sum + item.price * item.quantity, 0);
   document.getElementById("totals-chiffres").innerHTML = `
     <h3 class="font-bold text-xs">${total.toFixed(2)}</h3>
     <h3 class="font-bold text-xs">${(total * 0.2).toFixed(2)}</h3>

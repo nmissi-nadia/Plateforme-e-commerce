@@ -278,7 +278,7 @@ let imgpntk = document.querySelector(' .imgpntk');
 
 
 
-let cart = JSON.parse(localStorage.getItem('produits')) || [];
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 function stockerdata() {
     
